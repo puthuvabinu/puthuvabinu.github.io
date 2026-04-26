@@ -1146,24 +1146,39 @@ Function Contact Formular
 	function ContactForm() {	
 	
 		if( jQuery('#contact-formular').length > 0 ){
-			$('#contactform').submit(function(){
+			$('#contactform').submit(function(e){
+				e.preventDefault();
 				var action = $(this).attr('action');
 				$("#message").slideUp(750,function() {
 					$('#message').hide();
 					$('#submit').attr('disabled','disabled');		
-					$.post(action, {
-						name: $('#name').val(),
-						email: $('#email').val(),
-						comments: $('#comments').val()
-					},
-					function(data){
-						document.getElementById('message').innerHTML = data;
-						$('#message').slideDown('slow');
-						$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
-						$('#submit').removeAttr('disabled');
-						if(data.match('success') != null) $('#contactform').slideUp('slow');		
-					}
-				);		
+					
+					$.ajax({
+						url: action,
+						method: 'POST',
+						headers: {
+							'Accept': 'application/json'
+						},
+						data: {
+							name: $('#name').val() === 'Full Name' ? '' : $('#name').val(),
+							email: $('#email').val() === 'E-mail' ? '' : $('#email').val(),
+							comments: $('#comments').val() === 'Your Message' ? '' : $('#comments').val()
+						},
+						dataType: 'json',
+						success: function() {
+							document.getElementById('message').innerHTML = "<div class='success-msg' style='color: #4CAF50; margin-bottom: 20px; font-weight: bold;'>Thank you! Your message has been sent successfully.</div>";
+							$('#message').slideDown('slow');
+							$('#submit').removeAttr('disabled');
+							$('#contactform')[0].reset();
+							setTimeout(function() { $('#message').slideUp('slow'); }, 5000);
+						},
+						error: function() {
+							document.getElementById('message').innerHTML = "<div class='error-msg' style='color: #F44336; margin-bottom: 20px; font-weight: bold;'>Oops! There was a problem submitting your form.</div>";
+							$('#message').slideDown('slow');
+							$('#submit').removeAttr('disabled');
+							setTimeout(function() { $('#message').slideUp('slow'); }, 5000);
+						}
+					});	
 				});		
 				return false;		
 			});		
