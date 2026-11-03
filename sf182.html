@@ -143,7 +143,7 @@ drift.load('wiendkrzinkz');
                 <div id="hero-styles" class="parallax-onscroll opacity-onscroll">
                     <div id="hero-caption">
                         <div class="inner text-align-center">
-                            <div class="hero-title">SF 182</div>
+                            <div class="hero-title">SF-182</div>
                             <div class="hero-subtitle">Digitising training approvals for US government agencies</div>
                         </div>
                     </div>
@@ -162,14 +162,14 @@ drift.load('wiendkrzinkz');
 				<!-- Main Content -->
 				<div id="main-content">
 
-					<!-- DRAFT NOTE: text in yellow highlight (class="todo") still needs your facts. Search this file for "todo" before publishing. -->
+					<!-- DRAFT NOTE: text in yellow highlight (class="todo") still needs your input. Search this file for "todo" before publishing. -->
 					<style>.todo{background:#fff3c4;padding:0 4px;}</style>
 
 					<!-- Row -->
 					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
 						<div class="container">
 							<h5><i>Statement of Originality & Confidentiality</i></h5>
-							<p style="font-size: 16px;line-height: 24px;"><i>To comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study, including customer names and real data. All the below information belongs to the organization whose name appears on the document and is to be treated as confidential. It is used to demonstrate my work experience and related skills. Please do not disclose any information to any person or persons who would use it for the purpose outside the possibility of employment.</i></p>
+							<p style="font-size: 16px;line-height: 24px;"><i>To comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study, including customer names. All screens use placeholder data. All the below information belongs to the organization whose name appears on the document and is to be treated as confidential. It is used to demonstrate my work experience and related skills. Please do not disclose any information to any person or persons who would use it for the purpose outside the possibility of employment.</i></p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -178,9 +178,9 @@ drift.load('wiendkrzinkz');
 					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
 						<div class="container">
 							<h2>OVERVIEW</h2>
-							<p>The SF 182, <i>Authorization, Agreement and Certification of Training</i>, is the standard form US federal agencies use to request, approve and record training for their employees, especially external training paid for with agency funds. For many agencies it was still a paper form that travelled from desk to desk for signatures, was re-keyed into other systems and was hard to track.</p>
+							<p>Large US federal agencies use learning platforms to deliver training to their employees and contractors, and to assign and report on mandatory training. When an employee wants training from outside their organisation, especially training with fees or travel costs, they complete the SF-182: the <i>Request, Authorization, Agreement and Certification of Training</i> form from the Office of Personnel Management (OPM). The form records the request, its approvals and the completed training, and in some cases it also acts as the purchase order for the training provider.</p>
 							<h4><a href="https://www.totara.com/" target="_blank" class="link"><span>Totara</span></a> is a learning, performance and compliance platform used by organisations worldwide.<br>TotaraGov brings it to US federal and state government agencies.</h4>
-							<p>Our government customers wanted the whole SF 182 process, from the employee's request through approvals to completion, to live inside the learning platform their people already use. My goal was to replace the paper form with a digital workflow that stays true to the official form, while removing the chasing, re-keying and lost paperwork. <span class="todo">[Optional: when it launched / how long the project ran]</span></p>
+							<p>In 2021 a large US federal department moving to Totara needed its SF-182 process to come with it. Totara decided to design and build a new SF-182 plugin for Totara 14: first matching everything the department's previous system did, then becoming part of the core Totara product for other government customers. My goal was to turn a paper form into a guided digital workflow, from the learner's request, through several levels of approval, to verifying that the training was completed. <span class="todo">[Can you name the customer (e.g. its learning portal)? If not, leave as is.]</span></p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -188,8 +188,8 @@ drift.load('wiendkrzinkz');
 					<!-- Row -->
 					<div class="vc_row full text-align-center has-animation" data-delay="10">
 						<div class="container">
-							<img src="images/projects/SF182_before_after.jpg" alt="Paper SF 182 form compared with the digital request in TotaraGov">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>From a paper form to a guided digital request</i></p>
+							<img src="images/projects/SF182_before_after.jpg" alt="The OPM SF-182 form compared with the guided request in Totara">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>From the OPM form to a guided request</i></p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -198,7 +198,8 @@ drift.load('wiendkrzinkz');
 					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
 						<div class="container">
 							<h2>CHALLENGE</h2>
-							<p>A single SF 182 passes through many hands: the employee, their supervisor, training officers, funding approvers and sometimes more. Every agency sets up that chain a little differently, and the form carries strict rules about funding, service agreements and record keeping. The digital version had to feel familiar to people who know the official form, work for every agency's approval process, and fit naturally inside Totara so it felt like part of the product rather than a bolt-on. <span class="todo">[Add any specific constraint: timeline, compliance, accessibility (Section 508), legacy data]</span></p>
+							<p>The SF-182 is long and technical: three sections of trainee details, training course data, and costs and billing, full of government codes, pay plans and appropriation funds. Each request then passes through up to four levels of approval, and the right approvers depend on the learner's organisation and sub-organisation. After the training, the learner has to prove they completed it and their supervisor has to verify it.</p>
+							<p>Every agency uses the form a little differently, so the design had to work for this first customer while staying flexible enough to become a core product feature. It also had to stay true to the official OPM form, which people know well and which still has to be printed.</p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -215,16 +216,8 @@ drift.load('wiendkrzinkz');
 					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
 						<div class="container">
 							<h2>MY ROLE & DESIGN PROCESS</h2>
-							<p>I owned the design side of SF 182 in TotaraGov and the end-to-end experience, from the employee's first request to the final record. I worked closely with product owners and our US government customers, and handed designs over to the development team built from the Totara UI Kit design system.</p>
-							<h4>I partnered with product on discovery workshops, research and journey mapping, so that design decisions were grounded in how agencies actually process training requests.</h4>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img src="images/projects/SF182_designprocess.jpg" alt="Design process">
+							<p>I owned the design side of SF-182 and the end-to-end experience, for every role involved: learners, supervisors, approvers, approval admins and site administrators. I worked closely with product owners and the customer's team, and my concept designs formed the screens of the solution design that went to the customer for sign-off. I then supported the developers through handover, using components from the Totara UI Kit.</p>
+							<h4>I partnered with product on discovery workshops, research and journey mapping, so that every design decision was grounded in how the agency actually processes training requests.</h4>
 						</div>
 					</div>
 					<!--/Row -->
@@ -235,31 +228,24 @@ drift.load('wiendkrzinkz');
 							<div class=" one_third"><h3>Discover</h3></div>
 							<div class=" two_third last">
 								<h5>Understanding the form</h5>
-								<p>I started with the official SF 182 itself: every section, field and signature, and why each one exists. This showed which parts the employee fills in, which belong to approvers and training officers, and which data agencies need to report on later.</p>
-								<h5>Discovery workshops & research</h5>
-								<p>Together with the product owners, I ran discovery workshops and research sessions with our government customers to understand how requests move through their agencies today, who is involved, and where things get stuck. <span class="todo">[How many agencies / sessions / people?]</span></p>
+								<p>I started with the official OPM form itself: every section, field and code, and the OPM guidelines behind them. This showed which fields the learner fills in, which could be filled in automatically from their profile, which should be locked, and which only matter to approvers and reporting.</p>
+								<h5>Learning from the existing process</h5>
+								<p>Together with the product owners, I ran workshops with the customer's team to understand how SF-182 worked in their previous system: who approves at each level, how sub-organisations differ, which notifications people rely on and which reports they run. <span class="todo">[Add the number of sessions or people involved, if you know it]</span></p>
 								<h5>Key Insights</h5>
-								<p><span class="todo">[Check these match what you found, and edit]</span><br>
-									• Employees can't see where their request is once they hand it over.
+								<p>
+									• The form is long, and many fields are about the learner rather than the training, so the learner shouldn't have to type them.
 									<br>
-									• Each agency has its own approval chain and roles.
+									• Learners lose track of their request once it leaves their hands.
 									<br>
-									• Approvers need cost, dates and justification in one place to decide quickly.
+									• Approvers deal with many requests and need to see quickly what is waiting for them.
 									<br>
-									• Training officers re-key form data into other systems for reporting.
+									• Approval chains differ by organisation and sub-organisation, and change over time.
 									<br>
-									• People know the official form well, so its structure and wording need to stay recognisable.
+									• Some data, like social security numbers, should not be collected at all.
+									<br>
+									• The printed OPM form is still needed, for example as a purchase order.
 								</p>
 							</div>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full row_padding_bottom text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img src="images/projects/SF182_journeymap.jpg" alt="SF 182 journey map">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>End-to-end journey map, from request to completion</i></p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -269,19 +255,21 @@ drift.load('wiendkrzinkz');
 						<div class="container">
 							<div class=" one_third"><h3>Define</h3></div>
 							<div class=" two_third last">
-								<h5>Journey mapping</h5>
-								<p>We mapped the full journey across every role, from the employee finding training and submitting a request, through each approval, to completing the training and closing the record. This gave the team and our customers one shared picture of the process.</p>
-								<h5>Roles & approval flows</h5>
-								<p>I defined the roles involved and the approval flows between them, including what each person needs to see and do at their step, and how the flow could be set up to match each agency's own chain.</p>
+								<h5>Workflow & stages</h5>
+								<p>We defined SF-182 as a workflow of four stages: filling out the form and getting approval, the training itself, verification, and recording the learning. Each stage has its own approvers and notifications.</p>
+								<h5>Roles & permissions</h5>
+								<p>I mapped five roles (learner, supervisor, approver, approval admin and site administrator) and what each can do at every point in a request's life, from draft and pending approval through to denied, withdrawn or verified. This user actions matrix became the blueprint for both the screens and the permissions.</p>
 								<h5>Key Decisions</h5>
 								<p>
-									• Break the long form into clear, guided steps for the employee.
+									• Up to four approval levels, following OPM guidelines, with the supervisor at level 1.
 									<br>
-									• Show the status and the next approver at every stage.
+									• A rejected request returns to draft. A withdrawn request returns to the start of its current stage and must be approved again.
 									<br>
-									• Let administrators set up approval stages to match each agency.
+									• Approval admins can act at any level for their organisations, and submit or withdraw on someone's behalf.
 									<br>
-									• Keep a full record of who approved what, and when.
+									• Every key action is recorded in an activity log that everyone on the request can see.
+									<br>
+									• Every step sends a clear email notification, which administrators can edit.
 								</p>
 							</div>
 						</div>
@@ -291,8 +279,8 @@ drift.load('wiendkrzinkz');
 					<!-- Row -->
 					<div class="vc_row full row_padding_bottom text-align-center has-animation" data-delay="10">
 						<div class="container">
-							<img src="images/projects/SF182_approvalflow.jpg" alt="SF 182 approval flow and roles">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Approval flow and roles</i></p>
+							<img src="images/projects/SF182_approvalflow.jpg" alt="SF-182 workflow stages and approval levels">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Workflow stages and approval levels</i></p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -302,22 +290,17 @@ drift.load('wiendkrzinkz');
 						<div class="container">
 							<div class=" one_third"><h3>Design</h3></div>
 							<div class=" two_third last">
-								<h5>Wireframes</h5>
-								<p>I explored the key screens as wireframes: the employee's request, the approver's review and the status view. These were reviewed with product owners and customers early, so we could change direction cheaply.</p>
-								<h5>Prototype & validation</h5>
-								<p>The refined designs were turned into clickable prototypes in Figma and walked through with customers to check the flow matched how their agencies work. <span class="todo">[What changed after feedback?]</span></p>
-								<h5>Design system & handover</h5>
-								<p>The final designs were built from Totara UI Kit components so they stayed consistent with the rest of Totara and were faster to build. I worked with developers through handover and build to make sure the experience shipped as designed.</p>
+								<h5>A guided form</h5>
+								<p>The request form keeps the OPM structure and field labels, so it feels familiar, but makes it much easier to complete. Section names on the left let learners jump around the form. Their profile details are filled in automatically, fixed values are locked, totals are calculated for them, and choices adapt to earlier answers. Help text based on the OPM guidelines sits next to the fields that need it. Learners can save a draft at any time, and clone a past request to start a new one.</p>
+								<h5>Vendor search</h5>
+								<p>Instead of typing a training provider's details by hand, learners can search a vendor list by name, address or state, and the vendor fields fill themselves in. The details can still be edited.</p>
+								<h5>Dashboards for every role</h5>
+								<p>Learners get a dashboard of their requests and their progress. Approvers see the requests waiting for their response first, followed by every request they could act on, showing both their own progress and the overall progress.</p>
+								<h5>Verification</h5>
+								<p>After the training date, the learner is prompted to complete verification: they confirm whether they completed the training, add evidence such as a certificate, and update the costs if they changed. Their supervisor then approves the verification.</p>
+								<h5>Administration</h5>
+								<p>Site administrators manage workflows (edit, clone, publish, archive), choose approvers for each level by relationship or by name, upload overrides for sub-organisations in bulk with a CSV file, and edit the notifications.</p>
 							</div>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_bottom" data-delay="10" style="text-align: center;">
-						<div class="container">
-							<img src="images/projects/SF182_wireframes.jpg" alt="SF 182 wireframes">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Wireframes of the key screens</i></p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -325,14 +308,54 @@ drift.load('wiendkrzinkz');
 					<!-- Row -->
 					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9; text-align: center;">
 						<div class="container">
-							<img src="images/projects/SF182_screen_request.jpg" alt="Employee training request screen">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Employee: guided training request</i></p>
+							<h4>Learner</h4>
+							<img src="images/projects/SF182_learner_dashboard.jpg" alt="Learner request dashboard">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Request dashboard: all your requests and their progress</i></p>
 							<hr><hr>
-							<img src="images/projects/SF182_screen_approval.jpg" alt="Approver review screen">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Approver: everything needed to decide, in one place</i></p>
+							<img src="images/projects/SF182_screen_request.jpg" alt="SF-182 request form">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>The request form: OPM sections and labels, with pre-filled and locked fields</i></p>
 							<hr><hr>
-							<img src="images/projects/SF182_screen_tracking.jpg" alt="Request status and audit trail screen">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Status and approval history</i></p>
+							<img src="images/projects/SF182_vendor_search.jpg" alt="Vendor search">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Searching for a training vendor</i></p>
+						</div>
+					</div>
+					<!--/Row -->
+
+					<!-- Row -->
+					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="text-align: center;">
+						<div class="container">
+							<h4>Approver</h4>
+							<img src="images/projects/SF182_approver_dashboard.jpg" alt="Approver request dashboard">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Requests awaiting your response come first</i></p>
+							<hr><hr>
+							<img src="images/projects/SF182_screen_approval.jpg" alt="Approving a request">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Reviewing and approving a request at your level</i></p>
+						</div>
+					</div>
+					<!--/Row -->
+
+					<!-- Row -->
+					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9; text-align: center;">
+						<div class="container">
+							<h4>After the training</h4>
+							<img src="images/projects/SF182_verification.jpg" alt="Verification form">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Verification: completion status and evidence (with design notes)</i></p>
+							<hr><hr>
+							<img src="images/projects/SF182_screen_tracking.jpg" alt="Request activity log">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Activity log: everyone can see where the request is</i></p>
+						</div>
+					</div>
+					<!--/Row -->
+
+					<!-- Row -->
+					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="text-align: center;">
+						<div class="container">
+							<h4>Site administrator</h4>
+							<img src="images/projects/SF182_admin_workflows.jpg" alt="Manage approval workflows">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Managing approval workflows</i></p>
+							<hr><hr>
+							<img src="images/projects/SF182_admin_approvers.jpg" alt="Configuring approvers for each level">
+							<p style="color: #c0c0c0;padding-top: 30px;"><i>Choosing approvers for each of the four levels</i></p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -341,7 +364,7 @@ drift.load('wiendkrzinkz');
 					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
 						<div class="container">
 							<h2>OUTCOME</h2>
-							<p>SF 182 now runs end to end inside TotaraGov, replacing the paper form for our government customers. Employees can submit and track their training requests, approvers act on them in one place, and every step is recorded. <span class="todo">[Add results: agencies using it, number of requests, time saved, feedback from customers]</span></p>
+							<p>SF-182 was built as a Totara plugin for Totara 14, replacing the paper form for our federal customer and becoming part of the core TotaraGov offering for other agencies. Learners submit and track requests in one place, approvers act on them from their dashboard, and every step is recorded and reportable through Totara's Report Builder. <span class="todo">[Add results if you have them: number of users or requests, time saved, customer feedback]</span></p>
 						</div>
 					</div>
 					<!--/Row -->
@@ -350,7 +373,7 @@ drift.load('wiendkrzinkz');
 					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
 						<div class="container">
 							<h2>REFLECTION AND NEXT STEP</h2>
-							<p><span class="todo">[Your reflection: what you learned designing for government, what you'd do with more time, e.g. more research with approvers or measuring turnaround times after launch]</span></p>
+							<p><span class="todo">[Your reflection: what you learned designing for government, and what you would do next, e.g. making the form configurable for other agencies' fields]</span></p>
 						</div>
 					</div>
 					<!--/Row -->
