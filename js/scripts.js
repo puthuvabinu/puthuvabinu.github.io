@@ -242,6 +242,8 @@ Function Ajax Load
 		  
 		  //trigger smooth transition from the actual page to the new one 
 		  $('main').on('click', '[data-type="page-transition"]', function(event){
+			// Opened straight from disk (file://): browsers block AJAX there, so let the link load normally
+			if( window.location.protocol === 'file:' ) return;
 			event.preventDefault();
 			//detect which page has been selected
 			var newPage = $(this).attr('href');
@@ -288,7 +290,9 @@ Function Ajax Load
 			var section = $('<div class="cd-main-content "></div>');
 					
 				
-			section.load(url+' .cd-main-content > *', function(event){
+			section.load(url+' .cd-main-content > *', function(response, status){
+			  // If the page can't be fetched with AJAX, fall back to a normal page load
+			  if( status === 'error' ) { window.location.href = url; return; }
 			  // load new content and replace <main> content with the new one
 			  
 			  $('main').html(section);
