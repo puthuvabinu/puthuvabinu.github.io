@@ -187,6 +187,27 @@ drift.load('wiendkrzinkz');
                 .hp-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:44px}
                 .hp-head h2{font-size:clamp(32px,3.6vw,52px);letter-spacing:-0.03em;font-weight:600;line-height:1}
                 .hp-head p{margin:0;color:var(--muted);font-size:15px}
+                /* featured */
+                .hp-feats{display:flex;flex-direction:column;gap:28px;margin-bottom:110px}
+                .hp-feat{display:grid;grid-template-columns:1.35fr 1fr;align-items:center;gap:56px;padding:28px;border-radius:32px;background:var(--tint);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease}
+                .hp-feat.flip{grid-template-columns:1fr 1.35fr}
+                .hp-feat.flip .hp-feat-media{order:2}
+                .hp-feat:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(0,0,0,.25)}
+                .hp-feat-media{border-radius:20px;overflow:hidden;aspect-ratio:16/11;background:#fff;box-shadow:0 18px 40px -20px rgba(0,0,0,.25)}
+                .hp-feat-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+                .hp-feat:hover .hp-feat-media img{transform:scale(1.04)}
+                .hp-feat-body{padding:12px 20px 12px 0}
+                .hp-feat.flip .hp-feat-body{padding:12px 0 12px 20px}
+                .hp-kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+                .hp-feat h3{font-size:clamp(28px,3vw,44px);font-weight:600;letter-spacing:-0.03em;line-height:1.05;margin:14px 0 16px}
+                .hp-feat p{margin:0 0 22px;color:#3c3f44;font-size:17px;line-height:1.6}
+                .hp-feat .hp-tag{background:rgba(255,255,255,.75)}
+                .hp-link{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-weight:500;font-size:15px;border-bottom:1.5px solid var(--ink);padding-bottom:3px}
+                .hp-feat:hover .hp-link span{transform:translateX(4px)}
+                .hp-link span{transition:transform .3s ease}
+                .hp-sub{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:22px}
+                .hp-sub h4{margin:0;font-family:'Poppins',sans-serif;font-size:22px;font-weight:500;letter-spacing:-0.02em;color:var(--ink);text-transform:none}
+                .hp-sub span{color:var(--muted);font-size:14px}
                 .hp-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
                 .hp-row{position:relative;border-bottom:1px solid var(--line)}
                 .hp-row > a{display:grid;grid-template-columns:64px minmax(0,1.5fr) minmax(0,1fr) 56px;align-items:center;gap:24px;padding:34px 8px;position:relative;z-index:1;transition:padding .35s ease}
@@ -221,12 +242,17 @@ drift.load('wiendkrzinkz');
                     .hp-intro{padding:150px 0 60px}
                     .hp-stats{grid-template-columns:1fr;gap:22px;margin-top:60px}
                     .hp-row > a{grid-template-columns:1fr 44px;gap:16px;padding:26px 0}
-                    .hp-num,.hp-info .who,.hp-preview{display:none}
+                    .hp-num,.hp-info .who,.hp-preview,.hp-hint{display:none}
                     .hp-thumb{display:block;grid-column:1/-1;border-radius:16px;overflow:hidden;aspect-ratio:16/10;background:var(--soft)}
                     .hp-thumb img{width:100%;height:100%;object-fit:cover;display:block}
                     .hp-info{grid-column:1/2}
                     .hp-go{width:44px;height:44px;grid-row:3;grid-column:2;align-self:start}
                     .hp-head{flex-direction:column;align-items:flex-start}
+                    .hp-feat,.hp-feat.flip{grid-template-columns:1fr;gap:22px;padding:16px;border-radius:24px}
+                    .hp-feat.flip .hp-feat-media{order:0}
+                    .hp-feat-body,.hp-feat.flip .hp-feat-body{padding:4px 6px 10px}
+                    .hp-feats{margin-bottom:70px}
+                    .hp-sub{flex-direction:column;align-items:flex-start;gap:6px}
                     .hp-logos span{font-size:18px}
                 }
             </style>
@@ -265,33 +291,37 @@ drift.load('wiendkrzinkz');
                     <div class="hp-wrap">
                         <div class="hp-head has-animation" data-delay="50">
                             <h2>Selected work</h2>
-                            <p>Six case studies · hover to preview</p>
+                            <p>Recent work at Totara, and earlier projects</p>
                         </div>
 
+                        <div class="hp-feats">
+                            <a href="sf182.html" class="hp-feat ajax-link has-animation" data-type="page-transition" data-delay="50" style="--tint:#eef1ea">
+                                <div class="hp-feat-media"><img src="images/projects/SF182_before_after.jpg" alt="The SF-182 paper form next to the new guided request"></div>
+                                <div class="hp-feat-body">
+                                    <div class="hp-kicker">Featured · Totara · TotaraGov</div>
+                                    <h3>SF-182 approval workflow</h3>
+                                    <p>Turning a paper training-approval form into a guided workflow for US federal agencies, from the learner’s request through four levels of approval to verified completion.</p>
+                                    <div class="hp-tags"><span class="hp-tag">Enterprise SaaS</span><span class="hp-tag">Workflow</span><span class="hp-tag">Government</span></div>
+                                    <span class="hp-link">View case study <span>→</span></span>
+                                </div>
+                            </a>
+                            <a href="totaramobile.html" class="hp-feat flip ajax-link has-animation" data-type="page-transition" data-delay="50" style="--tint:#e9f0f1">
+                                <div class="hp-feat-media"><img src="images/10.jpg" alt="Totara Mobile"></div>
+                                <div class="hp-feat-body">
+                                    <div class="hp-kicker">Featured · Totara</div>
+                                    <h3>Totara Mobile</h3>
+                                    <p>Learning in your pocket, online or offline: one native app that every organisation can connect to their own Totara site and brand.</p>
+                                    <div class="hp-tags"><span class="hp-tag">Mobile</span><span class="hp-tag">iOS &amp; Android</span><span class="hp-tag">Offline</span></div>
+                                    <span class="hp-link">View case study <span>→</span></span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="hp-sub has-animation" data-delay="50"><h4>More work</h4><span>Earlier projects at QBurst<span class="hp-hint"> · hover to preview</span></span></div>
                         <ul class="hp-list">
                             <li class="hp-row has-animation" data-delay="40">
-                                <a href="sf182.html" class="ajax-link" data-type="page-transition">
-                                    <span class="hp-num">01</span>
-                                    <span class="hp-thumb"><img src="images/projects/SF182_before_after.jpg" alt=""></span>
-                                    <div><h3>SF-182 approval workflow</h3><span class="sum">Turning a paper training-approval form into a guided workflow for US federal agencies.</span></div>
-                                    <span class="hp-info"><span class="who">Totara · TotaraGov</span><span class="hp-tags"><span class="hp-tag">Enterprise SaaS</span> <span class="hp-tag">Workflow</span> <span class="hp-tag">Government</span></span></span>
-                                    <span class="hp-go">→</span>
-                                </a>
-                                <span class="hp-preview"><img src="images/projects/SF182_before_after.jpg" alt="SF-182 paper form next to the new guided request"></span>
-                            </li>
-                            <li class="hp-row has-animation" data-delay="80">
-                                <a href="totaramobile.html" class="ajax-link" data-type="page-transition">
-                                    <span class="hp-num">02</span>
-                                    <span class="hp-thumb"><img src="images/10.jpg" alt=""></span>
-                                    <div><h3>Totara Mobile</h3><span class="sum">Learning in your pocket, online or offline, for organisations around the world.</span></div>
-                                    <span class="hp-info"><span class="who">Totara</span><span class="hp-tags"><span class="hp-tag">Mobile</span> <span class="hp-tag">iOS &amp; Android</span></span></span>
-                                    <span class="hp-go">→</span>
-                                </a>
-                                <span class="hp-preview"><img src="images/10.jpg" alt="Totara Mobile"></span>
-                            </li>
-                            <li class="hp-row has-animation" data-delay="120">
                                 <a href="aware.html" class="ajax-link" data-type="page-transition">
-                                    <span class="hp-num">03</span>
+                                    <span class="hp-num">01</span>
                                     <span class="hp-thumb"><img src="images/2.jpg" alt=""></span>
                                     <div><h3>AWARE</h3><span class="sum">A radar-based warning system that keeps highway work-zone crews out of harm’s way.</span></div>
                                     <span class="hp-info"><span class="who">QBurst for Oldcastle</span><span class="hp-tags"><span class="hp-tag">Mobile &amp; web</span> <span class="hp-tag">Safety</span></span></span>
@@ -299,9 +329,9 @@ drift.load('wiendkrzinkz');
                                 </a>
                                 <span class="hp-preview"><img src="images/2.jpg" alt="AWARE app"></span>
                             </li>
-                            <li class="hp-row has-animation" data-delay="160">
+                            <li class="hp-row has-animation" data-delay="80">
                                 <a href="dhowber.html" class="ajax-link" data-type="page-transition">
-                                    <span class="hp-num">04</span>
+                                    <span class="hp-num">02</span>
                                     <span class="hp-thumb"><img src="images/1.jpg" alt=""></span>
                                     <div><h3>Nau by DP World</h3><span class="sum">A marketplace connecting dhow captains and traders to move cargo between nearby ports.</span></div>
                                     <span class="hp-info"><span class="who">QBurst for DP World</span><span class="hp-tags"><span class="hp-tag">Mobile</span> <span class="hp-tag">Marketplace</span></span></span>
@@ -309,9 +339,9 @@ drift.load('wiendkrzinkz');
                                 </a>
                                 <span class="hp-preview"><img src="images/1.jpg" alt="Nau by DP World"></span>
                             </li>
-                            <li class="hp-row has-animation" data-delay="200">
+                            <li class="hp-row has-animation" data-delay="120">
                                 <a href="omron.html" class="ajax-link" data-type="page-transition">
-                                    <span class="hp-num">05</span>
+                                    <span class="hp-num">03</span>
                                     <span class="hp-thumb"><img src="images/6.jpg" alt=""></span>
                                     <div><h3>Omron Health</h3><span class="sum">New blood pressure graphs and an activity timeline for an established health app.</span></div>
                                     <span class="hp-info"><span class="who">QBurst for Omron</span><span class="hp-tags"><span class="hp-tag">Mobile</span> <span class="hp-tag">Healthcare</span></span></span>
@@ -319,9 +349,9 @@ drift.load('wiendkrzinkz');
                                 </a>
                                 <span class="hp-preview"><img src="images/6.jpg" alt="Omron Health app"></span>
                             </li>
-                            <li class="hp-row has-animation" data-delay="240">
+                            <li class="hp-row has-animation" data-delay="160">
                                 <a href="studiesabroad.html" class="ajax-link" data-type="page-transition">
-                                    <span class="hp-num">06</span>
+                                    <span class="hp-num">04</span>
                                     <span class="hp-thumb"><img src="images/4.jpg" alt=""></span>
                                     <div><h3>Studies Abroad</h3><span class="sum">Discovery and recommendations for an international education consultancy’s website.</span></div>
                                     <span class="hp-info"><span class="who">QBurst for ISA</span><span class="hp-tags"><span class="hp-tag">Research</span> <span class="hp-tag">Web</span></span></span>
