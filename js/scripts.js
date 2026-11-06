@@ -25,7 +25,9 @@ $(window).on( 'resize', function () {
 
 });
 
-$(window).on("load", function() {
+// Reveal the page as soon as the HTML is ready instead of waiting for every image
+// and third-party script (window "load"), which made first loads feel very slow.
+$(function() {
 	LazyLoad();
 });
 
@@ -199,8 +201,23 @@ Function Lazy Load
 		
 		} else if( $('#hero-image').length > 0 ){
 		
+			// Lift the loading curtain once the hero image is ready, or after 1.2s at most
+			var heroDone = false;
+			var revealHero = function() {
+				if( heroDone ) return; heroDone = true;
+				HeroColor();
+				setTimeout( function(){
+					$(".page-overlay").addClass("from-bottom-end");
+					setTimeout( function(){
+						$(".page-overlay").removeClass("from-bottom");
+						$(".page-overlay").removeClass("from-bottom-end");
+					} , 800 );
+				} , 100 );
+			};
+			setTimeout( revealHero, 1200 );
 			$('#hero-image').waitForImages({
 				finished: function() {
+					if( heroDone ) return; heroDone = true;
 					HeroColor();
 					setTimeout( function(){
 						$(".page-overlay").addClass("from-bottom-end");
