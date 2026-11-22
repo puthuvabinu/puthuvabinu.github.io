@@ -33,7 +33,9 @@
 .lp:has(.page-overlay.from-bottom)::after,
 body.page-is-changing .lp::after,
 body.hidden .lp::after{opacity:0;transition:none}
-.lp footer .socials-text{display:none}  /* template leftover */
+/* template footer leftovers (the old footer sits outside .lp, so match on the page instead) */
+body:has(.lp) footer .socials-text, body:has(.lp) footer #page-action-holder{display:none !important}
+body:has(.lp) footer{padding:0 !important}
 
 /* ---------- header: 14px regular links, red "Let's Talk" with 32px underline ---------- */
 .lp header .flexnav li a{font-family:var(--font) !important;font-weight:400;font-size:14px;line-height:24px;color:var(--ink) !important;letter-spacing:0}
@@ -151,6 +153,32 @@ body.hidden .lp::after{opacity:0;transition:none}
 .lp-foot-in{max-width:var(--w-lg);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:14px;line-height:24px}
 .lp-foot a{color:var(--on-dark) !important}
 .lp-foot ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+
+
+/* ---------- footer (measured from Lollypop) ---------- */
+.lp .lp-foot2{position:relative;background:#F9F6F5 !important;color:var(--ink);padding:80px 80px 71px;margin-top:120px}
+.lp-foot2 a{color:var(--ink) !important;transition:color .2s ease-in-out}
+.lp-foot2 a:hover{color:var(--accent) !important}
+.lp-foot2-follow{margin-bottom:60px;text-align:center}
+.lp-foot2-follow h2{font-size:16px !important;line-height:26px;font-weight:600;margin:0 0 22px}
+.lp-foot2-follow ul{display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px 40px;list-style:none;margin:0;padding:0}
+.lp-foot2-follow li a{font-size:30px;line-height:40px;font-weight:800;letter-spacing:-1px}
+.lp-foot2-bottom{display:flex;justify-content:space-between;gap:48px;padding:0 12px;flex-wrap:wrap}
+.lp-foot2-brand{max-width:389px}
+.lp-foot2-brand img{height:50px;width:auto;display:block}
+.lp-foot2-brand .tag{font-size:14px;line-height:24px;margin:8px 0 24px}
+.lp-foot2-brand .copy{font-size:14px;line-height:24px;margin:0 0 4px}
+.lp-foot2-brand .small{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.lp-foot2-brand .small a{font-size:12px;line-height:22px}
+.lp-foot2-cols{display:flex;gap:48px}
+.lp-foot2-cols > div{display:flex;flex-direction:column}
+.lp-foot2-cols h3{font-size:16px !important;line-height:26px;font-weight:800;letter-spacing:-.5px;margin:0 0 2px}
+.lp-foot2-cols a,.lp-foot2-cols span{font-size:14px;line-height:24px;padding:4px 0;color:var(--ink)}
+@media (max-width:900px){
+  .lp .lp-foot2{padding:60px 24px}
+  .lp-foot2-follow li a{font-size:24px;line-height:32px}
+  .lp-foot2-cols{gap:32px;flex-wrap:wrap}
+}
 
 /* ---------- tablet ---------- */
 @media (max-width:1200px){
