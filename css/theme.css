@@ -93,7 +93,7 @@ body:has(.lp) footer{padding:0 !important}
 .lp-body{font-size:16px;line-height:26px;color:var(--ink)}
 .lp-label{display:inline-block;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .lp-bar{position:relative}
-.lp-bar::before{content:"";position:absolute;left:-40px;top:15px;width:5px;height:45px;background:var(--accent)}
+.lp-bar::before{content:"";position:absolute;left:-40px;top:15px;bottom:16px;width:5px;background:var(--accent)}  /* spans the whole headline (a one-line bar next to "I design" read like the letter I) */
 
 /* ---------- links & buttons ---------- */
 .lp-link{display:inline-block;font-size:14px;line-height:26px;color:var(--accent) !important;padding-bottom:2px;background:linear-gradient(var(--accent),var(--accent)) left bottom/32px 1px no-repeat;transition:background-size .35s ease}
@@ -287,7 +287,7 @@ body.lp-menu-open{overflow:hidden}
   .lp-hero-in{padding-left:20px}
   .lp-h1{font-size:32px;line-height:38px;letter-spacing:-1px}
   .lp-hero .lp-h1{margin-bottom:24px}
-  .lp-bar::before{left:-18px;top:7px;width:3px;height:23px}
+  .lp-bar::before{left:-18px;top:7px;bottom:8px;width:3px}
   .lp-h2{font-size:28px;line-height:38px;letter-spacing:-1px}
   .lp-h3,.lp-co .name{font-size:18px;line-height:28px;letter-spacing:0}
   .lp-lead,.lp-hero .lp-lead{font-size:18px;line-height:28px}
