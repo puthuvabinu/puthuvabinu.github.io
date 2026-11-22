@@ -46,6 +46,7 @@ body:has(.lp) footer{padding:0 !important}
    vertically centred where Lollypop's 38px logo sits (60-98px from the top) */
 @media (min-width:1025px){
   .lp #header-container{padding:0 192px 0 127px !important;transform:translateY(19px)}
+  .lp header nav{position:relative;top:-1.5px}   /* nav text centre on y79, same line as logo and menu icon */
 }
 
 /* ---------- containers ---------- */
