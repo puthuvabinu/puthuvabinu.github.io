@@ -1,7 +1,7 @@
 /* ==========================================================================
    Portfolio theme (editorial, Lollypop-inspired)
    Everything is scoped under .lp so pages that haven't moved yet are untouched.
-   Change the accent in ONE place: --accent.
+   Accent colours live in --accent and --accent-strong.
    ========================================================================== */
 .lp{
   --bg:#F7F4F2;          /* warm off-white */
@@ -9,11 +9,13 @@
   --muted:#6B6170;
   --line:#E6E0DC;
   --card:#FFFFFF;
-  --accent:#0F8B83;      /* your accent: swap this one value to restyle every highlight */
+  --accent:#FD2E35;      /* accent (Lollypop red): headline highlights, bars, labels */
+  --accent-strong:#E7232D; /* slightly deeper red for buttons and links (better contrast) */
   --accent-ink:#FFFFFF;
   --on-dark:#F7F4F2;
   --on-dark-muted:#B9AFBD;
   --radius:20px;
+  --frame:16px;          /* white frame around the page */
   --font:'Manrope','Inter','Helvetica Neue',Arial,sans-serif;
   font-family:var(--font);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;
 }
@@ -25,8 +27,11 @@
 
 /* ---------- header (restyles the existing template header) ---------- */
 .lp header .flexnav li a{font-family:var(--font) !important;font-weight:600;font-size:15px;color:var(--ink) !important;letter-spacing:0}
-.lp header .flexnav li:last-child a{color:var(--accent) !important}
+.lp header .flexnav li:last-child a{color:var(--accent-strong) !important}
 .lp header .flexnav li:last-child a::after{background:var(--accent) !important}
+
+/* ---------- white frame around the page (as on Lollypop) ---------- */
+.lp::after{content:"";position:fixed;inset:0;border:var(--frame) solid #fff;pointer-events:none;z-index:9000}
 
 /* ---------- layout ---------- */
 .lp-wrap{max-width:1180px;margin:0 auto;padding:0 40px}
@@ -44,12 +49,12 @@
 .lp-body{font-size:15px;line-height:1.75;color:var(--muted)}
 .lp-label{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
 .lp-bar{position:relative;padding-left:36px}
-.lp-bar::before{content:"";position:absolute;left:0;top:.18em;bottom:.18em;width:5px;border-radius:3px;background:var(--accent)}
+.lp-bar::before{content:"";position:absolute;left:0;top:.22em;height:.66em;width:6px;border-radius:1px;background:var(--accent)}
 
 /* ---------- links & buttons ---------- */
-.lp-link{display:inline-block;font-size:14px;font-weight:600;color:var(--accent) !important;padding-bottom:4px;background:linear-gradient(var(--accent),var(--accent)) left bottom/24px 2px no-repeat;transition:background-size .35s ease}
+.lp-link{display:inline-block;font-size:14px;font-weight:600;color:var(--accent-strong) !important;padding-bottom:4px;background:linear-gradient(var(--accent-strong),var(--accent-strong)) left bottom/24px 2px no-repeat;transition:background-size .35s ease}
 .lp-link:hover{background-size:100% 2px}
-.lp-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px;background:var(--accent);color:var(--accent-ink) !important;transition:transform .25s ease,filter .25s ease}
+.lp-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:15px;background:var(--accent-strong);color:var(--accent-ink) !important;transition:transform .25s ease,filter .25s ease}
 .lp-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
 .lp-btn.ghost{background:transparent;color:var(--ink) !important;box-shadow:inset 0 0 0 1.5px var(--ink)}
 .lp-dark .lp-btn.ghost{color:var(--on-dark) !important;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
@@ -99,7 +104,8 @@
 .lp-step p{font-size:14px;line-height:1.7;margin:10px 0 0}
 .lp-hls{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 40px;margin-top:64px;text-align:center}
 .lp-hl-item .ico{width:44px;height:44px;margin:0 auto 16px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);color:var(--accent);font-size:20px}
-.lp-hl-item h3{font-size:19px;font-weight:800}
+.lp-hl-item h3{font-size:19px;font-weight:800;line-height:1.35}
+.lp-hl-item p{line-height:1.6}
 .lp-hl-item p{font-size:13px;letter-spacing:.04em;margin:8px 0 0;text-transform:uppercase}
 
 /* ---------- testimonials ---------- */
@@ -132,6 +138,7 @@
   .lp-hls,.lp-quotes,.lp-inds{grid-template-columns:1fr 1fr}
 }
 @media (max-width:700px){
+  .lp{--frame:8px}
   .lp-wrap{padding:0 22px}
   .lp-sec{padding:80px 0}
   .lp-hero{padding:140px 0 60px}
