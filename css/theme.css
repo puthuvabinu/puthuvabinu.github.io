@@ -153,7 +153,7 @@ body:has(.lp) footer{padding:0 !important}
 .lp-co .logo{height:56px;display:flex;align-items:center;justify-content:center}
 .lp-co .logo img{max-height:100%;max-width:130px;width:auto;height:auto;display:block}
 .lp-co .logo img[alt="Assyst"]{max-width:140px}
-.lp-co .role{font-size:16px;line-height:24px;font-weight:700;color:var(--ink);margin:24px 0 0}
+.lp-co .role{font-size:16px;line-height:24px;font-weight:700;color:var(--ink);margin:24px 0 0;min-height:48px}
 .lp-co .yrs{font-size:14px;line-height:22px;color:var(--muted);margin:4px 0 0}
 .lp-co h3{font-size:18px;line-height:28px;font-weight:500;margin:0}
 .lp-co p{font-size:14px;line-height:24px;color:var(--ink);margin:8px 0 0}
