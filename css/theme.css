@@ -39,8 +39,18 @@ body:has(.lp) footer{padding:0 !important}
 
 /* ---------- header: 14px regular links, red "Let's Talk" with 32px underline ---------- */
 .lp header .flexnav li a{font-family:var(--font) !important;font-weight:400;font-size:14px;line-height:24px;color:var(--ink) !important;letter-spacing:0}
+/* sizes measured from Lollypop: 38px logo, 20px between links, 40px before "Let's Talk",
+   no underlines except a short 32px red line under "Let's Talk" */
+.lp #logo img{height:38px;margin-top:6px}
+.lp #logo img.white-logo{top:6px}
+.lp header .flexnav li{margin-left:20px}
+.lp header .flexnav li:last-child{margin-left:40px}
+.lp header .flexnav li::after{display:none}
+.lp header .flexnav li a::after{display:none}
+.lp header .flexnav li a:hover{color:var(--accent) !important}
 .lp header .flexnav li:last-child a{color:var(--accent) !important}
-.lp header .flexnav li:last-child a::after{background:var(--accent) !important}
+.lp header .flexnav li:last-child a::after{display:block;width:32px;height:1px;background:var(--accent) !important;transform:none;bottom:15px;left:0;transition:width .3s ease}
+.lp header .flexnav li:last-child a:hover::after{width:100%}
 
 /* header geometry on desktop: logo 127px from the left edge, nav ending in line with the hero column,
    vertically centred where Lollypop's 38px logo sits (60-98px from the top) */
