@@ -15,9 +15,12 @@
   --on-dark:#F7F4F2;
   --on-dark-muted:#BDB3C2;
   --frame:20px;            /* white frame around the page */
-  --w-sm:856px;            /* text column (section headings, services, industries) */
-  --w-md:1076px;           /* hero / wide content */
-  --w-lg:1296px;           /* work grid */
+  /* Lollypop uses centred Bootstrap-style containers that step down at breakpoints.
+     --C is the container; blocks take a share of it (8/12, 10/12 or the full width). */
+  --C:1320px;
+  --w-sm:calc(var(--C) * 8 / 12 - 24px);   /* text column: 856 @1440, 736 @1288 */
+  --w-md:calc(var(--C) * 10 / 12 - 24px);  /* hero / CTA: 1076 @1440, 926 @1288 */
+  --w-lg:calc(var(--C) - 24px);            /* work grid: 1296 @1440, 1116 @1288 */
   --gutter:24px;
   --font:'Manrope','Inter','Helvetica Neue',Arial,sans-serif;
   font-family:var(--font);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;
@@ -52,10 +55,20 @@ body:has(.lp) footer{padding:0 !important}
 .lp header .flexnav li:last-child a::after{display:block;width:32px;height:1px;background:var(--accent) !important;transform:none;bottom:15px;left:0;transition:width .3s ease}
 .lp header .flexnav li:last-child a:hover::after{width:100%}
 
-/* header geometry on desktop: logo 127px from the left edge, nav ending in line with the hero column,
-   vertically centred where Lollypop's 38px logo sits (60-98px from the top) */
+/* container steps (same breakpoints as Lollypop / Bootstrap) */
+@media (max-width:1399.98px){ .lp{--C:1140px} }
+@media (max-width:1199.98px){ .lp{--C:960px} }
+@media (max-width:991.98px){ .lp{--C:720px} }
+@media (max-width:767.98px){ .lp{--C:540px} }
+
+/* header geometry, tied to the container like Lollypop's:
+   logo half a column in from the container edge; menu icon near the right edge;
+   "Let's Talk" ending 33px before the icon; everything centred on y79 */
 @media (min-width:1025px){
-  .lp #header-container{padding:0 192px 0 127px !important;transform:translateY(19px)}
+  .lp #header-container{
+    padding:0 calc((100% - var(--C)) / 2 + 12px + var(--C) / 36 + 83px) 0 calc((100% - var(--C)) / 2 + 12px + var(--C) / 24) !important;
+    transform:translateY(19px)}
+  .lp .lp-burger{right:calc((100% - var(--C)) / 2 + 12px + var(--C) / 36)}
   .lp header nav{position:relative;top:-1.5px}   /* nav text centre on y79, same line as logo and menu icon */
 }
 
@@ -76,7 +89,7 @@ body:has(.lp) footer{padding:0 !important}
 .lp-rotate{transition:opacity .45s ease}
 .lp-rotate.is-out{opacity:0}
 @media (prefers-reduced-motion:reduce){.lp-rotate{transition:none}}
-.lp-lead{font-size:24px;line-height:36px;color:var(--ink);max-width:713px}
+.lp-lead{font-size:24px;line-height:36px;color:var(--ink);max-width:calc((var(--w-sm) + 24px) * 10 / 12 - 20px)}  /* 713 @1440, 613 @1288 */
 .lp-body{font-size:16px;line-height:26px;color:var(--ink)}
 .lp-label{display:inline-block;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .lp-bar{position:relative}
@@ -92,8 +105,8 @@ body:has(.lp) footer{padding:0 !important}
 
 /* ---------- hero: column 1076 wide, text indented 92px, bar 40px left of text ---------- */
 .lp-hero{padding:249px 0 60px}
-.lp-hero-in{padding-left:92px}
-.lp-hero .lp-h1{max-width:984px;margin-bottom:45px}
+.lp-hero-in{padding-left:calc((var(--w-md) + 24px) / 12)}
+.lp-hero .lp-h1{margin-bottom:45px}
 .lp-hero .lp-lead{font-size:20px;line-height:32px;max-width:640px;margin-bottom:30px}
 .lp-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:45px}
 .lp-stats{display:flex;flex-wrap:wrap;gap:16px 72px;margin:0;padding:0;list-style:none}
@@ -102,16 +115,19 @@ body:has(.lp) footer{padding:0 !important}
 
 /* ---------- services: 269 | 269 | 205 on an 856 column, rows 50px apart ---------- */
 .lp-services{margin-top:50px}
-.lp-service{display:grid;grid-template-columns:293px 358px 205px;padding-top:50px}
+.lp-services{margin-right:-24px}
+.lp-service{display:grid;grid-template-columns:4fr 5fr 3fr;padding-top:50px}
+.lp-service > *{padding-right:24px}
 .lp-service:first-child{padding-top:0}
-.lp-service .lp-h3{padding-right:48px}
-.lp-service .lp-body{max-width:269px}
+.lp-service .lp-h3{padding-right:72px}
+.lp-service .lp-body{max-width:calc((var(--w-sm) + 24px) * 4 / 12)}
 .lp-service ul{list-style:none;margin:0;padding:0}
 .lp-service li{position:relative;padding-left:16px;font-size:16px;line-height:26px;margin-bottom:8px;color:var(--ink)}
 .lp-service li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
 
 /* ---------- work: 3-up on a 1296 grid, 412x446 images, white panel inset 17px ---------- */
-.lp-work{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 20px;margin-top:50px}
+.lp-work{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 0;margin-top:50px}
+.lp-work > .lp-card{margin:0 10px}
 .lp-card{display:block;position:relative;aspect-ratio:412/446;overflow:hidden;background:#e9e4e0}
 .lp-card > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .lp-card:hover > img{transform:scale(1.05)}
@@ -154,7 +170,7 @@ body:has(.lp) footer{padding:0 !important}
 .lp-ind p{font-size:16px;line-height:26px;color:var(--ink)}
 
 /* ---------- CTA box (1096 wide, centred) + footer ---------- */
-.lp-cta-box{max-width:1096px;margin:0 auto;background:var(--ink);padding:60px 16px 70px;text-align:center}
+.lp-cta-box{max-width:calc(var(--w-md) + 20px);margin:0 auto;background:var(--ink);padding:60px 16px 70px;text-align:center}
 .lp-cta-box .eyebrow{font-size:24px;line-height:36px;color:var(--on-dark);margin-bottom:24px}
 .lp-cta-box h2{color:var(--on-dark) !important;max-width:640px;margin:0 auto 32px}
 .lp-cta-box .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -257,8 +273,6 @@ body.lp-menu-open{overflow:hidden}
 
 /* ---------- tablet ---------- */
 @media (max-width:1200px){
-  .lp-hero-in{padding-left:56px}
-  .lp-service{grid-template-columns:1fr 1.3fr .8fr;gap:24px}
   .lp-cos{grid-template-columns:repeat(2,1fr)}
   .lp-steps{grid-template-columns:repeat(2,1fr)}
 }
@@ -281,6 +295,11 @@ body.lp-menu-open{overflow:hidden}
   .lp-sec{padding:40px 0}
   .lp-dark{padding:80px 0}
   .lp-service{grid-template-columns:1fr;gap:8px;padding-top:36px}
+  .lp-services{margin-right:0}
+  .lp-service > *{padding-right:0 !important}
+  .lp-service .lp-body{max-width:none}
+  .lp-lead{max-width:none}
+  .lp-work > .lp-card{margin:0}
   .lp-work,.lp-cos,.lp-steps,.lp-hls,.lp-quotes,.lp-inds{grid-template-columns:1fr}
   .lp-step h3,.lp-ind h3{font-size:18px;line-height:28px}
   .lp-cta-box .eyebrow{font-size:18px;line-height:28px}
