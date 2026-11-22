@@ -293,7 +293,7 @@ body.lp-menu-open{overflow:hidden}
 @media (max-width:700px){
   .lp{--frame:15px;--gutter:20px}
   .lp-hero{padding:110px 0 40px}
-  .lp-hero-in{padding-left:20px}
+  .lp-hero-in{padding-left:34px}
   .lp-h1{font-size:32px;line-height:38px;letter-spacing:-1px}
   .lp-hero .lp-h1{margin-bottom:24px}
   .lp-bar::before{left:-18px;top:7px;bottom:8px;width:3px}
