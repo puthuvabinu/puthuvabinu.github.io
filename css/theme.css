@@ -45,6 +45,9 @@
 .lp-h2{font-size:clamp(32px,3.6vw,50px);line-height:1.12;font-weight:800;letter-spacing:-0.035em}
 .lp-h3{font-size:clamp(20px,1.7vw,24px);line-height:1.3;font-weight:800;letter-spacing:-0.02em}
 .lp-hl{color:var(--accent) !important}
+.lp-rotate{transition:opacity .45s ease}
+.lp-rotate.is-out{opacity:0}
+@media (prefers-reduced-motion:reduce){.lp-rotate{transition:none}}
 .lp-lead{font-size:clamp(17px,1.4vw,20px);line-height:1.6;color:var(--ink);max-width:640px;margin:22px 0 0}
 .lp-body{font-size:15px;line-height:1.75;color:var(--muted)}
 .lp-label{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}

@@ -16,6 +16,7 @@ $(document).ready(function() {
 	AppearIteam();
 	BackToTop();
 	ContactForm();
+	TextRotator();
 		
 });
 
@@ -351,6 +352,7 @@ Function Ajax Load
 				AppearIteam();
 				BackToTop();
 				ContactForm();
+				TextRotator();
 				
 				
 				
@@ -1220,3 +1222,25 @@ Function Contact Formular
 	}//End ContactForm		
 	
 	
+
+/*--------------------------------------------------
+Function Text Rotator: cycles the highlighted headline phrase
+(<span class="lp-rotate" data-words="one|two|three">), fading between them
+---------------------------------------------------*/
+
+	function TextRotator() {
+		if( window.lpRotateTimer ) { clearInterval(window.lpRotateTimer); window.lpRotateTimer = null; }
+		var el = document.querySelector('.lp-rotate');
+		if( !el || !el.getAttribute('data-words') ) return;
+		if( window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ) return;
+		var words = el.getAttribute('data-words').split('|'), i = 0;
+		window.lpRotateTimer = setInterval(function(){
+			if( !document.body.contains(el) ) { clearInterval(window.lpRotateTimer); return; }
+			el.classList.add('is-out');
+			setTimeout(function(){
+				i = (i + 1) % words.length;
+				el.textContent = words[i];
+				el.classList.remove('is-out');
+			}, 450);
+		}, 2800);
+	}// End Text Rotator
