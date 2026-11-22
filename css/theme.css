@@ -150,7 +150,7 @@ body:has(.lp) footer{padding:0 !important}
 .lp-cos{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px}
 .lp-co{background:var(--card);padding:60px 27px 27px;text-align:center}
 .lp-co .name{font-size:28px;line-height:38px;font-weight:800;letter-spacing:-1.2px}
-.lp-co .logo{height:56px;display:flex;align-items:center;justify-content:center}
+.lp-co .logo{height:56px;display:flex;align-items:flex-end;justify-content:center}
 .lp-co .logo img{max-height:100%;max-width:130px;width:auto;height:auto;display:block}
 .lp-co .logo img[alt="Assyst"]{max-width:140px}
 .lp-co .role{font-size:16px;line-height:24px;font-weight:700;color:var(--ink);margin:24px 0 0;min-height:48px}
