@@ -25,7 +25,9 @@ $(window).on( 'resize', function () {
 
 });
 
-$(window).on("load", function() {
+// Reveal the page as soon as the HTML is ready instead of waiting for every image
+// and third-party script (window "load"), which made first loads feel very slow.
+$(function() {
 	LazyLoad();
 });
 
@@ -183,8 +185,20 @@ Function Lazy Load
 		
 		if( $('#portfolio').length > 0 ){
 		
+			// Lift the loading curtain once the thumbnails are ready, or after 1.2s at most
+			var gridDone = false;
+			setTimeout( function(){
+				if( gridDone ) return; gridDone = true;
+				HeroColor();
+				$(".page-overlay").addClass("from-bottom-end");
+				setTimeout( function(){
+					$(".page-overlay").removeClass("from-bottom");
+					$(".page-overlay").removeClass("from-bottom-end");
+				} , 800 );
+			} , 1200 );
 			$('body').waitForImages({
 				finished: function() {
+					if( gridDone ) return; gridDone = true;
 					HeroColor();					
 					setTimeout( function(){
 						$(".page-overlay").addClass("from-bottom-end");
@@ -199,8 +213,23 @@ Function Lazy Load
 		
 		} else if( $('#hero-image').length > 0 ){
 		
+			// Lift the loading curtain once the hero image is ready, or after 1.2s at most
+			var heroDone = false;
+			var revealHero = function() {
+				if( heroDone ) return; heroDone = true;
+				HeroColor();
+				setTimeout( function(){
+					$(".page-overlay").addClass("from-bottom-end");
+					setTimeout( function(){
+						$(".page-overlay").removeClass("from-bottom");
+						$(".page-overlay").removeClass("from-bottom-end");
+					} , 800 );
+				} , 100 );
+			};
+			setTimeout( revealHero, 1200 );
 			$('#hero-image').waitForImages({
 				finished: function() {
+					if( heroDone ) return; heroDone = true;
 					HeroColor();
 					setTimeout( function(){
 						$(".page-overlay").addClass("from-bottom-end");
@@ -242,6 +271,8 @@ Function Ajax Load
 		  
 		  //trigger smooth transition from the actual page to the new one 
 		  $('main').on('click', '[data-type="page-transition"]', function(event){
+			// Opened straight from disk (file://): browsers block AJAX there, so let the link load normally
+			if( window.location.protocol === 'file:' ) return;
 			event.preventDefault();
 			//detect which page has been selected
 			var newPage = $(this).attr('href');
@@ -288,7 +319,9 @@ Function Ajax Load
 			var section = $('<div class="cd-main-content "></div>');
 					
 				
-			section.load(url+' .cd-main-content > *', function(event){
+			section.load(url+' .cd-main-content > *', function(response, status){
+			  // If the page can't be fetched with AJAX, fall back to a normal page load
+			  if( status === 'error' ) { window.location.href = url; return; }
 			  // load new content and replace <main> content with the new one
 			  
 			  $('main').html(section);
