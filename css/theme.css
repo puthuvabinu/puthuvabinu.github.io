@@ -31,7 +31,11 @@
 .lp header .flexnav li:last-child a::after{background:var(--accent) !important}
 
 /* ---------- white frame around the page (as on Lollypop) ---------- */
-.lp::after{content:"";position:fixed;inset:0;border:var(--frame) solid #fff;pointer-events:none;z-index:9000}
+.lp::after{content:"";position:fixed;inset:0;border:var(--frame) solid #fff;pointer-events:none;z-index:9000;opacity:1;transition:opacity .5s ease .15s}
+/* keep the frame out of the way while the black loading cover is on screen */
+.lp:has(.page-overlay.from-bottom)::after,
+body.page-is-changing .lp::after,
+body.hidden .lp::after{opacity:0;transition:none}
 
 /* ---------- layout ---------- */
 .lp-wrap{max-width:1180px;margin:0 auto;padding:0 40px}
