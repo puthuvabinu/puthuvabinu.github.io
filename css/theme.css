@@ -185,10 +185,12 @@ body:has(.lp) footer{padding:0 !important}
 .lp-burger,.lp-menu-close{position:absolute;width:50px;height:50px;border:0;background:none;cursor:pointer;padding:0;z-index:2}
 .lp-burger{position:fixed !important;right:109px;top:54px;z-index:9400 !important;border-radius:50%;transition:background .3s ease,box-shadow .3s ease}
 body.lp-scrolled .lp-burger{background:#fff;box-shadow:0 6px 20px rgba(34,20,41,.15)}
-.lp-burger span{position:absolute;right:13px;height:2px;background:var(--accent);border-radius:2px;transition:width .3s ease-in-out}
-.lp-burger span:first-child{top:19px;width:22px}
-.lp-burger span:last-child{top:28px;width:14px}
-.lp-burger:hover span:last-child{width:22px}
+/* icon measured from Lollypop: two 13x2px lines, 10px apart, centred in a 50px button */
+.lp-burger span{position:absolute;left:18.5px;width:13px;height:2px;background:var(--accent);border-radius:3px;transition:transform .3s ease-in-out}
+.lp-burger span:first-child{top:19px}
+.lp-burger span:last-child{top:29px}
+.lp-burger:hover span:first-child{transform:translateX(-3px)}
+.lp-burger:hover span:last-child{transform:translateX(3px)}
 .lp header #menu-burger{display:none !important}      /* replaced by .lp-burger */
 
 .lp-menu{position:fixed;inset:0;z-index:9500;display:flex;transform:translateY(-100%);transition:transform .6s ease-in-out,visibility 0s linear .6s;visibility:hidden}
