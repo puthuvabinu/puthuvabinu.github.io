@@ -125,6 +125,9 @@ Function Hero Section
 		
 		window.addEventListener('scroll', function windowScroll() {
 			windowScrolled = window.pageYOffset || document.documentElement.scrollTop;
+			// look the caption up each time: after an AJAX page change the old one may be gone
+			HeroCaption = document.getElementById('hero-caption');
+			if (!HeroCaption) return;
 			if ($('#hero-styles').hasClass("scale-onscroll")) {
 				HeroCaption.style.transform = 'scale('+(100 - windowScrolled/100)/100+')';
 			}
@@ -1003,6 +1006,7 @@ Function Page Progress
 	function PageProgress() {
   
 		var progressPath = document.querySelector('.progress-page path');
+		if (!progressPath) return;
 		var pathLength = progressPath.getTotalLength();
 		progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
 		progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
@@ -1244,3 +1248,43 @@ Function Text Rotator: cycles the highlighted headline phrase
 			}, 450);
 		}, 2800);
 	}// End Text Rotator
+
+
+/*--------------------------------------------------
+Lollypop-style full-screen menu (.lp-burger / .lp-menu)
+Delegated on document so it keeps working after AJAX page changes.
+---------------------------------------------------*/
+
+	(function(){
+		function menuEl(){ return document.getElementById('lp-menu'); }
+		function setMenu(open){
+			var m = menuEl(); if( !m ) return;
+			m.classList.toggle('is-open', open);
+			m.setAttribute('aria-hidden', open ? 'false' : 'true');
+			document.body.classList.toggle('lp-menu-open', open);
+			var b = document.querySelector('.lp-burger');
+			if( b ) b.setAttribute('aria-expanded', open ? 'true' : 'false');
+			if( open ){ var c = m.querySelector('.lp-menu-close'); if( c ) setTimeout(function(){ c.focus(); }, 650); }
+			else if( b ) b.focus();
+		}
+		document.addEventListener('click', function(e){
+			if( e.target.closest('.lp-burger') ){ e.preventDefault(); setMenu(true); return; }
+			if( e.target.closest('.lp-menu-close') ){ e.preventDefault(); setMenu(false); return; }
+			var a = e.target.closest('.lp-menu a');
+			if( a ){
+				var href = a.getAttribute('href') || '';
+				if( href.charAt(0) === '#' ){
+					e.preventDefault(); setMenu(false);
+					var t = document.querySelector(href);
+					if( t ) setTimeout(function(){ window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 40, behavior: 'smooth' }); }, 350);
+				} else {
+					var m = menuEl(); if( m ){ m.classList.remove('is-open'); document.body.classList.remove('lp-menu-open'); }
+				}
+			}
+		});
+		function onScroll(){ document.body.classList.toggle('lp-scrolled', window.pageYOffset > 120); }
+		window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+		document.addEventListener('keydown', function(e){
+			if( e.key === 'Escape' && menuEl() && menuEl().classList.contains('is-open') ) setMenu(false);
+		});
+	})();

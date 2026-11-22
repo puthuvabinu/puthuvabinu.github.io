@@ -97,6 +97,54 @@
 
             </div>
         </header>
+
+        <!-- Menu button: sits with the header, then floats as a round button once you scroll (like Lollypop) -->
+        <button class="lp-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="lp-menu"><span></span><span></span></button>
+
+        <!-- Full-screen menu (slides down from the top, like Lollypop) -->
+        <div class="lp-menu" id="lp-menu" aria-hidden="true">
+            <button class="lp-menu-close" type="button" aria-label="Close menu"><span></span><span></span></button>
+            <div class="lp-menu-red">
+                <div class="lp-menu-in">
+                    <div class="lp-menu-grid">
+                        <ul class="lp-menu-big">
+                            <li><a class="ajax-link" href="index.html" data-type="page-transition">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a></li>
+                            <li><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a></li>
+                            <li><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a></li>
+                            <li><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a></li>
+                            <li><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a></li>
+                            <li><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#experience">Where I’ve Worked</a></li>
+                            <li><a href="#how">How I Work</a></li>
+                            <li><a href="#highlights">Highlights</a></li>
+                            <li><a href="#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <a class="lp-menu-promo ajax-link" href="contact.html" data-type="page-transition"><span>UX &amp; product designer, 17+ years</span> <b>Open to new opportunities →</b></a>
+                    <ul class="lp-menu-social">
+                        <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lp-menu-dark">
+                <div class="lp-menu-in">
+                    <p class="lp-menu-eyebrow">Got a complex product?</p>
+                    <h2 class="lp-menu-h">Let’s make it feel simple together!</h2>
+                    <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition">Get In Touch</a>
+                    <ul class="lp-menu-places"><li>Wellington</li><li>New Zealand</li></ul>
+                </div>
+            </div>
+        </div>
         <!--/Header -->
 
 
@@ -145,7 +193,7 @@
                 </section>
 
                 <!-- What I do -->
-                <section class="lp-sec">
+                <section class="lp-sec" id="services">
                     <div class="lp-wrap">
                         <h2 class="lp-h2 has-animation" data-delay="40">Turning complex workflows into products people trust</h2>
                         <p class="lp-lead has-animation" data-delay="100">I work end to end, from discovery with product teams and customers to polished, accessible designs that developers can build with confidence.</p>
@@ -207,7 +255,7 @@
                 </section>
 
                 <!-- Where I've worked -->
-                <section class="lp-sec">
+                <section class="lp-sec" id="experience">
                     <div class="lp-wrap">
                         <h2 class="lp-h2 has-animation" data-delay="40">Where I’ve worked</h2>
                         <p class="lp-lead has-animation" data-delay="100">From a Big Four firm to a fast-paced agency and a global SaaS company, across very different industries.</p>
@@ -223,7 +271,7 @@
                 </section>
 
                 <!-- Dark: how I work + highlights -->
-                <section class="lp-dark" style="margin-top:60px">
+                <section class="lp-dark" id="how" style="margin-top:60px">
                     <div class="lp-wrap md">
                         <span class="lp-label">How I work</span>
                         <h2 class="lp-h2 has-animation" data-delay="40" style="margin-top:12px;max-width:713px">Curious by nature, methodical by habit</h2>
@@ -234,7 +282,7 @@
                             <div class="lp-step has-animation" data-delay="220"><h3>Deliver</h3><p>Design-system components and close work with developers so the experience ships as designed.</p></div>
                         </div>
                     </div>
-                    <div class="lp-wrap" style="margin-top:120px">
+                    <div class="lp-wrap" id="highlights" style="margin-top:120px">
                         <h2 class="lp-h2 has-animation" data-delay="40">Highlights</h2>
                         <p class="lp-lead has-animation" data-delay="100" style="color:var(--on-dark)">Moments I’m proud of, from government contracts to field research.</p>
                         <div class="lp-hls">
@@ -264,7 +312,7 @@
                 </section>
 
                 <!-- Industries -->
-                <section class="lp-sec">
+                <section class="lp-sec" id="industries">
                     <div class="lp-wrap">
                         <h2 class="lp-h2 has-animation" data-delay="40">Experience across six industries, from government to the dhow harbours of Dubai</h2>
                         <p class="lp-lead has-animation" data-delay="100">Working across very different domains means I learn new contexts fast and bring patterns from one to another.</p>
