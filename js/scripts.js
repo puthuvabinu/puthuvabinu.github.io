@@ -185,8 +185,20 @@ Function Lazy Load
 		
 		if( $('#portfolio').length > 0 ){
 		
+			// Lift the loading curtain once the thumbnails are ready, or after 1.2s at most
+			var gridDone = false;
+			setTimeout( function(){
+				if( gridDone ) return; gridDone = true;
+				HeroColor();
+				$(".page-overlay").addClass("from-bottom-end");
+				setTimeout( function(){
+					$(".page-overlay").removeClass("from-bottom");
+					$(".page-overlay").removeClass("from-bottom-end");
+				} , 800 );
+			} , 1200 );
 			$('body').waitForImages({
 				finished: function() {
+					if( gridDone ) return; gridDone = true;
 					HeroColor();					
 					setTimeout( function(){
 						$(".page-overlay").addClass("from-bottom-end");
