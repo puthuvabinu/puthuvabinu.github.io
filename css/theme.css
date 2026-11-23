@@ -44,9 +44,9 @@ body:has(.lp) footer{padding:0 !important}
 .lp header .flexnav li a{font-family:var(--font) !important;font-weight:400;font-size:14px;line-height:24px;color:var(--ink) !important;letter-spacing:0}
 /* sizes measured from Lollypop: 38px logo, 20px between links, 40px before "Let's Talk",
    no underlines except a short 32px red line under "Let's Talk" */
-.lp #logo img{height:84px;width:auto;margin-top:-17px}
+.lp #logo img{height:72px;width:auto;margin-top:-11px}
 .lp #logo img.white-logo{top:0}
-@media (max-width:767.98px){ .lp #logo img{height:64px;margin-top:0} }
+@media (max-width:767.98px){ .lp #logo img{height:56px;margin-top:0} }
 .lp header .flexnav li{margin-left:20px}
 .lp header .flexnav li:last-child{margin-left:40px}
 .lp header .flexnav li::after{display:none}
@@ -207,7 +207,7 @@ body:has(.lp) footer{padding:0 !important}
 .lp-foot2-follow li a{font-size:30px;line-height:40px;font-weight:800;letter-spacing:-1px}
 .lp-foot2-bottom{display:flex;justify-content:space-between;gap:48px;padding:0 12px;flex-wrap:wrap}
 .lp-foot2-brand{max-width:389px}
-.lp-foot2-brand img{height:120px;width:auto;display:block}
+.lp-foot2-brand img{height:96px;width:auto;display:block}
 .lp-foot2-brand .tag{font-size:14px;line-height:24px;margin:8px 0 24px}
 .lp-foot2-brand .copy{font-size:14px;line-height:24px;margin:0 0 4px}
 .lp-foot2-brand .small{display:flex;gap:28px;list-style:none;margin:0;padding:0}
