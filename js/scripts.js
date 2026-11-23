@@ -1312,13 +1312,16 @@ Delegated / re-queried so it keeps working after AJAX page changes.
 		function offset(n){ return (n ? n.getBoundingClientRect().height : 0) + 20 + 32; }
 		function update(){
 			ticking = false;
-			var n = nav(); if( !n ) return;
+			var n = nav(); if( !n ){ document.body.classList.remove('lp-tabs-pinned'); return; }
+			// while the menu is pinned, keep the site header tucked away so it doesn't cover the menu
+			var spy = n.parentElement, sr = spy.getBoundingClientRect(), nr = n.getBoundingClientRect();
+			document.body.classList.toggle('lp-tabs-pinned', nr.top <= 22 && sr.bottom > nr.height + 40);
 			var links = n.querySelectorAll('a[href^="#"]'), line = offset(n) + 10, current = null;
 			for( var i = 0; i < links.length; i++ ){
 				var t = document.querySelector(links[i].getAttribute('href'));
 				if( t && t.getBoundingClientRect().top <= line ) current = links[i];
 			}
-			if( !current && links.length ) current = links[0];
+			// before Discover nothing is highlighted (the brief, challenge and role come first)
 			for( var j = 0; j < links.length; j++ ){
 				var on = links[j] === current;
 				if( on !== links[j].classList.contains('is-active') ){
