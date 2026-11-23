@@ -208,7 +208,7 @@ body:has(.lp) footer{padding:0 !important}
 .lp-foot2-follow li a{font-size:30px;line-height:40px;font-weight:800;letter-spacing:-1px}
 .lp-foot2-bottom{display:flex;justify-content:space-between;gap:48px;padding:0 12px;flex-wrap:wrap}
 .lp-foot2-brand{max-width:389px}
-.lp-foot2-brand img{height:96px;width:auto;display:block}
+.lp-foot2-brand img{height:72px;width:auto;display:block}
 .lp-foot2-brand .tag{font-size:14px;line-height:24px;margin:8px 0 24px}
 .lp-foot2-brand .copy{font-size:14px;line-height:24px;margin:0 0 4px}
 .lp-foot2-brand .small{display:flex;gap:28px;list-style:none;margin:0;padding:0}
