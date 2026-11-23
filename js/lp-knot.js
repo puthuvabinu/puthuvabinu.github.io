@@ -1,72 +1,35 @@
 /* Logo knot animation (js/lp-knot.js), loaded after scripts.js on every main page.
-   The red scribble (complex ideas) pulls tight into the site's short red bar (structure).
-   Plays once per visit when the site first opens, and on logo hover / keyboard focus.
-   At rest the logo is the original PNG; while animating, an exact vector trace of the same
-   scribble is laid over a copy of the logo without its scribble, so the hand-off is invisible. */
+   The red scribble (complex ideas) spins and collapses into a point, and the site's short
+   red bar (structure) draws out under "Binu". Uses the real logo artwork split in two
+   (images/logo-bj-text.png + images/logo-bj-scribble.png), so it is always crisp and exact.
+   Plays once per visit when the site first opens, and on logo hover / keyboard focus. */
 
 	(function(){
 		if( window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ) return;
-		var RAW = '212.8,136.6,212.6,140.0,212.3,143.0,211.8,145.7,211.3,148.4,210.6,151.2,209.8,154.2,208.9,157.4,207.8,160.4,206.4,163.0,204.7,165.1,202.6,166.4,200.3,166.8,197.8,166.2,195.5,164.8,193.4,162.6,191.6,159.9,190.2,157.1,189.0,154.3,188.0,151.5,187.2,148.8,186.4,146.0,185.6,143.3,184.7,140.6,183.8,137.8,182.9,135.0,182.1,132.2,181.4,129.3,180.9,126.3,180.6,123.3,180.1,120.4,179.5,117.6,178.4,115.1,176.8,113.0,174.7,111.2,172.6,109.4,170.9,107.5,169.9,105.3,169.6,102.8,170.0,100.1,171.0,97.4,172.3,94.7,173.7,92.0,175.1,89.3,176.2,86.6,176.9,83.9,177.1,81.2,177.0,78.6,176.6,75.9,176.1,73.2,175.5,70.5,174.9,67.7,174.5,64.9,174.1,62.1,173.8,59.3,173.5,56.4,173.0,53.5,172.4,50.5,171.7,47.6,171.0,44.6,170.2,41.6,169.5,38.6,169.0,35.6,168.6,32.7,168.5,29.8,168.8,26.9,169.4,24.1,170.5,21.4,172.1,18.8,174.0,16.6,176.1,14.8,178.4,13.6,180.8,13.1,183.1,13.5,185.5,14.7,187.7,16.5,189.9,18.7,191.9,21.3,193.8,23.9,195.6,26.5,197.3,29.0,198.8,31.4,200.2,33.8,201.5,36.2,202.8,38.6,203.9,41.0,205.1,43.5,206.2,46.1,207.3,48.7,208.4,51.5,209.5,54.4,210.7,57.5;210.0,53.1,207.2,53.0,204.0,53.2,200.9,53.8,198.1,55.0,195.9,56.7,194.4,59.0,193.5,61.7,193.0,64.5,193.0,67.5,193.4,70.4,194.0,73.3,194.9,76.2,196.0,79.0,197.3,81.7,198.7,84.5,200.1,87.1,201.6,89.7,202.9,92.3,204.0,94.8,204.6,97.3,204.4,99.8,203.6,102.3,202.2,104.8,200.5,107.5,198.8,110.2,197.2,113.1,195.5,115.8,193.8,118.1,192.1,119.9,190.2,121.0,188.0,121.1,185.7,120.3,182.9,118.7,179.8,116.2;183.1,105.0,181.7,103.7,182.0,101.8,182.3,100.2,181.3,99.5,178.7,99.8,175.6,99.9,173.1,99.1,171.3,96.9,170.1,94.1,169.1,91.0,168.2,88.0,167.5,84.9,167.2,81.7,167.1,78.4,167.1,75.1,167.0,71.9,166.8,68.8,166.4,66.0,165.7,63.4;181.7,62.2,181.9,61.9,182.1,61.7,182.2,61.4,182.3,61.0,182.5,60.7;182.8,69.7,186.1,68.7,189.0,67.0,191.0,64.8,192.6,62.4,194.5,60.5,196.9,59.6,199.7,59.1,202.7,58.4,205.3,56.8,207.4,53.6;211.2,44.7,208.2,44.3,205.2,43.9,202.1,43.8,199.1,43.7,196.1,43.8,193.1,44.1,190.1,44.5,187.2,45.1,184.3,45.9,181.5,46.8,178.7,47.9,176.1,49.3,173.7,50.9,171.5,52.7,169.6,54.9,168.1,57.3,167.1,60.1,166.6,62.9,167.1,65.0,168.6,66.1,170.9,66.2,173.6,65.6,176.2,64.4,179.0,63.0,181.7,61.5,184.5,60.1,187.2,59.1,190.0,58.7,192.6,58.9,195.2,59.8,197.5,61.1,199.6,63.0,201.3,65.3,202.7,67.9,203.9,70.7,205.0,73.5,206.0,76.2,207.1,78.5,208.4,80.5,209.9,82.1,211.7,83.5,213.7,84.8,216.0,86.2,218.6,87.8;209.5,91.0,208.4,91.5,207.7,92.4,207.3,93.5,206.7,94.6,205.7,95.5;217.7,102.3,218.5,99.6,219.0,96.8,219.2,94.0,219.2,91.1,219.3,88.1,219.5,85.1,220.0,82.1,220.8,79.1,221.4,76.0,221.6,73.0,220.9,70.1,219.6,67.6,217.7,65.9,215.5,65.6,213.2,66.6,210.8,68.6,208.6,71.0,206.5,73.4,204.7,75.7,203.0,77.8,201.4,79.9,199.8,82.0,198.1,84.2,196.3,86.5,194.4,89.0,192.3,91.4,190.0,93.7,187.5,95.6,184.9,97.1,182.5,98.5,180.7,100.4,179.6,102.7,179.2,105.4,178.9,108.0,178.3,110.0,177.3,111.5,175.7,113.0,173.8,114.6,171.6,116.3,169.4,118.0,167.1,119.9,165.0,121.8,163.1,123.9,161.1,125.9,159.2,128.0,157.3,130.2,155.3,132.3,153.2,134.3,151.0,136.3,148.5,138.2,145.9,140.0,143.0,141.6,140.3,142.5,137.9,142.5,136.0,141.3,134.8,139.0,134.1,136.0,133.9,132.7,134.2,129.4,134.8,126.2,135.5,123.2,136.2,120.4,136.8,118.0,137.1,116.0,137.0,114.5;140.0,103.7,141.7,101.0,143.6,98.4,145.6,95.7,147.5,93.0,149.3,90.2,151.0,87.3,152.3,84.4,153.3,81.3;153.9,96.2,149.9,94.6,146.7,92.7,144.1,90.6,142.1,88.2,140.7,85.7,139.9,83.1,139.6,80.4,139.9,77.7,140.5,75.0,141.6,72.3,143.0,69.7,144.7,67.2,146.6,64.7,148.8,62.3,151.0,59.9,153.3,57.7,155.6,55.6,158.0,53.5,160.4,51.6,162.7,49.7,165.1,47.9,167.5,46.2,169.9,44.5,172.3,42.9,174.7,41.3,177.1,39.8,179.5,38.2,181.9,36.7,184.3,35.1,186.7,33.6,189.0,32.1,191.4,30.5,193.7,28.9,196.1,27.2;197.2,27.1,199.7,26.0,202.2,24.3,204.9,22.1,207.6,19.8,210.4,17.4,213.3,15.4,216.1,13.9,218.6,13.3,220.7,13.9,222.1,15.8,223.1,18.7,223.6,22.2,223.7,26.0,223.5,29.8,223.1,33.1,222.5,35.7;218.9,49.5,221.1,47.0,222.6,46.5,223.7,46.7,224.1,46.3,224.1,44.4,223.5,41.7,222.5,38.9,221.1,36.3,219.5,33.9,217.8,31.5,216.1,29.2,214.6,26.8,213.2,24.4,211.9,21.9,210.5,19.4,209.0,16.9,207.3,14.3,205.3,11.7,203.0,9.3,200.5,7.2,198.0,5.5,195.5,4.6,193.1,4.6,190.9,5.6,188.9,7.4,187.1,9.8,185.7,12.6,184.5,15.6,183.6,18.6,183.0,21.6,182.7,24.6,182.5,27.5,182.4,30.4,182.4,33.4,182.3,36.4,182.2,39.5,182.2,42.6,182.1,45.7,182.0,48.9,182.0,52.0,182.0,55.1,182.0,58.2,182.1,61.2,182.2,64.2,182.2,67.1,182.1,70.0,181.8,72.9,181.3,75.7,180.5,78.4,179.7,81.1,179.3,84.0,179.4,86.9,179.7,89.8,180.4,92.7,181.2,95.4,182.2,98.1,183.4,100.7,184.6,103.3,185.8,105.8,187.1,108.3,188.3,110.8,189.4,113.4,190.5,115.9,191.3,118.5,191.5,120.9,190.1,122.9,188.0,124.6,186.1,126.6,184.4,128.7,182.7,130.8,180.5,132.6,177.7,134.1,174.7,135.1,171.6,135.6,168.9,135.4,166.6,134.6,165.1,133.0,164.3,130.7,164.0,128.1,164.2,125.1,164.7,121.9,165.4,118.7,166.3,115.7,167.1,112.9,167.9,110.5,168.5,108.8;168.8,104.7,168.1,104.3,167.4,103.9,166.8,103.4,166.4,102.8,166.3,102.0;192.9,122.5,194.7,124.1,196.6,126.3,198.5,128.8,200.6,131.3,203.0,133.5,205.7,135.0,208.3,135.8,210.7,135.7,212.6,134.5,214.1,132.3,215.1,129.3,215.6,125.9,215.8,122.4,215.6,119.1,215.1,116.1,214.4,113.9;215.7,122.9,218.5,122.5,220.5,121.1,222.1,119.2,223.5,117.0,225.0,115.0;226.2,101.3,227.6,98.4,228.7,95.1,229.6,91.6,230.0,88.0,229.9,84.5,229.2,81.2,227.6,78.2,225.1,75.7,221.6,73.8;216.4,65.5,216.3,69.1,215.5,72.3,214.3,75.1,212.9,77.8,211.5,80.5,210.4,83.3,209.9,86.5,210.0,89.9,210.7,93.2,212.0,95.9,213.9,97.7,216.2,98.5,218.7,98.8,221.3,98.8,222.4,101.4;214.5,127.6,211.4,128.0,208.3,128.1,205.2,128.0,202.2,127.7,199.1,127.3;185.2,15.0,185.0,14.8,185.0,14.6,185.0,14.3,185.0,14.0,185.0,13.8';
-		var S = RAW.split(';').map(function(s){ var a = s.split(',').map(Number), o = []; for( var i = 0; i < a.length; i += 2 ) o.push([a[i], a[i+1]]); return o; });
-		// global arc-length position of every point, so all strokes line up end to end on the bar
-		var total = 0, F = [];
-		S.forEach(function(s){ var f = []; for( var i = 0; i < s.length; i++ ){ if( i ) total += Math.hypot(s[i][0]-s[i-1][0], s[i][1]-s[i-1][1]); f.push(total); } F.push(f); });
-		F = F.map(function(f){ return f.map(function(v){ return v/total; }); });
-		var BAR = [4,131,102,131], SW = 3.0, BW = 8, STAG = 0.65;
-		function clamp(x){ return x < 0 ? 0 : x > 1 ? 1 : x; }
-		function inout(x){ x = clamp(x); return x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x + 2, 3)/2; }
-		function pathFor(p, draw){
-			var d = '', k = p*(1 + STAG);
-			for( var s = 0; s < S.length; s++ ){
-				var pts = S[s], f = F[s], first = true;
-				for( var i = 0; i < pts.length; i++ ){
-					if( f[i] > draw ) break;
-					var l = inout(k - STAG*f[i]);
-					var x = pts[i][0] + (BAR[0] + (BAR[2] - BAR[0])*f[i] - pts[i][0])*l;
-					var y = pts[i][1] + (BAR[1] - pts[i][1])*l;
-					d += (first ? 'M' : 'L') + x.toFixed(1) + ' ' + y.toFixed(1); first = false;
-				}
-			}
-			return d || 'M0 0';
-		}
 		function setup(a){
 			if( a.__knot ) return a.__knot;
 			var img = a.querySelector('img.black-logo'); if( !img ) return null;
 			var wrap = document.createElement('span');
 			wrap.className = 'lp-knot'; wrap.setAttribute('aria-hidden', 'true');
-			wrap.innerHTML = '<img src="images/logo-bj-text.png" alt=""><svg viewBox="0 0 393 172" preserveAspectRatio="none"><path fill="none" stroke="#FD2E35" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+			wrap.innerHTML = '<img class="txt" src="images/logo-bj-text.png" alt=""><img class="scr" src="images/logo-bj-scribble.png" alt=""><i class="bar"></i>';
 			a.appendChild(wrap);
-			var st = { p: 0, draw: 1, raf: 0, a: a, img: img, wrap: wrap, path: wrap.querySelector('path') };
-			render(st); a.__knot = st; return st;
+			var st = { a: a, img: img, wrap: wrap, timer: 0 };
+			a.__knot = st; return st;
 		}
 		function place(st){
 			var i = st.img, w = st.wrap;
 			w.style.left = i.offsetLeft + 'px'; w.style.top = i.offsetTop + 'px';
 			w.style.width = i.offsetWidth + 'px'; w.style.height = i.offsetHeight + 'px';
 		}
-		function show(st, on){ place(st); st.a.classList.toggle('lp-knot-on', on); }
-		function render(st){
-			st.path.setAttribute('d', pathFor(st.p, st.draw));
-			st.path.setAttribute('stroke-width', (SW + (BW - SW)*st.p).toFixed(2));
+		function pull(st){
+			clearTimeout(st.timer); place(st);
+			st.a.classList.add('lp-knot-on');
+			requestAnimationFrame(function(){ requestAnimationFrame(function(){ st.wrap.classList.add('is-pulled'); }); });
 		}
-		function tween(st, key, to, ms, done){
-			cancelAnimationFrame(st.raf);
-			var from = st[key], t0 = performance.now();
-			(function step(now){
-				var k = Math.min(1, (now - t0)/ms);
-				st[key] = from + (to - from)*k; render(st);
-				if( k < 1 ) st.raf = requestAnimationFrame(step); else if( done ) done();
-			})(t0);
-		}
-		function pull(st){ st.draw = 1; show(st, true); tween(st, 'p', 1, 900*(1 - st.p) + 150); }
-		function release(st){ tween(st, 'p', 0, 750*st.p + 100, function(){ show(st, false); }); }
-		function intro(st){
-			st.draw = 0; st.p = 0; render(st); show(st, true);
-			tween(st, 'draw', 1, 1100, function(){
-				setTimeout(function(){ tween(st, 'p', 1, 1100, function(){
-					setTimeout(function(){ if( !st.hover ) release(st); }, 900);
-				}); }, 250);
-			});
+		function release(st){
+			st.wrap.classList.remove('is-pulled');
+			clearTimeout(st.timer);
+			st.timer = setTimeout(function(){ if( !st.wrap.classList.contains('is-pulled') ) st.a.classList.remove('lp-knot-on'); }, 900);
 		}
 		var played = false;
 		try { played = sessionStorage.getItem('lpKnotPlayed') === '1'; } catch(e) {}
@@ -80,7 +43,7 @@
 			a.addEventListener('blur', function(){ release(st); });
 			if( !played ){
 				played = true; try { sessionStorage.setItem('lpKnotPlayed', '1'); } catch(e) {}
-				setTimeout(function(){ intro(st); }, 1500);
+				setTimeout(function(){ pull(st); setTimeout(function(){ if( !st.hover ) release(st); }, 1900); }, 1600);
 			}
 		}
 		scan(); setInterval(scan, 700);
