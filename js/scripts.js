@@ -1238,6 +1238,21 @@ Function Text Rotator: cycles the highlighted headline phrase
 		if( !el || !el.getAttribute('data-words') ) return;
 		if( window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ) return;
 		var words = el.getAttribute('data-words').split('|'), i = 0;
+		// Reserve the height of the longest phrase so the headline doesn't jump when a word wraps
+		var head = el.closest('h1,h2') || el.parentNode;
+		function reserve(){
+			if( !document.body.contains(el) ) { window.removeEventListener('resize', reserve); return; }
+			var cur = el.textContent, max = 0;
+			head.style.minHeight = '';
+			words.forEach(function(w){ el.textContent = w; max = Math.max(max, head.offsetHeight); });
+			el.textContent = cur;
+			head.style.minHeight = max + 'px';
+		}
+		reserve();
+		window.removeEventListener('resize', window.lpRotateReserve || function(){});
+		window.lpRotateReserve = reserve;
+		window.addEventListener('resize', reserve);
+		if( document.fonts && document.fonts.ready ) document.fonts.ready.then(reserve);
 		window.lpRotateTimer = setInterval(function(){
 			if( !document.body.contains(el) ) { clearInterval(window.lpRotateTimer); return; }
 			el.classList.add('is-out');
