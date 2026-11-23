@@ -173,7 +173,8 @@ body:has(.lp) footer{padding:0 !important}
 
 /* ---------- testimonials ---------- */
 .lp-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
-.lp-quote{background:var(--card);padding:35px 30px}
+.lp-quote{background:var(--card);padding:35px 30px;display:flex;flex-direction:column}
+.lp-quote blockquote{flex:1}
 .lp-quote blockquote{margin:0;padding:0;border:0;font-style:normal;font-family:var(--font);font-size:16px;line-height:26px;color:var(--ink)}
 .lp-quote .who{margin-top:22px;font-size:16px;line-height:26px;font-weight:800}
 .lp-quote .role{font-size:14px;line-height:24px;color:var(--muted)}
