@@ -48,13 +48,13 @@ body:has(.lp) footer{padding:0 !important}
 .lp #logo img.white-logo{top:0}
 @media (max-width:767.98px){ .lp #logo img{height:56px;margin-top:0} }
 .lp header .flexnav li{margin-left:20px}
-.lp header .flexnav li:last-child{margin-left:40px}
 .lp header .flexnav li::after{display:none}
 .lp header .flexnav li a::after{display:none}
 .lp header .flexnav li a:hover{color:var(--accent) !important}
-.lp header .flexnav li:last-child a{color:var(--accent) !important}
-.lp header .flexnav li:last-child a::after{display:block;width:32px;height:1px;background:var(--accent) !important;transform:none;bottom:15px;left:0;transition:width .3s ease}
-.lp header .flexnav li:last-child a:hover::after{width:100%}
+/* the link for the page you are on: red with a short red line under it (like Lollypop's "Let's Talk") */
+.lp header .flexnav li a.is-current{color:var(--accent) !important}
+.lp header .flexnav li a.is-current::after{display:block;width:32px;height:1px;background:var(--accent) !important;transform:none;bottom:15px;left:0;transition:width .3s ease}
+.lp header .flexnav li a.is-current:hover::after{width:100%}
 
 /* container steps (same breakpoints as Lollypop / Bootstrap) */
 @media (max-width:1399.98px){ .lp{--C:1140px} }
