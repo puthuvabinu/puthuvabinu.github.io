@@ -535,8 +535,8 @@ body.lp-tabs-pinned header{top:-120px !important}
 
 /* Logo knot animation (js/lp-knot.js): an SVG copy of the scribble laid over the logo while it pulls into the red bar */
 .lp #logo a{position:relative;display:inline-block}
-.lp-knot{position:absolute;left:0;top:0;pointer-events:none;opacity:0;transition:opacity .12s ease}
+.lp-knot{position:absolute;left:0;top:0;pointer-events:none;opacity:0}   /* no fade: the overlay matches the logo exactly, so it swaps in invisibly */
 .lp-knot img{display:block;width:100%;height:100%;margin:0 !important;position:static !important}
 .lp-knot svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible}
 .lp #logo a.lp-knot-on .lp-knot{opacity:1}
-.lp #logo a.lp-knot-on img.black-logo{opacity:0;transition:opacity .12s ease}
+.lp #logo a.lp-knot-on img.black-logo{opacity:0}
