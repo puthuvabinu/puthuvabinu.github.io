@@ -5,17 +5,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <title>User Experience Design Portfolio of Binu Jose HFI (CUA™)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Binu Jose is a User Experience Designer based in New Zealand." />
-  <meta name="keywords" content="user experience, ux, interaction design, user experience designer" />
-  <meta name="author" content="Binu Jose" />
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Binu Jose is a User Experience Designer based in New Zealand." />
+    <meta name="keywords" content="user experience, ux, interaction design, user experience designer" />
+    <meta name="author" content="Binu Jose"/>
+    <meta charset="UTF-8" />
 
-  <link rel="icon" type="image/ico" href="favicon.ico" />
-  <link href="style.css" rel="stylesheet" />
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300&display=swap' rel='stylesheet' type='text/css' media="print" onload="this.media='all'">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap' rel='stylesheet' type='text/css' media="print" onload="this.media='all'">
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300&display=swap' rel='stylesheet' type='text/css' media="print" onload="this.media='all'">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap' rel='stylesheet' type='text/css' media="print" onload="this.media='all'">
 
     <link href="css/theme.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -34,17 +34,17 @@
 	<div class="cd-index cd-main-content">
 
 	<!-- Page Content -->
-	<div id="page-content" class="" data-bgcolor="#fff" data-textcolor="#000">
+	<div id="page-content" class="lp" data-bgcolor="#F7F4F2" data-textcolor="#221429" >
 
         <div class="page-overlay from-bottom">
             <div class="animate-box-bottom"></div>
         </div>
 
         <!-- Header -->
-        <header class="scroll-hide">
-        	<div id="header-container">
+        <header class="scroll-hide initial">
+            <div id="header-container">
 
-        	<!-- Logo -->
+            <!-- Logo -->
             <div id="logo">
                 <a class="ajax-link" data-type="page-transition" href="index.html">
                     <img class="black-logo" src="images/logo-bj.png" alt="Logo Black">
@@ -56,36 +56,34 @@
             <!-- Navigation -->
             <nav>
 
-              <ul data-breakpoint="1024" class="flexnav">
-                <li><a class="ajax-link active" href="index.html" data-type="page-transition">Portfolio</a>
-                  <!--
-                  <ul>
-                    <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
-                    <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
-                    <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
-                    <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
-                    <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
-                  </ul>
-                -->
-                </li>
+                <ul data-breakpoint="1024" class="flexnav">
+                    <li><a class="active" href="" data-type="page-transition">Portfolio</a>
+                      <!--
+                      <ul>
+                        <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
+                        <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
+                        <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
+                        <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
+                        <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
+                      </ul>
+                    -->
+                    </li>
 
-                <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
-                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
+                    <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
 
-                <!--
-                <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
-
-
-                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
-              -->
+                    <!--
+                    <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
 
 
-              </ul>
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
+                  -->
+
+
+                </ul>
 
             </nav>
             <!--/Navigation -->
-
-            <div id="black-fade"></div>
 
             <!-- Menu Burger -->
             <div id="menu-burger">
@@ -96,110 +94,143 @@
             </div>
             <!--/Menu Burger -->
 
-        	</div>
+            </div>
         </header>
+
+        <!-- Menu button: sits with the header, then floats as a round button once you scroll (like Lollypop) -->
+        <button class="lp-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="lp-menu"><span></span><span></span></button>
+
+        <!-- Full-screen menu (slides down from the top, like Lollypop) -->
+        <div class="lp-menu" id="lp-menu" aria-hidden="true">
+            <button class="lp-menu-close" type="button" aria-label="Close menu"><span></span><span></span></button>
+            <div class="lp-menu-red">
+                <div class="lp-menu-in">
+                    <div class="lp-menu-grid">
+                        <ul class="lp-menu-big">
+                            <li><a class="ajax-link" href="index.html" data-type="page-transition">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a></li>
+                            <li><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a></li>
+                            <li><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a></li>
+                            <li><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a></li>
+                            <li><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a></li>
+                            <li><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#experience">Where I’ve Worked</a></li>
+                            <li><a href="#how">How I Work</a></li>
+                            <li><a href="#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <a class="lp-menu-promo ajax-link" href="contact.html" data-type="page-transition"><span>UX &amp; product designer, 22+ years</span> <b>Open to new opportunities →</b></a>
+                    <ul class="lp-menu-social">
+                        <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lp-menu-dark">
+                <div class="lp-menu-in">
+                    <p class="lp-menu-eyebrow">Got a complex product?</p>
+                    <h2 class="lp-menu-h">Let’s make it clear, together.</h2>
+                    <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition">Get In Touch</a>
+                    <ul class="lp-menu-places"><li>Wellington</li><li>New Zealand</li></ul>
+                </div>
+            </div>
+        </div>
         <!--/Header -->
-
-
 
         <!-- Main -->
         <div id="main">
+            <!-- Loaded here too so the page is styled when it arrives through an AJAX page transition -->
+            <link href="css/theme.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+            <div id="main-content" class="lp-cs">
 
-            <!-- Hero Section -->
-            <div id="hero">
-                <div id="hero-styles" class="parallax-onscroll opacity-onscroll">
-                    <div id="hero-caption">
-                        <div class="inner text-align-center">
-                            <div class="hero-title">Nau by DP World</div>
-                            <div class="hero-subtitle">New platform to boost Dubai's lead in maritime transport</div>
+                <!-- Banner -->
+                <section class="lp-cs-banner">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-head has-animation" data-delay="60">
+                            <span class="lp-cs-eyebrow">QBurst · DP World</span>
+                            <h1 class="lp-cs-h1">A marketplace for dhow captains and traders</h1>
+                            <div class="lp-cs-tags"><span>Nau</span><span>Dubai Future Foundation</span><span>Mobile</span><span>UX</span></div>
+                            <span class="lp-cs-nda">Project under non-disclosure agreement</span>
+                        </div>
+                        <div class="lp-cs-hero has-animation" data-delay="120">
+                            <img decoding="async" src="images/projects/02hero.jpg" alt="Dhows in a Dubai creek">
+                        </div>
+                        <p class="lp-cs-note">Statement of originality and confidentiality: to comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study. This material belongs to the organisation named on it and is shared only to demonstrate my work experience and skills for the purpose of employment. Permission has been granted for the product to be used as documentation of my work.</p>
+                    </div>
+                </section>
+
+                <section class="lp-cs-brief">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Brief</h2>
+                            <div class="lp-cs-body"><p>The <strong>Nau</strong> app is a marketplace that brings together boat captains (nukhdas) and traders who want to ship their cargo to nearby ports. Nukhdas can define the dhow route, show the boat's capacity and connect with traders. Both can register, search, check availability and book cargo shipments, all from one easy-to-use mobile app.</p><p>Payments are handled in the app, so nukhdas are paid immediately. A <strong>two-sided rating system</strong> lets traders and nukhdas rate each other, and traders can <strong>track their cargo</strong> from departure to arrival.</p><p>The Nau app is overseen by the <strong>Dubai Future Foundation (DFF)</strong> and is part of the Dubai 10X initiative.</p><p>About <strong>1,500 dhows make 13,000 trips a year</strong>, carrying around 2.2 million tonnes of cargo worth Dh22 million. The platform can scale and be replicated around the world, especially in countries with large inland waterways, rivers and harbours.</p></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">My role</h2>
+                            <div class="lp-cs-body"><p>I led the UX team at QBurst for this project. Because it is under a non-disclosure agreement, I can't share further details of the work here.</p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="lp-cs-end">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-next has-animation" data-delay="40">
+                            <a class="ajax-link" href="studiesabroad.html" data-type="page-transition"><span><small>Next project</small><h4>Studies Abroad</h4></span><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 14h17M15 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="lp-sec" style="padding-top:90px;padding-bottom:0">
+                    <div class="lp-cta-box has-animation" data-delay="40">
+                        <p class="eyebrow">Got a complex product?</p>
+                        <h2 class="lp-h2">Let’s make it clear, together.</h2>
+                        <div class="row">
+                            <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition" style="border-color:var(--accent);color:var(--accent) !important">Let’s talk</a>
+                            <a class="lp-btn ghost" href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn <svg class="lp-ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer (Lollypop-style: big links row, then brand + link columns) -->
+                <div class="lp-foot2">
+                    <div class="lp-foot2-follow">
+                        <h2>Let’s connect</h2>
+                        <ul>
+                            <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="lp-foot2-bottom">
+                        <div class="lp-foot2-brand">
+                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose"></a>
+                            <p class="tag">A UX and product designer crafting clear, human experiences through <b>research, design and design systems</b>.</p>
+                            <p class="copy">© 2026 Binu Jose · Wellington, New Zealand</p>
+                            <ul class="small">
+                                <li><a class="ajax-link" href="about.html" data-type="page-transition">About</a></li>
+                                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                                <li><a class="ajax-link" href="index.html" data-type="page-transition">Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="lp-foot2-cols">
+                            <div><h3>Case studies</h3><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></div>
+                            <div><h3>Experience</h3><span>Totara</span><span>QBurst</span><span>EY</span><span>Assyst</span></div>
+                            <div><h3>Based in</h3><span>Wellington</span><span>New Zealand</span></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="hero-height" class="hidden"></div>
-            <!--/Hero Section -->
-
-
-            <div id="hero-image" class="hidden" style="background-image:url(images/projects/02hero.jpg)">
-            	<div id="image-border-left"></div>
-                <div id="image-border-right"></div>
-            </div>
-
-
-        	<!-- Main Content -->
-            <div id="main-content">
-              <!-- Row -->
-              <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-
-                  <div class="container">
-
-                      <h5><i>Statement of Originality & Confidentiality</i></h5>
-                      <p style="font-size: 16px;line-height: 24px;"><i>To comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study. All the below information belongs to the organization whose name appears on the document and is to be treated as confidential. It is used to demonstrate my work experience and related skills. Permission has been granted for the product to be used as documentation of my work. Please do not disclose any information to any person or persons who would use it for the purpose outside the possibility of employment.</i>
-                        <br><br>
-                        ** Project Under Non-disclosure agreement **
-                      </p>
-
-
-
-                  </div>
-
-              </div>
-              <!--/Row -->
-
-              <!-- Row -->
-              <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                  <div class="container">
-
-                      <h2>OVERVIEW</h2>
-                      <p>The Nau app is a marketplace that brings together boat captains (nukdahs) and traders, who are looking to ship their cargo to nearby ports. Nukdahs can define the dhow route, display the boat capacity and connect with traders. Dhowber allows both nukdahs and traders to register, search, and enquire availability and book cargo shipments, all from one user-friendly, easy-to-use mobile app. Payments are also handled via the app so that nukdahs can receive payments immediately. Additionally, there is a two-sided rating system, which allows both traders and nukdahs to rate each other. And finally, the traders can track their cargo from departure to arrival.
-                        </p>
-
-                        <h4>The Nau app is overseen by the Dubai Future Foundation (DFF) and it is part of the Dubai 10X Initiative</h4>
-
-                      <p>
-                        About 1,500 dhows make 13,000 trips annually, transporting around 2.2 million tonnes of cargo with a value of Dh22 million. The platform is scalable and can be replicated across the globe, especially in countries that have larger inland waterways, rivers, and harbours, to transport cargo from one port to another.
-                      </p>
-                      <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                      <div class="submit-box">
-                         <input type="submit" class="send_message cillar-button" value="View site" onclick="window.open('https://nau.dpworld.com/','newwindow');"/>
-                      </div>
-
-                  </div>
-
-              </div>
-              <!--/Row -->
-
-
-
-              <!-- Row -->
-              <div class="vc_row small text-align-center has-animation row_padding_bottom" data-delay="10">
-
-                  <div class="container">
-
-                        <h2>MY ROLE</h2>
-
-                        <p>I lead the UX team in QBurst for the Dhowber project. This would mean that I cannot furnish further details of the work as it is under NDA. The project is expected to complete in a couple of months after which I will be able to showcase the entire work.</p>
-
-                  </div>
-
-              </div>
-              <!--/Row -->
-
-
-
-
-
-                <div id="project-nav" class="has-animation" data-delay="100">
-                    <div class="nav-title">
-                        <a  class="ajax-link project-next" data-type="page-transition" href="studiesabroad.html">next</a>
-                    </div>
-                    <div class="nav-project-title"><span>Studies Abroad</span></div>
-                </div>
-
-
 
             </div>
             <!--/Main Content -->
@@ -207,11 +238,11 @@
         <!--/Main -->
 
 
-        <!-- Footer -->
+                <!-- Footer -->
         <footer class="hidden">
 
 
-			<a id="page-action-holder" class="ajax-link" href="index.html" data-type="page-transition" data-tooltip="Back to Works" data-placement="right">
+	    <a id="page-action-holder" class="ajax-link" href="index.html" data-type="page-transition" data-tooltip="Back to Home" data-placement="right">
                 <div id="backtoworks"><i class="fa fa-times" aria-hidden="true"></i></div>
             </a>
 
@@ -222,7 +253,7 @@
             </ul>
 
 
-			<div class="progress-page">
+	    <div class="progress-page">
                 <div class="scrolltotop is-active is-visible" data-tooltip="Back to Top" data-placement="left">
                 	<div class="arrow-top"></div>
                     <div class="arrow-top-line"></div>
@@ -249,7 +280,7 @@
     <div class="cd-cover-layer invisible"></div>
 
 
-	<script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
 

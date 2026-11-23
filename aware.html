@@ -34,15 +34,15 @@
 	<div class="cd-index cd-main-content">
 
 	<!-- Page Content -->
-	<div id="page-content" class="" data-bgcolor="#fff" data-textcolor="#000">
+	<div id="page-content" class="lp" data-bgcolor="#F7F4F2" data-textcolor="#221429" >
 
         <div class="page-overlay from-bottom">
             <div class="animate-box-bottom"></div>
         </div>
 
         <!-- Header -->
-        <header class="scroll-hide">
-        	<div id="header-container">
+        <header class="scroll-hide initial">
+            <div id="header-container">
 
             <!-- Logo -->
             <div id="logo">
@@ -57,35 +57,33 @@
             <nav>
 
                 <ul data-breakpoint="1024" class="flexnav">
-                  <li><a class="ajax-link active" href="index.html" data-type="page-transition">Portfolio</a>
+                    <li><a class="active" href="" data-type="page-transition">Portfolio</a>
+                      <!--
+                      <ul>
+                        <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
+                        <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
+                        <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
+                        <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
+                        <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
+                      </ul>
+                    -->
+                    </li>
+
+                    <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
+
                     <!--
-                    <ul>
-                      <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
-                      <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
-                      <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
-                      <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
-                      <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
-                    </ul>
+                    <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
+
+
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
                   -->
-                  </li>
-
-                  <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
-
-                  <!--
-                  <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
-
-
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
-                -->
 
 
                 </ul>
 
             </nav>
             <!--/Navigation -->
-
-            <div id="black-fade"></div>
 
             <!-- Menu Burger -->
             <div id="menu-burger">
@@ -96,713 +94,224 @@
             </div>
             <!--/Menu Burger -->
 
-        	</div>
+            </div>
         </header>
+
+        <!-- Menu button: sits with the header, then floats as a round button once you scroll (like Lollypop) -->
+        <button class="lp-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="lp-menu"><span></span><span></span></button>
+
+        <!-- Full-screen menu (slides down from the top, like Lollypop) -->
+        <div class="lp-menu" id="lp-menu" aria-hidden="true">
+            <button class="lp-menu-close" type="button" aria-label="Close menu"><span></span><span></span></button>
+            <div class="lp-menu-red">
+                <div class="lp-menu-in">
+                    <div class="lp-menu-grid">
+                        <ul class="lp-menu-big">
+                            <li><a class="ajax-link" href="index.html" data-type="page-transition">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a></li>
+                            <li><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a></li>
+                            <li><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a></li>
+                            <li><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a></li>
+                            <li><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a></li>
+                            <li><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#experience">Where I’ve Worked</a></li>
+                            <li><a href="#how">How I Work</a></li>
+                            <li><a href="#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <a class="lp-menu-promo ajax-link" href="contact.html" data-type="page-transition"><span>UX &amp; product designer, 22+ years</span> <b>Open to new opportunities →</b></a>
+                    <ul class="lp-menu-social">
+                        <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lp-menu-dark">
+                <div class="lp-menu-in">
+                    <p class="lp-menu-eyebrow">Got a complex product?</p>
+                    <h2 class="lp-menu-h">Let’s make it clear, together.</h2>
+                    <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition">Get In Touch</a>
+                    <ul class="lp-menu-places"><li>Wellington</li><li>New Zealand</li></ul>
+                </div>
+            </div>
+        </div>
         <!--/Header -->
-
-
 
         <!-- Main -->
         <div id="main">
+            <!-- Loaded here too so the page is styled when it arrives through an AJAX page transition -->
+            <link href="css/theme.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+            <div id="main-content" class="lp-cs">
 
-            <!-- Hero Section -->
-            <div id="hero">
-                <div id="hero-styles" class="parallax-onscroll opacity-onscroll">
-                    <div id="hero-caption">
-                        <div class="inner text-align-center">
-                            <div class="hero-title">AWARE</div>
-                            <div class="hero-subtitle">Advanced Warning And Risk Evasion</div>
+                <!-- Banner -->
+                <section class="lp-cs-banner">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-head has-animation" data-delay="60">
+                            <span class="lp-cs-eyebrow">QBurst · Oldcastle Materials</span>
+                            <h1 class="lp-cs-h1">Keeping highway work-zone crews out of harm’s way</h1>
+                            <div class="lp-cs-tags"><span>AWARE</span><span>Construction safety</span><span>iOS, Android &amp; Web</span><span>UX/UI</span></div>
+                        </div>
+                        <div class="lp-cs-hero has-animation" data-delay="120">
+                            <img decoding="async" src="images/2.jpg" alt="AWARE mobile and web app">
+                        </div>
+                        <p class="lp-cs-note">Statement of originality and confidentiality: to comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study. This material belongs to the organisation named on it and is shared only to demonstrate my work experience and skills for the purpose of employment. Permission has been granted for the product to be used as documentation of my work.</p>
+                    </div>
+                </section>
+
+                <section class="lp-cs-brief">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Brief</h2>
+                            <div class="lp-cs-body"><p>Every day, highway and street construction workers are at risk of fatal and serious injuries while working near passing motorists, construction vehicles and other equipment. Each year, <strong>more than 100 workers are killed and over 20,000 injured</strong> in the highway and street construction industry.</p><p><a href="https://www.crhamericas.com/" target="_blank" rel="noopener"><strong>Oldcastle Materials</strong></a> is the holding company for CRH's American operations and a leading supplier of aggregates, asphalt and construction services in the US.</p><p>From the fall of 2012 to the spring of 2013, Oldcastle Materials lost four of their members nationwide. Three of those four employees were lost within an 18-hour period. As with all such fatalities, it was devastating, and some workers left their jobs for a safer working environment.</p><p>Oldcastle Materials decided to invest in the lives of their employees with a system that would combine human effort with cutting-edge technology: a system that would always be vigilant, working and non-fatigued.</p><p>Oldcastle partnered with <a href="http://artisllc.com" target="_blank" rel="noopener"><strong>ARTIS, LLC</strong></a> to develop an innovative work zone intrusion detection and alarm system called <strong>Advance Warning And Risk Evasion (AWARE)</strong>. QBurst was approached by Oldcastle to transform the existing proof-of-concept application into a user-friendly application with expanded features and functionality, to keep their workers safe.</p></div>
+                            <div class="lp-cs-gallery"><figure><img loading="lazy" decoding="async" src="images/projects/Awareworkersonground.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/Awareworkesite.jpg" alt=""></figure></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">The system</h2>
+                            <div class="lp-cs-body"><p>AWARE is a <strong>radar-based system</strong> that can detect a potential work zone intrusion from multiple vehicles and, simultaneously, warn the errant driver and the workers who may be in harm's way. It detects a threat by determining speed, position, trajectory and stopping distance, providing valuable seconds that can save the lives of workers and the motoring public.</p><p>One sensor includes electronically-scanned radar, high-precision differential GPS, accelerometers, gyroscopes and magnetometers for position and orientation sensing, plus high-definition video and several wireless interfaces to monitor traffic and broadcast a warning when an intrusion is detected.</p><p>A second sensor is a tracking device strapped to the workers' hard hats, vests or armbands. If a worker is in the path of an oncoming threat, a vibration motor and acoustic buzzer alert them, and lights and audible alerts are activated.</p></div>
+                            <div class="lp-cs-gallery"><figure><img loading="lazy" decoding="async" src="images/projects/Aware_ravens.jpg" alt="Ravens"><figcaption>Ravens</figcaption></figure><figure><img loading="lazy" decoding="async" src="images/projects/Aware_worktrax.jpg" alt="WorkTrax"><figcaption>WorkTrax</figcaption></figure></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Challenge</h2>
+                            <div class="lp-cs-body"><p>First, I had to understand how the whole worksite functions, from the beginning of a worker's day, through existing safety procedures, to how they interact with the sensors. Second, I had to examine how the radar system works and how the sensors communicate with each other, and consider the technical feasibility of each interaction and function on the interface.</p><p>The hardest part was working within a <strong>shoestring budget and the time allotted to the UX phase: less than two weeks</strong>.</p><h3 class="lp-cs-quote">“A small error or delay in the feedback can lead to major casualties!”</h3></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">My role</h2>
+                            <div class="lp-cs-body"><p>I led the QBurst design team for the AWARE app across <strong>iOS, Android and web</strong> from the start of the project in February 2017, identifying and addressing customer pain points and refining the design based on user testing and technical challenges. It was also my responsibility to make sure the initial UX phase was completed on time.</p><p>I followed a <strong>human-centred, lean UX</strong> design process, so that my design decisions were supported by user research and feedback.</p></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/Aware_designprocess.jpg" alt="Design process"></figure>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Discover</h2>
+                            <div class="lp-cs-body"><h4>User research</h4><p>I needed to understand how a road construction site works, and the needs, motivations and working style of the people the app was for. What could be better than a direct visit? I spent <strong>two weeks on site in Utah</strong>, USA.</p><p>We visited a construction site with the project coordinators from Oldcastle Materials and ARTIS and interviewed users to learn their concerns, needs and mental models. We even built a miniature work site in our conference room to refer to during discussions.</p><h4>Competitive analysis</h4><p>I looked at other construction safety systems in use. None of them had a mobile application to control the entire system, and most of the sensors were basic.</p><h4>Key insights</h4><ul><li>The primary users of the mobile app are not used to advanced technology.</li><li>Most primary users are aged 25 to 45.</li><li>Users might work in extreme conditions: smoke, dust and heat.</li><li>Site supervisors need to switch the radars on and off manually several times during working hours.</li><li>Work sites might be in remote locations without good connectivity.</li><li>Administrators cannot assess how effective the system is from offsite.</li><li>The radars were not yet fully functional, so several technical challenges had to be anticipated in the UI.</li><li>Construction workers wear gloves and goggles, so they need large touch targets.</li></ul></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/discussion_screens.jpg" alt="Initial discussion sketches"><figcaption>Initial discussion sketches</figcaption></figure>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Define</h2>
+                            <div class="lp-cs-body"><h4>Personas</h4><p>From the research and validated assumptions, I created personas to capture the traits of the potential users and check whether features would be usable.</p><h4>Application map</h4><p>During brainstorming sessions with the Oldcastle and ARTIS teams, I created a <strong>mind map</strong> of the entire system. It helped us consider every feature discussed and bridged gaps in later conversations about user needs and the features stakeholders wanted.</p><h4>User flows</h4><p>I created user flows for the main tasks, which helped reduce the number of steps a user needs to complete each task.</p><h4>Key insights</h4><ul><li>A single tap to switch the radars on site on or off was handy.</li><li>A visualiser screen to watch videos of intrusions was practical.</li><li>A map of the location showing the position of assets on the work site was useful.</li><li>Information on how to align a Raven was hard to find and understand.</li><li>Seeing the alerts generated by different sensors on site was slightly confusing for a few users.</li></ul></div>
+                            <div class="lp-cs-gallery"><figure><img loading="lazy" decoding="async" src="images/projects/Aware_persona1.jpg" alt="Persona 1: mobile app user"><figcaption>Persona 1: mobile app user</figcaption></figure><figure><img loading="lazy" decoding="async" src="images/projects/Aware_persona2.jpg" alt="Persona 2: web app user"><figcaption>Persona 2: web app user</figcaption></figure></div><figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/Aware_appmap.jpg" alt="Application map"><figcaption>Application map</figcaption></figure><div class="lp-cs-gallery"><figure><img loading="lazy" decoding="async" src="images/projects/Aware_UserFlow1.jpg" alt="User flow 1"><figcaption>User flow 1</figcaption></figure><figure><img loading="lazy" decoding="async" src="images/projects/Aware_UserFlow2.jpg" alt="User flow 2"><figcaption>User flow 2</figcaption></figure></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40" style="margin-bottom:40px">
+                            <h2 class="lp-cs-label">Design</h2>
+                            <div class="lp-cs-body"><h4>Paper sketches</h4><p>Based on the research and key task flows, I sketched the key screens on the spot so I could get feedback from the whole team, and iterated until we reached common ground.</p><h4>Wireframes</h4><p>The sketches then became higher-fidelity, clickable wireframes in <strong>Axure</strong>, used to gather early feedback from users and stakeholders.</p><h4>Prototype</h4><p>After that feedback, the wireframes were refined and moved into branding and visual design. The screens were linked into an <strong>InVision</strong> prototype for user testing, some of it in person, which gave me a better understanding of users' thinking.</p></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/Aware_papersketch.jpg" alt="Ideation sketches of the main screens"><figcaption>Ideation sketches of the main screens</figcaption></figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lp-cs-modules">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">Mobile app</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Wireframes</h3>
+                                <p><strong>Clickable in Axure –</strong> Used to take initial feedback from users and stakeholders.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_wireframe.jpg" alt="Wireframes">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Visual design</h3>
+                                <p><strong>Designed with the visual design team –</strong> Large, clear controls for people working in gloves, goggles, dust and heat.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_mobiledesign1.jpg" alt="Visual design">
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_mobiledesign2.jpg" alt="Visual design">
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_mobiledesign3.jpg" alt="Visual design">
+                            </div>
+                        </div>
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">Web app</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Wireframes</h3>
+                                <p><strong>Managing the whole system –</strong> The web app gives administrators an overview of their work sites, assets and alerts.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_webwireframe1.jpg" alt="Wireframes">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Visual design</h3>
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_webdesign1.jpg" alt="Visual design">
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_webdesign2.jpg" alt="Visual design">
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_webdesign3.jpg" alt="Visual design">
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_webdesign4.jpg" alt="Visual design">
+                            </div>
+                        </div>
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">Style guide</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Colours, type and buttons</h3>
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_primaryColor.jpg" alt="Colours, type and buttons">
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_typography.jpg" alt="Colours, type and buttons">
+                                <img loading="lazy" decoding="async" src="images/projects/Aware_buttonstyle.jpg" alt="Colours, type and buttons">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lp-cs-brief">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">User testing</h2>
+                            <div class="lp-cs-body"><p>I ran user testing with <strong>9 users</strong>, who were asked to complete a set of tasks. I found patterns where users were confused and made errors, including confusing wording in some places, and revised the wireframes based on the results.</p></div>
+                            <div class="lp-cs-gallery c3"><figure><img loading="lazy" decoding="async" src="images/projects/01_Aware_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/02_Aware_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/03_Aware_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/04_Aware_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/05_Aware_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/06_Aware_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/07_Aware_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/08_Aware_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/09_Aware_testresult.jpg" alt=""></figure></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="lp-cs-end">
+                    <div class="lp-wrap md">
+                        <h2 class="has-animation" data-delay="40">Conclusion</h2>
+                        <div class="lp-cs-qa has-animation" data-delay="40"><h3>What would I do next?</h3><p>We received a lot of positive feedback from the users we tested, along with a few negative points. Unfortunately, we didn't have much time for the UX research phase. With more time and budget, I would test on an actual work site, which would lead to further iterations and a more intuitive interface.</p><figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/Aware_teamsnapshot.jpg" alt="With the AWARE team in Utah"><figcaption>With the AWARE team in Utah</figcaption></figure></div>
+                        <div class="lp-cs-next has-animation" data-delay="40">
+                            <a class="ajax-link" href="dhowber.html" data-type="page-transition"><span><small>Next project</small><h4>Nau</h4></span><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 14h17M15 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="lp-sec" style="padding-top:90px;padding-bottom:0">
+                    <div class="lp-cta-box has-animation" data-delay="40">
+                        <p class="eyebrow">Got a complex product?</p>
+                        <h2 class="lp-h2">Let’s make it clear, together.</h2>
+                        <div class="row">
+                            <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition" style="border-color:var(--accent);color:var(--accent) !important">Let’s talk</a>
+                            <a class="lp-btn ghost" href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn <svg class="lp-ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer (Lollypop-style: big links row, then brand + link columns) -->
+                <div class="lp-foot2">
+                    <div class="lp-foot2-follow">
+                        <h2>Let’s connect</h2>
+                        <ul>
+                            <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="lp-foot2-bottom">
+                        <div class="lp-foot2-brand">
+                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose"></a>
+                            <p class="tag">A UX and product designer crafting clear, human experiences through <b>research, design and design systems</b>.</p>
+                            <p class="copy">© 2026 Binu Jose · Wellington, New Zealand</p>
+                            <ul class="small">
+                                <li><a class="ajax-link" href="about.html" data-type="page-transition">About</a></li>
+                                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                                <li><a class="ajax-link" href="index.html" data-type="page-transition">Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="lp-foot2-cols">
+                            <div><h3>Case studies</h3><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></div>
+                            <div><h3>Experience</h3><span>Totara</span><span>QBurst</span><span>EY</span><span>Assyst</span></div>
+                            <div><h3>Based in</h3><span>Wellington</span><span>New Zealand</span></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="hero-height" class="hidden"></div>
-            <!--/Hero Section -->
-
-
-            <div id="hero-image" class="hidden" style="background-image:url(images/projects/01hero.jpg)">
-            	<div id="image-border-left"></div>
-                <div id="image-border-right"></div>
-            </div>
-
-
-        	<!-- Main Content -->
-            <div id="main-content">
-
-
-              <!-- Row -->
-              <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-
-                  <div class="container">
-
-                      <h5><i>Statement of Originality & Confidentiality</i></h5>
-                      <p style="font-size: 16px;line-height: 24px;"><i>To comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study. All the below information belongs to the organization whose name appears on the document and is to be treated as confidential. It is used to demonstrate my work experience and related skills. Permission has been granted for the product to be used as documentation of my work. Please do not disclose any information to any person or persons who would use it for the purpose outside the possibility of employment.</i></p>
-
-
-
-                  </div>
-
-              </div>
-              <!--/Row -->
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>OVERVIEW</h2>
-                        <p>Every day, highway and street construction workers are at the risk of fatal and serious nonfatal injuries while working in the vicinity of passing motorists, construction vehicles, and other types of equipment. Each year, more than 100 workers are killed and over 20,000  injured in the highway and street construction industry.
-                          </p>
-
-                          <h4><a href="https://www.crhamericas.com/" target="_blank" class="link"><span>Oldcastle Materials</span></a> is the holding company for CRH's American operations and is a leading supplier of aggregates, <br> asphalt and construction services in the US.</h4>
-
-                        <p>
-                          From the fall of 2012 to the spring of 2013, Oldcastle Materials lost four of their members nationwide. Three of those four employees were lost within an 18-hour period. As with all such fatalities, it was a devastating one. Soon, some workers left their jobs for a safer working environment. <br>Oldcastle Materials decided to invest in the lives of their employees, to make a safer working environment. They decided to come up with a system that would combine human efforts with cutting-edge technology;  a system that would always be vigilant, working and non-fatigued.
-
-                          Oldcastle decided to partner with <a href="http://artisllc.com" target="_blank" class="link"><span>ARTIS, LLC</span></a> to develop an innovative work zone intrusion detection and alarm system called Advance Warning And Risk Evasion (AWARE). QBurst was approached by Oldcastle to transform the existing POC application into a user-friendly application with expanded features & functionalities, to ensure their workers' security.
-                        </p>
-                        <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <div class="one_half has-animation" data-delay="100">
-                            <a class=""><img loading="lazy" decoding="async" src="images/projects/Awareworkersonground.jpg" /></a>
-
-                        </div>
-
-                        <div class="one_half last has-animation" data-delay="200">
-                            <a class=""><img loading="lazy" decoding="async" src="images/projects/Awareworkesite.jpg" /></a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>AWARE SYSTEM</h2>
-
-                        <p>The AWARE system is a radar-based system that can detect a potential work zone intrusion from multiple vehicles, and, simultaneously, warn the errant driver and workers who may be in harm’s way. The system detects a threat by determining speed, position, trajectory, and stopping distance; thereby providing valuable seconds that can save the lives of the workers and the motoring public. The system consists of a sensor that includes electronically-scanned radar, high-precision differential GPS, accelerometers, gyroscopes and magnetometers for position and orientation sensing. High-definition videos and several wireless interfaces are used to monitor traffic in the area. All of this is to broadcast a warning when an intrusion is detected. A second sensor includes a tracking device that is typically strapped to the workers’ hard hats, vests or armbands with high-precision position sensing.  In order to receive warning signals from the other system sensor, it includes wireless interfaces. If the worker is in the path of an oncoming threat, a vibrator motor and acoustic buzzer will alert the user that a threat is approaching. Lights and audible alerts will also be activated if a threat is detected.
-                        </p>
-
-
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-                <!-- Row -->
-                <div class="vc_row text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <div class="one_half has-animation" data-delay="100">
-                            <a class=""><img loading="lazy" decoding="async" src="images/projects/Aware_ravens.jpg" /></a>
-                            <p style="color: #c0c0c0;padding-top: 30px;"><i>Ravens</i></p>
-                        </div>
-
-                        <div class="one_half last has-animation" data-delay="200">
-                            <a class=""><img loading="lazy" decoding="async" src="images/projects/Aware_worktrax.jpg" /></a>
-                            <p style="color: #c0c0c0;padding-top: 30px;"><i>WorkTrax</i></p>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>CHALLENGE</h2>
-
-                        <p>Firstly, an understanding of the whole functioning of the worksite from the beginning of a worker's day, existing safety procedures and interaction with sensors, had to be acquired. Secondly, the whole function of the radar system and communication of sensors with each other had to be examined. The technological feasibility of each interaction and the functionalities that laid out on to the interface had to be considered. The challenging part was to work within the shoestring budget and time allotted to the UX phase (less than two weeks).</p>
-
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row full has-animation text-align-center row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-
-                    <div class="container">
-
-                        <h3>“A small error or delay in the feedback can lead to major casualties!”</h3>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                          <h2>MY ROLE & DESIGN PROCESS</h2>
-
-                          <p>I led the Qburst design team for the AWARE App across iOS, Android, and Web since the outset of the project in February 2017. I’m still on the project to identify and address the customer pain-points, design tweaks based on the user testing and technological challenge. It was also my responsibility to make sure that the initial UX phase of the project was completed on time.</p>
-                          <h4>I followed the human-centered design and lean UX design thinking process to make sure that my design decisions were supported by user research and feedback.</h4>
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_designprocess.jpg" alt="UX Process image">
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!--<div class="one_third">
-                    <div class="clapat-icon">
-                        <i class="fa fa-desktop" aria-hidden="true"></i>
-                    </div>
-
-                    <h5>Discover</h5>
-                    <p>The first step is all about gaining understanding & knowledge. We dig deep to know everything possible that will help us craft a better solution.</p>
-                </div>
-
-                <div class="one_third">
-                    <div class="clapat-icon">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                    </div>
-
-                    <h5>Define</h5>
-                    <p>We draw insights from the research data and craft a product roadmap that solves problems like no other existing products.</p>
-                </div>
-
-                <div class=" one_third last">
-                    <div class="clapat-icon">
-                        <i class="fa fa-camera" aria-hidden="true"></i>
-                    </div>
-
-                    <h5>Design</h5>
-                    <p>It's all about bringing emotions to logic. We map empathy and cognitive science to derive on a product that is not just usable but appealing.</p>
-                </div>-->
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <div class=" one_third"><h3>Discover</h3></div>
-
-                        <div class=" two_third last">
-                            <h5>User Research</h5>
-                            <p>Since every project needs an initial research before the designing phase sets in, an understanding of the working procedure of a road construction site had to be taken up (as I had a limited understanding of the subject prior to this!). It is necessary to be informed about the needs, motivations and working style of the users for whom the application was to be designed for. What could be better than a direct visit? I went for an onsite visit of two weeks to Utah, the United States of America from QBurst.<br><br>
-                            We had plans of visiting a construction site along with the project coordinators from OldCastle Materials & Artis. The visit proved beneficial as we could interview the users to know their concerns, needs and mental models. We tried to create a miniature work site in our conference room for reference during discussions.
-                            </p>
-                            <h5>Competitive Analysis</h5>
-                            <p>I was very curious to find out about other construction security systems currently in place. As part of my research I found a few of them but, none of them had a mobile application to control the entire system. Most of the sensors were non-advanced and premature.</p>
-                            <h5>Key Insights</h5>
-                            <p>• The primary users of the mobile app are not used to advanced technology.
-                              <br>
-                              • Primary user age group is mostly  25 – 45yrs.
-                              <br>
-                              • The mobile app users might work in extreme conditions (smoke, dust, hot).
-                              <br>
-                              • Site supervisors need to manage the working of the radars manually (switch on/ off) several times during the working hours.
-                              <br>
-                              • Working sites might be in remote locations without good connectivity.
-                              <br>
-                              • Administrators cannot assess the effectiveness of the system offsite.
-                              <br>
-                              • There are several other technical challenges that need to be envisioned while plotting UI because the radars are not fully functional.
-                              <br>
-                              • The construction workers use gloves, goggles and have ‘fat-fingers’.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/discussion_screens.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Initial Disscussion Sketches</i></p>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <div class=" one_third"><h3>Define</h3></div>
-
-                        <div class=" two_third last">
-                          <h5>Persona</h5>
-                          <p>From the user research takeaways and validated assumptions, I created few personas to understand some of the traits of the potential user and to find out if the feature is usable.</p>
-                          <h5>Application Map</h5>
-                          <p>During the brainstorming sessions with Oldcastle and Artis team members, I created a mind map to get a larger picture of the entire system. This helped us to consider every feature that was discussed with the team and bridged gaps in further communications. We discussed about the user needs and the features that the stakeholder wanted to manage and coordinate the entire system.</p>
-                          <h5>User Flows</h5>
-                          <p>I created user flows for the main tasks that the user performs in the application. It helped me to reduce the number of steps or clicks that a user would need to complete a task. User flows are very useful when it comes to focusing on a specific task.</p>
-                          <h5>Key Insights</h5>
-                          <p>• Single tap to switch on/ off the Radars on site appeared handy.
-                            <br>
-                            • A visualizer screen to view the videos of the intrusions was practical.
-                            <br>
-                            • A map view of the location and the position of assets on the work site.
-                            <br>
-                            • A map of the location and the ability to view the position of assets on the work site was useful.
-                            <br>
-                            • Information to align Raven was not easily understood or found.
-                            <br>
-                            • Easy view of the alerts generated by different sensors on site appeared slightly confusing for few users.
-                          </p>
-                          </p>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_persona1.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Persona 1 - Mobile App User</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_persona2.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Persona 2 - Web App User</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row full row_padding_bottom text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_appmap.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Application Map</i></p>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_UserFlow1.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>User Flow 1</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_UserFlow2.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>User Flow 1</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-
-
-                <!--
-                <div class="vc_row full text-align-center has-animation row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <div class="one_half has-animation" data-delay="100">
-                          <a href="images/projects/bruni01.jpg" class="image-link"><img loading="lazy" decoding="async" src="images/projects/bruni01.jpg" /></a>
-                          <p style="color: #c0c0c0;padding-top: 30px;">User Flows</p>
-                        </div>
-
-                        <div class="one_half last has-animation" data-delay="200">
-                            <a href="images/projects/bruni02.jpg" class="image-link"><img loading="lazy" decoding="async" src="images/projects/bruni02.jpg" /></a>
-                            <p style="color: #c0c0c0;padding-top: 30px;">User Flows</p>
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-                -->
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <div class=" one_third"><h3>Design</h3></div>
-
-                        <div class=" two_third last">
-                          <h5>Paper Sketches</h5>
-                          <p>Based on the user research findings and key task user flows, I did some initial paper sketches of the key screens on the spot, so that I could get the feedback from the entire team. Following this, I made iterations to the initial drafts until we arrived at a common ground.</p>
-                          <h5>Wireframes</h5>
-                          <p>All the hand drawn paper sketches are then moved onto higher fidelity digital wireframes using Axure. These clickable wireframes are used to take initial feedback from the users and the stakeholders.</p>
-                          <h5>Prototype</h5>
-                          <p>Based on the stakeholder and user feedback, wireframes were polished and finalized screens were moved to do the branding & visual design. All the screens were then linked to create a simulation of the actual app using Invision which is used for user testing. Some of the testings were taken in person where I had a better understanding of user’s notions and thoughts.</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-
-                    <div class="container">
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_papersketch.jpg" alt="">
-                      <p style="color: #c0c0c0;padding-top: 30px; text-align: center;"><i>Ideation sketches of the main screens</i></p>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_bottom" data-delay="10" style="text-align: center;">
-
-                    <div class="container">
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_wireframe.jpg" alt="">
-                      <div class="submit-box">
-                         <input type="submit" class="send_message cillar-button" value="View Axure Wireframe" onclick="window.open('https://nw0hy9.axshare.com/aware.html','newwindow');"/>
-                      </div>
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9; text-align: center;">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_mobiledesign1.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Designs in collaboration with VD team.</i></p>
-                        <hr><hr>
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_mobiledesign2.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Designs in collaboration with VD team.</i></p>
-                        <hr><hr>
-
-                        <img loading="lazy" decoding="async" src="images/projects/Aware_mobiledesign3.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Designs in collaboration with VD team.</i></p>
-                        <hr><hr>
-                        <div class="submit-box">
-                           <input type="submit" class="send_message cillar-button" value="View Invision Prototype" onclick="window.open('https://projects.invisionapp.com/share/T9AWSU35D#/screens/224176620_02_Login','newwindow');"/>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="text-align: center;">
-
-                    <div class="container">
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_webwireframe1.jpg" alt="">
-                      <div class="submit-box">
-                         <input type="submit" class="send_message cillar-button" value="View Axure Wireframe" onclick="window.open('https://cm5kva.axshare.com/dashboard.html','newwindow');"/>
-                      </div>
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation" data-delay="10">
-
-                    <div class="container">
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_webdesign1.jpg" alt="">
-
-
-                      <hr><hr>
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_webdesign2.jpg" alt="">
-
-                      <hr><hr>
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_webdesign3.jpg" alt="">
-
-                      <hr><hr>
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_webdesign4.jpg" alt="">
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-
-                    <div class="container">
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_primaryColor.jpg" alt="">
-
-                      <hr><hr>
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_typography.jpg" alt="">
-
-                      <hr><hr>
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_buttonstyle.jpg" alt="">
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>USER TEST RESULTS</h2>
-                        <p>I have conducted user testing with 9 users. They were asked to complete few tasks. I found some patterns in areas where the users had confusion and ended up making errors. There were confusions with wording in some instances. I revised the wireframes based on the test results.</p>
-                        <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row full row_padding_bottom">
-
-                    <div class="container">
-
-                        <div class="carousel">
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/01_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/02_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/03_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/04_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/05_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/06_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/07_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/08_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/09_Aware_testresult.jpg" alt="User Test Result"></a></div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>REFLECTION AND NEXT STEP</h2>
-                        <p>We have received numerous positive feedback from users we tested, and there were a few negative feedbacks as well. Unfortunately, we didn't have much time to complete the UX research phase. If I had more time and budget, I would love to spend time on user testing on the actual work site. And this would have resulted in further iterations to include more intuitiveness to the interface.</p>
-                        <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                      <img loading="lazy" decoding="async" src="images/projects/Aware_teamsnapshot.jpg" alt="">
-                      <p style="color: #c0c0c0;padding-top: 30px; text-align: center;"><i>With AWARE Team in Utah</i></p>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-                <div id="project-nav" class="has-animation" data-delay="100">
-                    <div class="nav-title">
-                        <a  class="ajax-link project-next" data-type="page-transition" href="dhowber.html">next</a>
-                    </div>
-                    <div class="nav-project-title"><span>Dhowber</span></div>
-                </div>
-
-
 
             </div>
             <!--/Main Content -->
@@ -810,7 +319,7 @@
         <!--/Main -->
 
 
-        <!-- Footer -->
+                <!-- Footer -->
         <footer class="hidden">
 
 

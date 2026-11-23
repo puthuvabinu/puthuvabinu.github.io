@@ -34,15 +34,15 @@
 	<div class="cd-index cd-main-content">
 
 	<!-- Page Content -->
-	<div id="page-content" class="" data-bgcolor="#fff" data-textcolor="#000">
+	<div id="page-content" class="lp" data-bgcolor="#F7F4F2" data-textcolor="#221429" >
 
         <div class="page-overlay from-bottom">
             <div class="animate-box-bottom"></div>
         </div>
 
         <!-- Header -->
-        <header class="scroll-hide">
-        	<div id="header-container">
+        <header class="scroll-hide initial">
+            <div id="header-container">
 
             <!-- Logo -->
             <div id="logo">
@@ -57,35 +57,33 @@
             <nav>
 
                 <ul data-breakpoint="1024" class="flexnav">
-                  <li><a class="ajax-link active" href="index.html" data-type="page-transition">Portfolio</a>
+                    <li><a class="active" href="" data-type="page-transition">Portfolio</a>
+                      <!--
+                      <ul>
+                        <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
+                        <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
+                        <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
+                        <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
+                        <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
+                      </ul>
+                    -->
+                    </li>
+
+                    <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
+
                     <!--
-                    <ul>
-                      <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
-                      <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
-                      <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
-                      <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
-                      <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
-                    </ul>
+                    <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
+
+
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
                   -->
-                  </li>
-
-                  <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
-
-                  <!--
-                  <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
-
-
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
-                -->
 
 
                 </ul>
 
             </nav>
             <!--/Navigation -->
-
-            <div id="black-fade"></div>
 
             <!-- Menu Burger -->
             <div id="menu-burger">
@@ -96,259 +94,194 @@
             </div>
             <!--/Menu Burger -->
 
-        	</div>
+            </div>
         </header>
+
+        <!-- Menu button: sits with the header, then floats as a round button once you scroll (like Lollypop) -->
+        <button class="lp-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="lp-menu"><span></span><span></span></button>
+
+        <!-- Full-screen menu (slides down from the top, like Lollypop) -->
+        <div class="lp-menu" id="lp-menu" aria-hidden="true">
+            <button class="lp-menu-close" type="button" aria-label="Close menu"><span></span><span></span></button>
+            <div class="lp-menu-red">
+                <div class="lp-menu-in">
+                    <div class="lp-menu-grid">
+                        <ul class="lp-menu-big">
+                            <li><a class="ajax-link" href="index.html" data-type="page-transition">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a></li>
+                            <li><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a></li>
+                            <li><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a></li>
+                            <li><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a></li>
+                            <li><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a></li>
+                            <li><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#experience">Where I’ve Worked</a></li>
+                            <li><a href="#how">How I Work</a></li>
+                            <li><a href="#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <a class="lp-menu-promo ajax-link" href="contact.html" data-type="page-transition"><span>UX &amp; product designer, 22+ years</span> <b>Open to new opportunities →</b></a>
+                    <ul class="lp-menu-social">
+                        <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lp-menu-dark">
+                <div class="lp-menu-in">
+                    <p class="lp-menu-eyebrow">Got a complex product?</p>
+                    <h2 class="lp-menu-h">Let’s make it clear, together.</h2>
+                    <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition">Get In Touch</a>
+                    <ul class="lp-menu-places"><li>Wellington</li><li>New Zealand</li></ul>
+                </div>
+            </div>
+        </div>
         <!--/Header -->
-
-
 
         <!-- Main -->
         <div id="main">
+            <!-- Loaded here too so the page is styled when it arrives through an AJAX page transition -->
+            <link href="css/theme.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+            <div id="main-content" class="lp-cs">
 
-            <!-- Hero Section -->
-            <div id="hero">
-                <div id="hero-styles" class="parallax-onscroll opacity-onscroll">
-                    <div id="hero-caption">
-                        <div class="inner text-align-center">
-                            <div class="hero-title">Totara Mobile</div>
-                            <div class="hero-subtitle">Learning in your pocket, online or offline</div>
+                <!-- Banner -->
+                <section class="lp-cs-banner">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-head has-animation" data-delay="60">
+                            <span class="lp-cs-eyebrow">Totara</span>
+                            <h1 class="lp-cs-h1">Learning in your pocket, online or offline</h1>
+                            <div class="lp-cs-tags"><span>Totara Mobile</span><span>iOS &amp; Android</span><span>Enterprise</span><span>UX/UI</span></div>
+                        </div>
+                        <div class="lp-cs-hero has-animation" data-delay="120">
+                            <img decoding="async" src="images/projects/10hero.jpg" alt="Totara Mobile app screens">
+                        </div>
+                        <p class="lp-cs-note">Statement of originality and confidentiality: to comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study, including customer names and real data. This material belongs to the organisation named on it and is shared only to demonstrate my work experience and skills for the purpose of employment.</p>
+                    </div>
+                </section>
+
+                <section class="lp-cs-brief">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Brief</h2>
+                            <div class="lp-cs-body"><p><strong>Totara Mobile</strong> is the native iOS and Android app for the Totara learning platform. It gives learners their learning wherever they are: they can see what they need to complete, work through courses on their phone, download learning to finish offline, and get reminders when something is due.</p><p><a href="https://www.totara.com/" target="_blank" rel="noopener"><strong>Totara</strong></a> is a learning, performance and compliance platform used by organisations worldwide.</p><p>Every organisation runs its own Totara site, so the app had to <strong>connect to each customer's site</strong> and feel like their product, with their branding and their content. <span class="lp-todo">[Add timeframe and which releases/features you worked on]</span></p></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/TotaraMobile_overview.jpg" alt="Totara Mobile overview"></figure>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Challenge</h2>
+                            <div class="lp-cs-body"><p>Many learners don't sit at a desk all day. They work on shop floors, in hospitals and out in the field, often with <strong>patchy connectivity</strong> and only a few minutes to spare. <span class="lp-todo">[Confirm these learner groups]</span> Their learning, much of it compliance training with deadlines, was built for the desktop.</p><p>The challenge was to make that learning <strong>quick and easy to complete on a small screen</strong>, work reliably offline, and serve many different organisations from one app, each with its own site, configuration and brand.</p><h3 class="lp-cs-quote">“Learning should fit into the gaps in a working day.”</h3></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">My role</h2>
+                            <div class="lp-cs-body"><p>I designed the <strong>end-to-end experience</strong> of Totara Mobile, from signing in and connecting to an organisation's site, to finding and completing learning on the go. I worked closely with product owners, mobile developers and customers, and kept the app consistent with the <strong>Totara UI Kit</strong> design system. <span class="lp-todo">[Adjust to your exact scope: features you owned, team size]</span></p><p>I partnered with product on <strong>discovery workshops, research and journey mapping</strong>, so the app was shaped around how learners actually use their phones at work.</p></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/TotaraMobile_designprocess.jpg" alt="Design process"></figure>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Discover</h2>
+                            <div class="lp-cs-body"><h4>Research with learners and customers</h4><p>Together with the product owners, I spoke with customers and learners to understand when and where people learn, what devices they use, and what stops them completing their learning on time. <span class="lp-todo">[How many interviews / customers / industries?]</span></p><h4>Reviewing the web experience</h4><p>I reviewed how learners use Totara on the web today, which tasks matter most on the go, and which parts of the desktop experience didn't make sense on a phone.</p><h4>Key insights</h4><p><span class="lp-todo">[Check these match what you found, and edit]</span></p><ul><li>Learners mostly open the app to answer one question: "What do I need to do next?"</li><li>Sessions are short and often interrupted.</li><li>Connectivity is unreliable in many workplaces.</li><li>Learners can miss due dates without a timely reminder.</li><li>Organisations want the app to look like their own brand.</li></ul></div>
+                            <div class="lp-cs-gallery"><figure><img loading="lazy" decoding="async" src="images/projects/TotaraMobile_persona.jpg" alt="Persona: the learner on the go"><figcaption>Persona: the learner on the go</figcaption></figure><figure><img loading="lazy" decoding="async" src="images/projects/TotaraMobile_journeymap.jpg" alt="Learner journey map"><figcaption>Learner journey map</figcaption></figure></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Define</h2>
+                            <div class="lp-cs-body"><h4>Journey mapping</h4><p>We mapped the learner's journey from first opening the app, through signing in to their organisation's site, to finding, completing and tracking learning. This showed the moments where the app could help most.</p><h4>Application map</h4><p>I created an <strong>application map</strong> to agree the structure of the app with the team: what lives on the home screen, how learners move into a course and back, and where downloads and notifications sit.</p><h4>Key decisions</h4><ul><li>Put "current learning" first, ordered by what is due soonest.</li><li>Make offline a first-class feature: clear download controls and progress that syncs when back online.</li><li>Keep sign-in simple, including connecting to the right organisation's site.</li><li>Let each organisation apply its own branding.</li></ul></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/TotaraMobile_appmap.jpg" alt="Application map"><figcaption>Application map</figcaption></figure>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40" style="margin-bottom:40px">
+                            <h2 class="lp-cs-label">Design</h2>
+                            <div class="lp-cs-body"><h4>Wireframes</h4><p>I sketched and wireframed the key flows (sign in, current learning, course and activity, downloads) and reviewed them with product owners and developers early, so we could check what was technically possible on each platform.</p><h4>Prototype and testing</h4><p>The flows were turned into clickable prototypes in Figma and tested with learners and customers. <span class="lp-todo">[What did you learn and change?]</span></p><h4>Visual design and design system</h4><p>The visual design follows iOS and Android conventions while staying recognisably Totara, using shared colours, type and components from the Totara UI Kit, and supporting each organisation's brand colours.</p></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/TotaraMobile_wireframes.jpg" alt="Wireframes of the key flows"><figcaption>Wireframes of the key flows</figcaption></figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lp-cs-modules">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">The app</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Sign in</h3>
+                                <p><strong>Connect to your organisation –</strong> Sign-in is kept simple, including connecting to the right organisation's site.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/TotaraMobile_screens1.jpg" alt="Sign in">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Current learning and course</h3>
+                                <p><strong>What do I need to do next –</strong> Current learning comes first, ordered by what is due soonest, and learners can work through a course on their phone.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/TotaraMobile_screens2.jpg" alt="Current learning and course">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Offline downloads and notifications</h3>
+                                <p><strong>Learning without a signal –</strong> Clear download controls let learners finish learning offline, progress syncs when they are back online, and reminders arrive when something is due.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/TotaraMobile_screens3.jpg" alt="Offline downloads and notifications">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Customer branding</h3>
+                                <p><strong>One app, many organisations –</strong> Each organisation applies its own branding, so the app feels like their product.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/TotaraMobile_branding.jpg" alt="Customer branding">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="lp-cs-end">
+                    <div class="lp-wrap md">
+                        <h2 class="has-animation" data-delay="40">Conclusion</h2>
+                        <div class="lp-cs-qa has-animation" data-delay="40"><h3>What did we achieve?</h3><p>Totara Mobile is available on the App Store and Google Play, letting learners at Totara's customers complete their learning on their phones, online or offline. <span class="lp-todo">[Add results: downloads, customers using it, completion rates, ratings or feedback]</span></p></div>
+                        <div class="lp-cs-qa has-animation" data-delay="40"><h3>What would I do next?</h3><p><span class="lp-todo">[Your reflection: what you learned designing one app for many organisations, and what you'd do next]</span></p></div>
+                        <div class="lp-cs-next has-animation" data-delay="40">
+                            <a class="ajax-link" href="aware.html" data-type="page-transition"><span><small>Next project</small><h4>AWARE</h4></span><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 14h17M15 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="lp-sec" style="padding-top:90px;padding-bottom:0">
+                    <div class="lp-cta-box has-animation" data-delay="40">
+                        <p class="eyebrow">Got a complex product?</p>
+                        <h2 class="lp-h2">Let’s make it clear, together.</h2>
+                        <div class="row">
+                            <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition" style="border-color:var(--accent);color:var(--accent) !important">Let’s talk</a>
+                            <a class="lp-btn ghost" href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn <svg class="lp-ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer (Lollypop-style: big links row, then brand + link columns) -->
+                <div class="lp-foot2">
+                    <div class="lp-foot2-follow">
+                        <h2>Let’s connect</h2>
+                        <ul>
+                            <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="lp-foot2-bottom">
+                        <div class="lp-foot2-brand">
+                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose"></a>
+                            <p class="tag">A UX and product designer crafting clear, human experiences through <b>research, design and design systems</b>.</p>
+                            <p class="copy">© 2026 Binu Jose · Wellington, New Zealand</p>
+                            <ul class="small">
+                                <li><a class="ajax-link" href="about.html" data-type="page-transition">About</a></li>
+                                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                                <li><a class="ajax-link" href="index.html" data-type="page-transition">Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="lp-foot2-cols">
+                            <div><h3>Case studies</h3><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></div>
+                            <div><h3>Experience</h3><span>Totara</span><span>QBurst</span><span>EY</span><span>Assyst</span></div>
+                            <div><h3>Based in</h3><span>Wellington</span><span>New Zealand</span></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="hero-height" class="hidden"></div>
-            <!--/Hero Section -->
-
-
-            <div id="hero-image" class="hidden" style="background-image:url(images/projects/10hero.jpg)">
-            	<div id="image-border-left"></div>
-                <div id="image-border-right"></div>
-            </div>
-
-
-				<!-- Main Content -->
-				<div id="main-content">
-
-					<!-- DRAFT NOTE: text in yellow highlight (class="todo") still needs your facts. Search this file for "todo" before publishing. -->
-					<style>.todo{background:#fff3c4;padding:0 4px;}</style>
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-						<div class="container">
-							<h5><i>Statement of Originality & Confidentiality</i></h5>
-							<p style="font-size: 16px;line-height: 24px;"><i>To comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study, including customer names and real data. All the below information belongs to the organization whose name appears on the document and is to be treated as confidential. It is used to demonstrate my work experience and related skills. Please do not disclose any information to any person or persons who would use it for the purpose outside the possibility of employment.</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>OVERVIEW</h2>
-							<p>Totara Mobile is the native iOS and Android app for the Totara learning platform. It gives learners their learning wherever they are: they can see what they need to complete, work through courses on their phone, download learning to finish offline, and get reminders when something is due.</p>
-							<h4><a href="https://www.totara.com/" target="_blank" class="link"><span>Totara</span></a> is a learning, performance and compliance platform<br>used by organisations worldwide.</h4>
-							<p>Every organisation runs its own Totara site, so the app had to connect to each customer's site and feel like their product, with their branding and their content. <span class="todo">[Add timeframe and which releases/features you worked on]</span></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_overview.jpg" alt="Totara Mobile app overview">
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>CHALLENGE</h2>
-							<p>Many learners don't sit at a desk all day. They work on shop floors, in hospitals and out in the field, often with patchy connectivity and only a few minutes to spare. <span class="todo">[Confirm these learner groups]</span> Their learning, much of it compliance training with deadlines, was built for the desktop. The challenge was to make that learning quick and easy to complete on a small screen, work reliably offline, and serve many different organisations from one app, each with its own site, configuration and brand.</p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full has-animation text-align-center row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-						<div class="container">
-							<h3>“Learning should fit into the gaps in a working day.”</h3>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>MY ROLE & DESIGN PROCESS</h2>
-							<p>I designed the end-to-end experience of Totara Mobile, from signing in and connecting to an organisation's site, to finding and completing learning on the go. I worked closely with product owners, mobile developers and customers, and kept the app consistent with the Totara UI Kit design system. <span class="todo">[Adjust to your exact scope: features you owned, team size]</span></p>
-							<h4>I partnered with product on discovery workshops, research and journey mapping, so the app was shaped around how learners actually use their phones at work.</h4>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_designprocess.jpg" alt="Design process">
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<div class=" one_third"><h3>Discover</h3></div>
-							<div class=" two_third last">
-								<h5>Research with learners & customers</h5>
-								<p>Together with the product owners, I spoke with customers and learners to understand when and where people learn, what devices they use, and what stops them completing their learning on time. <span class="todo">[How many interviews / customers / industries?]</span></p>
-								<h5>Reviewing the web experience</h5>
-								<p>I reviewed how learners use Totara on the web today, which tasks matter most on the go, and which parts of the desktop experience didn't make sense on a phone.</p>
-								<h5>Key Insights</h5>
-								<p><span class="todo">[Check these match what you found, and edit]</span><br>
-									• Learners mostly open the app to answer one question: "What do I need to do next?"
-									<br>
-									• Sessions are short and often interrupted.
-									<br>
-									• Connectivity is unreliable in many workplaces.
-									<br>
-									• Learners can miss due dates without a timely reminder.
-									<br>
-									• Organisations want the app to look like their own brand.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_persona.jpg" alt="Persona">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Persona: the learner on the go</i></p>
-						</div>
-						<hr><hr>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full row_padding_bottom text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_journeymap.jpg" alt="Learner journey map">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Learner journey map</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<div class=" one_third"><h3>Define</h3></div>
-							<div class=" two_third last">
-								<h5>Journey mapping</h5>
-								<p>We mapped the learner's journey from first opening the app, through signing in to their organisation's site, to finding, completing and tracking learning. This showed the moments where the app could help most.</p>
-								<h5>Application map</h5>
-								<p>I created an application map to agree the structure of the app with the team: what lives on the home screen, how learners move into a course and back, and where downloads and notifications sit.</p>
-								<h5>Key Decisions</h5>
-								<p>
-									• Put "current learning" first, ordered by what is due soonest.
-									<br>
-									• Make offline a first-class feature: clear download controls and progress that syncs when back online.
-									<br>
-									• Keep sign-in simple, including connecting to the right organisation's site.
-									<br>
-									• Let each organisation apply its own branding.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full row_padding_bottom text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_appmap.jpg" alt="Application map">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Application map</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<div class=" one_third"><h3>Design</h3></div>
-							<div class=" two_third last">
-								<h5>Wireframes</h5>
-								<p>I sketched and wireframed the key flows (sign in, current learning, course and activity, downloads) and reviewed them with product owners and developers early, so we could check what was technically possible on each platform.</p>
-								<h5>Prototype & testing</h5>
-								<p>The flows were turned into clickable prototypes in Figma and tested with learners and customers. <span class="todo">[What did you learn and change?]</span></p>
-								<h5>Visual design & design system</h5>
-								<p>The visual design follows iOS and Android conventions while staying recognisably Totara, using shared colours, type and components from the Totara UI Kit, and supporting each organisation's brand colours.</p>
-							</div>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_bottom" data-delay="10" style="text-align: center;">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_wireframes.jpg" alt="Wireframes">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Wireframes of the key flows</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9; text-align: center;">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_screens1.jpg" alt="Sign in screens">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Sign in and connect to your organisation's site</i></p>
-							<hr><hr>
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_screens2.jpg" alt="Current learning and course screens">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Current learning and course</i></p>
-							<hr><hr>
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_screens3.jpg" alt="Offline downloads and notifications screens">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Offline downloads and notifications</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full row_padding_top row_padding_bottom text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/TotaraMobile_branding.jpg" alt="The app with different organisations' branding">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>One app, many organisations: customer branding</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>OUTCOME</h2>
-							<p>Totara Mobile is available on the App Store and Google Play, letting learners at Totara's customers complete their learning on their phones, online or offline. <span class="todo">[Add results: downloads, customers using it, completion rates, ratings or feedback]</span></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>REFLECTION AND NEXT STEP</h2>
-							<p><span class="todo">[Your reflection: what you learned designing one app for many organisations, and what you'd do next]</span></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-                <div id="project-nav" class="has-animation" data-delay="100">
-                    <div class="nav-title">
-                        <a  class="ajax-link project-next" data-type="page-transition" href="aware.html">next</a>
-                    </div>
-                    <div class="nav-project-title"><span>AWARE</span></div>
-                </div>
-
-
 
             </div>
             <!--/Main Content -->
@@ -356,7 +289,7 @@
         <!--/Main -->
 
 
-        <!-- Footer -->
+                <!-- Footer -->
         <footer class="hidden">
 
 

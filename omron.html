@@ -34,15 +34,15 @@
 	<div class="cd-index cd-main-content">
 
 	<!-- Page Content -->
-	<div id="page-content" class="" data-bgcolor="#fff" data-textcolor="#000">
+	<div id="page-content" class="lp" data-bgcolor="#F7F4F2" data-textcolor="#221429" >
 
         <div class="page-overlay from-bottom">
             <div class="animate-box-bottom"></div>
         </div>
 
         <!-- Header -->
-        <header class="scroll-hide">
-        	<div id="header-container">
+        <header class="scroll-hide initial">
+            <div id="header-container">
 
             <!-- Logo -->
             <div id="logo">
@@ -57,35 +57,33 @@
             <nav>
 
                 <ul data-breakpoint="1024" class="flexnav">
-                  <li><a class="ajax-link active" href="index.html" data-type="page-transition">Portfolio</a>
+                    <li><a class="active" href="" data-type="page-transition">Portfolio</a>
+                      <!--
+                      <ul>
+                        <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
+                        <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
+                        <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
+                        <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
+                        <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
+                      </ul>
+                    -->
+                    </li>
+
+                    <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
+
                     <!--
-                    <ul>
-                      <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
-                      <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
-                      <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
-                      <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
-                      <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
-                    </ul>
+                    <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
+
+
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
                   -->
-                  </li>
-
-                  <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
-
-                  <!--
-                  <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
-
-
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
-                -->
 
 
                 </ul>
 
             </nav>
             <!--/Navigation -->
-
-            <div id="black-fade"></div>
 
             <!-- Menu Burger -->
             <div id="menu-burger">
@@ -96,271 +94,177 @@
             </div>
             <!--/Menu Burger -->
 
-        	</div>
+            </div>
         </header>
+
+        <!-- Menu button: sits with the header, then floats as a round button once you scroll (like Lollypop) -->
+        <button class="lp-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="lp-menu"><span></span><span></span></button>
+
+        <!-- Full-screen menu (slides down from the top, like Lollypop) -->
+        <div class="lp-menu" id="lp-menu" aria-hidden="true">
+            <button class="lp-menu-close" type="button" aria-label="Close menu"><span></span><span></span></button>
+            <div class="lp-menu-red">
+                <div class="lp-menu-in">
+                    <div class="lp-menu-grid">
+                        <ul class="lp-menu-big">
+                            <li><a class="ajax-link" href="index.html" data-type="page-transition">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a></li>
+                            <li><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a></li>
+                            <li><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a></li>
+                            <li><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a></li>
+                            <li><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a></li>
+                            <li><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#experience">Where I’ve Worked</a></li>
+                            <li><a href="#how">How I Work</a></li>
+                            <li><a href="#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <a class="lp-menu-promo ajax-link" href="contact.html" data-type="page-transition"><span>UX &amp; product designer, 22+ years</span> <b>Open to new opportunities →</b></a>
+                    <ul class="lp-menu-social">
+                        <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lp-menu-dark">
+                <div class="lp-menu-in">
+                    <p class="lp-menu-eyebrow">Got a complex product?</p>
+                    <h2 class="lp-menu-h">Let’s make it clear, together.</h2>
+                    <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition">Get In Touch</a>
+                    <ul class="lp-menu-places"><li>Wellington</li><li>New Zealand</li></ul>
+                </div>
+            </div>
+        </div>
         <!--/Header -->
-
-
 
         <!-- Main -->
         <div id="main">
+            <!-- Loaded here too so the page is styled when it arrives through an AJAX page transition -->
+            <link href="css/theme.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+            <div id="main-content" class="lp-cs">
 
-            <!-- Hero Section -->
-            <div id="hero">
-                <div id="hero-styles" class="parallax-onscroll opacity-onscroll">
-                    <div id="hero-caption">
-                        <div class="inner text-align-center">
-                            <div class="hero-title">OMRON</div>
-                            <div class="hero-subtitle">Health care App </div>
+                <!-- Banner -->
+                <section class="lp-cs-banner">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-head has-animation" data-delay="60">
+                            <span class="lp-cs-eyebrow">QBurst · Omron</span>
+                            <h1 class="lp-cs-h1">New features for an established health app</h1>
+                            <div class="lp-cs-tags"><span>Omron</span><span>Healthcare</span><span>Mobile</span><span>Visual design</span></div>
+                        </div>
+                        <div class="lp-cs-hero has-animation" data-delay="120">
+                            <img decoding="async" src="images/6.jpg" alt="Omron health app screens">
+                        </div>
+                        <p class="lp-cs-note">Statement of originality and confidentiality: to comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study. This material belongs to the organisation named on it and is shared only to demonstrate my work experience and skills for the purpose of employment. Permission has been granted for the product to be used as documentation of my work.</p>
+                    </div>
+                </section>
+
+                <section class="lp-cs-brief">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Brief</h2>
+                            <div class="lp-cs-body"><p><strong>Omron</strong> is an electronics company based in Kyoto, Japan. The QBurst experience team was asked to design new features for Omron's existing healthcare mobile app.</p></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Challenge</h2>
+                            <div class="lp-cs-body"><p>The app already had a strong UI, so <strong>adding new features without disrupting it</strong> was the challenge.</p></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40" style="margin-bottom:40px">
+                            <h2 class="lp-cs-label">My role</h2>
+                            <div class="lp-cs-body"><p>I led the <strong>visual design team</strong> to find a solution to the client's needs.</p></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/Omron_designprocess.jpg" alt="Design process"></figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lp-cs-modules">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">New features</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Blood pressure graphs</h3>
+                                <p><strong>The requirement –</strong> add a graph to the existing blood pressure monitor screen.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/01_Omron_screens.jpg" alt="Blood pressure graphs">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Activity timeline</h3>
+                                <p><strong>The requirement –</strong> add options to view a graph, share and delete an activity.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/02_Omron_screens.jpg" alt="Activity timeline">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Activity timeline tutorial</h3>
+                                <p><strong>The requirement –</strong> add walkthrough screens for the new features.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/03_Omron_screens.jpg" alt="Activity timeline tutorial">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Edit profile</h3>
+                                <p><strong>The requirement –</strong> add screens to edit the profile.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/04_Omron_screens.jpg" alt="Edit profile">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="lp-cs-end">
+                    <div class="lp-wrap md">
+                        <h2 class="has-animation" data-delay="40">Conclusion</h2>
+                        <div class="lp-cs-qa has-animation" data-delay="40"><h3>What would I do next?</h3><p>With more time, we could have built a prototype and run user testing to see how users react to the new features.</p></div>
+                        <div class="lp-cs-next has-animation" data-delay="40">
+                            <a class="ajax-link" href="sf182.html" data-type="page-transition"><span><small>Next project</small><h4>SF-182</h4></span><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 14h17M15 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="lp-sec" style="padding-top:90px;padding-bottom:0">
+                    <div class="lp-cta-box has-animation" data-delay="40">
+                        <p class="eyebrow">Got a complex product?</p>
+                        <h2 class="lp-h2">Let’s make it clear, together.</h2>
+                        <div class="row">
+                            <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition" style="border-color:var(--accent);color:var(--accent) !important">Let’s talk</a>
+                            <a class="lp-btn ghost" href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn <svg class="lp-ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer (Lollypop-style: big links row, then brand + link columns) -->
+                <div class="lp-foot2">
+                    <div class="lp-foot2-follow">
+                        <h2>Let’s connect</h2>
+                        <ul>
+                            <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="lp-foot2-bottom">
+                        <div class="lp-foot2-brand">
+                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose"></a>
+                            <p class="tag">A UX and product designer crafting clear, human experiences through <b>research, design and design systems</b>.</p>
+                            <p class="copy">© 2026 Binu Jose · Wellington, New Zealand</p>
+                            <ul class="small">
+                                <li><a class="ajax-link" href="about.html" data-type="page-transition">About</a></li>
+                                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                                <li><a class="ajax-link" href="index.html" data-type="page-transition">Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="lp-foot2-cols">
+                            <div><h3>Case studies</h3><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></div>
+                            <div><h3>Experience</h3><span>Totara</span><span>QBurst</span><span>EY</span><span>Assyst</span></div>
+                            <div><h3>Based in</h3><span>Wellington</span><span>New Zealand</span></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="hero-height" class="hidden"></div>
-            <!--/Hero Section -->
-
-
-            <div id="hero-image" class="hidden" style="background-image:url(images/projects/04hero.jpg)">
-            	<div id="image-border-left"></div>
-                <div id="image-border-right"></div>
-            </div>
-
-
-        	<!-- Main Content -->
-            <div id="main-content">
-
-
-              <!-- Row -->
-              <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-
-                  <div class="container">
-
-                      <h5><i>Statement of Originality & Confidentiality</i></h5>
-                      <p style="font-size: 16px;line-height: 24px;"><i>To comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study. All the below information belongs to the organization whose name appears on the document and is to be treated as confidential. It is used to demonstrate my work experience and related skills. Permission has been granted for the product to be used as documentation of my work. Please do not disclose any information to any person or persons who would use it for the purpose outside the possibility of employment.</i></p>
-
-
-
-                  </div>
-
-              </div>
-              <!--/Row -->
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>OVERVIEW</h2>
-                        <p>Omron is an electronics company based in Kyoto, Japan. QBurst Experience Team was approached to design the newly added features to existing Health care mobile application.
-                          </p>
-
-
-
-                        <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-
-                    <div class="container">
-
-                        <h2>CHALLENGE</h2>
-
-                        <p>Since they had an already existing application with a great UI, adding new features directly into the UI was challenging</p>
-
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                          <h2>MY ROLE</h2>
-
-                          <p>I led the Visual Design team to find a solution of the client needs. The project is currently in its development phase.</p>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/Omron_designprocess.jpg" alt="UX Process image">
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/01_Omron_screens.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Blood Pressure monitor graphs (requirment was to add a graph to the existing pressure monitor screen)</i></p>
-
-                    </div>
-
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/02_Omron_screens.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Activity Timeline (requirment was to add option to view graph, share, and delete an activity.)</i></p>
-
-                    </div>
-
-
-                </div>
-                <!--/Row -->
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/03_Omron_screens.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Activity Timeline Tutorial (requirment was to add a walkthrough screens of the new features added)</i></p>
-
-                    </div>
-
-
-                </div>
-                <!--/Row -->
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/04_Omron_screens.jpg" alt="">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Edit Profile (requirment was to add profile edit screens)</i></p>
-
-                    </div>
-
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>REFLECTION AND NEXT STEP</h2>
-                        <p>Had given more time, a prototype could have been developed. Based on this, user testing could have been done to know the reactions of the users on the newly added features.</p>
-                        <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-                <div id="project-nav" class="has-animation" data-delay="100">
-                    <div class="nav-title">
-                        <a  class="ajax-link project-next" data-type="page-transition" href="sf182.html">next</a>
-                    </div>
-                    <div class="nav-project-title"><span>SF-182</span></div>
-                </div>
-
-
 
             </div>
             <!--/Main Content -->
@@ -368,7 +272,7 @@
         <!--/Main -->
 
 
-        <!-- Footer -->
+                <!-- Footer -->
         <footer class="hidden">
 
 

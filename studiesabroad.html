@@ -34,15 +34,15 @@
 	<div class="cd-index cd-main-content">
 
 	<!-- Page Content -->
-	<div id="page-content" class="" data-bgcolor="#fff" data-textcolor="#000">
+	<div id="page-content" class="lp" data-bgcolor="#F7F4F2" data-textcolor="#221429" >
 
         <div class="page-overlay from-bottom">
             <div class="animate-box-bottom"></div>
         </div>
 
         <!-- Header -->
-        <header class="scroll-hide">
-        	<div id="header-container">
+        <header class="scroll-hide initial">
+            <div id="header-container">
 
             <!-- Logo -->
             <div id="logo">
@@ -57,35 +57,33 @@
             <nav>
 
                 <ul data-breakpoint="1024" class="flexnav">
-                  <li><a class="ajax-link active" href="index.html" data-type="page-transition">Portfolio</a>
+                    <li><a class="active" href="" data-type="page-transition">Portfolio</a>
+                      <!--
+                      <ul>
+                        <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
+                        <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
+                        <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
+                        <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
+                        <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
+                      </ul>
+                    -->
+                    </li>
+
+                    <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
+
                     <!--
-                    <ul>
-                      <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
-                      <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
-                      <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
-                      <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
-                      <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
-                    </ul>
+                    <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
+
+
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
                   -->
-                  </li>
-
-                  <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
-
-                  <!--
-                  <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
-
-
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
-                -->
 
 
                 </ul>
 
             </nav>
             <!--/Navigation -->
-
-            <div id="black-fade"></div>
 
             <!-- Menu Burger -->
             <div id="menu-burger">
@@ -96,480 +94,168 @@
             </div>
             <!--/Menu Burger -->
 
-        	</div>
+            </div>
         </header>
+
+        <!-- Menu button: sits with the header, then floats as a round button once you scroll (like Lollypop) -->
+        <button class="lp-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="lp-menu"><span></span><span></span></button>
+
+        <!-- Full-screen menu (slides down from the top, like Lollypop) -->
+        <div class="lp-menu" id="lp-menu" aria-hidden="true">
+            <button class="lp-menu-close" type="button" aria-label="Close menu"><span></span><span></span></button>
+            <div class="lp-menu-red">
+                <div class="lp-menu-in">
+                    <div class="lp-menu-grid">
+                        <ul class="lp-menu-big">
+                            <li><a class="ajax-link" href="index.html" data-type="page-transition">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a></li>
+                            <li><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a></li>
+                            <li><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a></li>
+                            <li><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a></li>
+                            <li><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a></li>
+                            <li><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#experience">Where I’ve Worked</a></li>
+                            <li><a href="#how">How I Work</a></li>
+                            <li><a href="#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <a class="lp-menu-promo ajax-link" href="contact.html" data-type="page-transition"><span>UX &amp; product designer, 22+ years</span> <b>Open to new opportunities →</b></a>
+                    <ul class="lp-menu-social">
+                        <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lp-menu-dark">
+                <div class="lp-menu-in">
+                    <p class="lp-menu-eyebrow">Got a complex product?</p>
+                    <h2 class="lp-menu-h">Let’s make it clear, together.</h2>
+                    <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition">Get In Touch</a>
+                    <ul class="lp-menu-places"><li>Wellington</li><li>New Zealand</li></ul>
+                </div>
+            </div>
+        </div>
         <!--/Header -->
-
-
 
         <!-- Main -->
         <div id="main">
+            <!-- Loaded here too so the page is styled when it arrives through an AJAX page transition -->
+            <link href="css/theme.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+            <div id="main-content" class="lp-cs">
 
-            <!-- Hero Section -->
-            <div id="hero">
-                <div id="hero-styles" class="parallax-onscroll opacity-onscroll">
-                    <div id="hero-caption">
-                        <div class="inner text-align-center">
-                            <div class="hero-title">Studies Abroad</div>
-                            <div class="hero-subtitle">Discovery & Recommendations</div>
+                <!-- Banner -->
+                <section class="lp-cs-banner">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-head has-animation" data-delay="60">
+                            <span class="lp-cs-eyebrow">QBurst · ISA</span>
+                            <h1 class="lp-cs-h1">Discovery for an education consultancy</h1>
+                            <div class="lp-cs-tags"><span>ISA</span><span>Education</span><span>Discovery</span><span>UX research</span></div>
+                        </div>
+                        <div class="lp-cs-hero has-animation" data-delay="120">
+                            <img decoding="async" src="images/4.jpg" alt="ISA website wireframe">
+                        </div>
+                        <p class="lp-cs-note">Statement of originality and confidentiality: to comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study. This material belongs to the organisation named on it and is shared only to demonstrate my work experience and skills for the purpose of employment.</p>
+                    </div>
+                </section>
+
+                <section class="lp-cs-brief">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Brief</h2>
+                            <div class="lp-cs-body"><p><strong>ISA</strong> is a leading educational consultancy providing services in international education. Spread across Asia, Africa, Europe, Latin America and the Pacific, ISA partners with accredited schools and universities to meet its customers' needs.</p><p>QBurst was asked to run a <strong>UX discovery phase</strong> and provide recommendations for redesigning the existing ISA website.</p></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Objectives</h2>
+                            <div class="lp-cs-body"><ul><li>A website that delivers a more appealing, effective, user-friendly and personalised experience for target audiences across all devices and channels, to improve both user and business performance.</li><li>A new content management system that non-technical business users can use to manage and publish content.</li><li>A site that is easier to administer and maintain.</li></ul></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Goals</h2>
+                            <div class="lp-cs-body"><ul><li>Assess the current, or "as-is", state to define the nature and scope of the challenges.</li><li>Build a shared understanding and consensus within ISA and WorldStrides about priorities, goals and desired outcomes.</li><li>Create a vision for the future, "to-be", state that gives direction to the design and development teams.</li><li>Recommend solutions and platforms that deliver on ISA's vision for its target audiences across devices and channels.</li></ul></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">My role</h2>
+                            <div class="lp-cs-body"><p>I worked with the QBurst UX team in the US on the discovery phase, which ran for <strong>two months</strong>.</p></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/ISA_designprocess.jpg" alt="Design process"></figure>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Discover</h2>
+                            <div class="lp-cs-body"><h4>Target audience</h4><p>We interviewed stakeholders and students to learn who they were, and their goals, needs, challenges and behaviours.</p><h4>ISA's business and competitors</h4><p>I ran a <strong>competitor analysis</strong> to better understand ISA's business, operations, goals, risks and challenges, and the education industry.</p><h4>Heuristic evaluation</h4><p>We also analysed the current site to understand its flows and the strengths and weaknesses of its UI.</p><h4>Key takeaways</h4><ul><li>Key business challenges include changing preferences, expectations and behaviours across all audience segments.</li><li>Outdated proprietary technology and IT resourcing.</li><li>A redesign will fix the presentation issues on the website, but the biggest challenges are related to content and structure.</li></ul></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/ISA_targetaudience.jpg" alt="Target audience segments"><figcaption>Target audience segments</figcaption></figure><div class="lp-cs-gallery"><figure><img loading="lazy" decoding="async" src="images/projects/ISA_persona1.jpg" alt="Target audience findings"><figcaption>Target audience findings</figcaption></figure><figure><img loading="lazy" decoding="async" src="images/projects/ISA_persona2.jpg" alt="Target audience findings"><figcaption>Target audience findings</figcaption></figure></div><div class="lp-cs-gallery"><figure><img loading="lazy" decoding="async" src="images/projects/ISA_slide0.jpg" alt="Existing site review"><figcaption>Existing site review</figcaption></figure><figure><img loading="lazy" decoding="async" src="images/projects/ISA_slide1.jpg" alt="Existing site review"><figcaption>Existing site review</figcaption></figure><figure><img loading="lazy" decoding="async" src="images/projects/ISA_slide2.jpg" alt="Existing site review"><figcaption>Existing site review</figcaption></figure><figure><img loading="lazy" decoding="async" src="images/projects/ISA_slide3.jpg" alt="Existing site review"><figcaption>Existing site review</figcaption></figure></div><figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/ISA_slide4.jpg" alt="Existing site review"><figcaption>Existing site review</figcaption></figure>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Stakeholders</h2>
+                            <div class="lp-cs-body"><p>We interviewed stakeholders to better understand their vision, concerns and needs.</p></div>
+                            <div class="lp-cs-gallery c3"><figure><img loading="lazy" decoding="async" src="images/projects/01_ISA_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/02_ISA_testresult.jpg" alt=""></figure><figure><img loading="lazy" decoding="async" src="images/projects/03_ISA_testresult.jpg" alt=""></figure></div>
+                        </div>
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Proposed wireframe</h2>
+                            <div class="lp-cs-body"><p>Our recommendations came together in a proposed wireframe for the new site.</p></div>
+                            <figure class="lp-cs-fig"><img loading="lazy" decoding="async" src="images/projects/ISA_wireframe.jpg" alt="Proposed UI wireframe"></figure>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="lp-cs-end">
+                    <div class="lp-wrap md">
+                        <h2 class="has-animation" data-delay="40">Conclusion</h2>
+                        <div class="lp-cs-qa has-animation" data-delay="40"><h3>What would I do next?</h3><p>For a smoother move into the design phase, a few more tasks were needed, including <strong>card sorting, user flows and usability testing</strong>. These weren't possible within the budget and time available.</p></div>
+                        <div class="lp-cs-next has-animation" data-delay="40">
+                            <a class="ajax-link" href="omron.html" data-type="page-transition"><span><small>Next project</small><h4>Omron Health</h4></span><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 14h17M15 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="lp-sec" style="padding-top:90px;padding-bottom:0">
+                    <div class="lp-cta-box has-animation" data-delay="40">
+                        <p class="eyebrow">Got a complex product?</p>
+                        <h2 class="lp-h2">Let’s make it clear, together.</h2>
+                        <div class="row">
+                            <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition" style="border-color:var(--accent);color:var(--accent) !important">Let’s talk</a>
+                            <a class="lp-btn ghost" href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn <svg class="lp-ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer (Lollypop-style: big links row, then brand + link columns) -->
+                <div class="lp-foot2">
+                    <div class="lp-foot2-follow">
+                        <h2>Let’s connect</h2>
+                        <ul>
+                            <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="lp-foot2-bottom">
+                        <div class="lp-foot2-brand">
+                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose"></a>
+                            <p class="tag">A UX and product designer crafting clear, human experiences through <b>research, design and design systems</b>.</p>
+                            <p class="copy">© 2026 Binu Jose · Wellington, New Zealand</p>
+                            <ul class="small">
+                                <li><a class="ajax-link" href="about.html" data-type="page-transition">About</a></li>
+                                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                                <li><a class="ajax-link" href="index.html" data-type="page-transition">Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="lp-foot2-cols">
+                            <div><h3>Case studies</h3><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></div>
+                            <div><h3>Experience</h3><span>Totara</span><span>QBurst</span><span>EY</span><span>Assyst</span></div>
+                            <div><h3>Based in</h3><span>Wellington</span><span>New Zealand</span></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="hero-height" class="hidden"></div>
-            <!--/Hero Section -->
-
-
-            <div id="hero-image" class="hidden" style="background-image:url(images/projects/03hero.jpg)">
-            	<div id="image-border-left"></div>
-                <div id="image-border-right"></div>
-            </div>
-
-
-        	<!-- Main Content -->
-            <div id="main-content">
-
-
-              <!-- Row -->
-              <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-
-                  <div class="container">
-
-                      <h5><i>Statement of Originality & Confidentiality</i></h5>
-                      <p style="font-size: 16px;line-height: 24px;"><i>To comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study. All the below information belongs to the organization whose name appears on the document and is to be treated as confidential. It is used to demonstrate my work experience and related skills. Permission has been granted for the product to be used as documentation of my work. Please do not disclose any information to any person or persons who would use it for the purpose outside the possibility of employment.</i></p>
-
-
-
-                  </div>
-
-              </div>
-              <!--/Row -->
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>OVERVIEW</h2>
-                        <p>ISA is a leading educational consultancy that facilitates quality services in the area of international education. Spread across the continents of Asia, Africa, Europe, Latin America and the Pacific, ISA partners with accredited schools and universities to ensure their customer needs. QBurst was approached to do a UX discovery phase and provide recommendations for redesigning the existing ISA website.
-                          </p>
-
-                        <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top " data-delay="10">
-
-                    <div class="container">
-
-                        <div class=" one_third"><h3>Objectives</h3></div>
-
-                        <div class=" two_third last">
-
-                            <p>• A website that delivers a more appealing, effective, user-friendly, and personalized experience for target audiences across all targeted devices and channels to improve both user and business performance.
-                              <br>
-                              • A new content management system for non-technical business users to manage content and publish to the site.
-                              <br>
-                              • A site that is easier to administer and maintain.
-                            </p>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <div class=" one_third"><h3>Goals</h3></div>
-
-                        <div class=" two_third last">
-
-
-                            <p>• Perform a situation assessment of the current, or “As-Is,” state of things to define the nature and scope of the challenges to be addressed.
-                              <br>
-                              • Establish a shared understanding and consensus within ISA and World Strides about priorities, goals and desired outcomes for the project.
-                              <br>
-                              • Create a vision for the desired future, or “To-Be,” state that provides inputs and direction for the Design and Development teams to deliver solutions for the challenges identified during Discovery.
-                              <br>
-                              • Provide recommendations for proposed solutions and platforms that deliver on ISA’s vision for more appealing, effective, user-friendly and personalized offerings to all target audiences across targeted devices and channels.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top" data-delay="10" style="background-color:#e8e8e9">
-
-                    <div class="container">
-
-                          <h2>MY ROLE</h2>
-
-                          <p>I collaborated with the Qburst UX team in US for the discovery phase which extended for two months.</p>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10" style="background-color:#e8e8e9">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_designprocess.jpg" alt="UX Process">
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-                <!--<div class="one_third">
-                    <div class="clapat-icon">
-                        <i class="fa fa-desktop" aria-hidden="true"></i>
-                    </div>
-
-                    <h5>Discover</h5>
-                    <p>The first step is all about gaining understanding & knowledge. We dig deep to know everything possible that will help us craft a better solution.</p>
-                </div>
-
-                <div class="one_third">
-                    <div class="clapat-icon">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                    </div>
-
-                    <h5>Define</h5>
-                    <p>We draw insights from the research data and craft a product roadmap that solves problems like no other existing products.</p>
-                </div>
-
-                <div class=" one_third last">
-                    <div class="clapat-icon">
-                        <i class="fa fa-camera" aria-hidden="true"></i>
-                    </div>
-
-                    <h5>Design</h5>
-                    <p>It's all about bringing emotions to logic. We map empathy and cognitive science to derive on a product that is not just usable but appealing.</p>
-                </div>-->
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <div class=" one_third"><h3>Discover</h3></div>
-
-                        <div class=" two_third last">
-                          <h5>Target Audience</h5>
-                          <p>We interviewed a number of stakeholders and few students to know Who they were, their goals, needs, challenges, and their behaviors.</p>
-                          <h5>Understand ISA Business & Competitors</h5>
-                          <p>I did a competitors' analysis to better understand ISA’s business, operations, goals, risks and challenges, education industry.</p>
-                          <h5>Heuristic evaluation</h5>
-                          <p>An analysis of the current site was also done to get a better understand of the current flow,  strengths and weakness of UI.</p>
-                          <h5>Key Takeaways</h5>
-                          <p>
-                            • Key challenges facing the business include: Changing preferences, expectations and behaviors across all target audience segments.
-                            <br>
-                            • Outdated proprietary technology and IT resourcing.
-                            <br>
-                            • A “redesign” will address the presentation-related issues on the website, however, the greatest challenges are related to content and structure.
-
-                          </p>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_targetaudience.jpg" alt="Target Audience Image">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Target audience segments findings</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_persona1.jpg" alt="Persona 1 Image">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Target audience findings</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_persona2.jpg" alt="Persona 2 Image">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Target audience findings</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_slide0.jpg" alt="Image from presentation slide">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Existing site review findings</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_slide1.jpg" alt="Image from presentation slide">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Existing site review findings</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_slide2.jpg" alt="Image from presentation slide">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Existing site review findings</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_slide3.jpg" alt="Image from presentation slide">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Existing site review findings</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-                <!-- Row -->
-                <div class="vc_row full text-align-center has-animation" data-delay="10">
-
-                    <div class="container">
-
-                        <img loading="lazy" decoding="async" src="images/projects/ISA_slide4.jpg" alt="Image from presentation slide">
-                        <p style="color: #c0c0c0;padding-top: 30px;"><i>Existing site review findings</i></p>
-
-                    </div>
-                    <hr><hr>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>STAKEHOLDER INTERVIEW</h2>
-                        <p>Stakeholder interview was done to better understand their vision, concerns and needs.</p>
-                        <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-                <!-- Row -->
-                <div class="vc_row full row_padding_bottom">
-
-                    <div class="container">
-
-                        <div class="carousel">
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/01_ISA_testresult.jpg" alt="stakeholders interview"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/02_ISA_testresult.jpg" alt="stakeholders interview"></a></div>
-                            <div class="slide"><a class=""><img loading="lazy" decoding="async" src="images/projects/03_ISA_testresult.jpg" alt="stakeholders interview"></a></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-                <!--
-                <div class="vc_row full text-align-center has-animation row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <div class="one_half has-animation" data-delay="100">
-                          <a href="images/projects/bruni01.jpg" class="image-link"><img loading="lazy" decoding="async" src="images/projects/bruni01.jpg" /></a>
-                          <p style="color: #c0c0c0;padding-top: 30px;">User Flows</p>
-                        </div>
-
-                        <div class="one_half last has-animation" data-delay="200">
-                            <a href="images/projects/bruni02.jpg" class="image-link"><img loading="lazy" decoding="async" src="images/projects/bruni02.jpg" /></a>
-                            <p style="color: #c0c0c0;padding-top: 30px;">User Flows</p>
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-                -->
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row has-animation row_padding_bottom" data-delay="10" style="text-align: center;">
-
-                    <div class="container">
-                      <h2>Proposed UI Wireframe</h2>
-                      <img loading="lazy" decoding="async" src="images/projects/ISA_wireframe.jpg" alt="">
-                      <div class="submit-box">
-                         <input type="submit" class="send_message cillar-button" value="View Axure Wireframe" onclick="window.open('https://26icim.axshare.com/#g=1&p=homepage_option_2&hi=1','newwindow');"/>
-                      </div>
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- Row -->
-                <div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-
-                    <div class="container">
-
-                        <h2>REFLECTION AND NEXT STEP</h2>
-                        <p>For a better transition to the design phase, few more tasks had to be completed that includes Card Sorting, defining User Flows and Usability Testing. These suggestion were not met due to budget and time constraints.</p>
-                        <!--<a href="https://oldcastleproductguide.com/" target="_blank" class="link"><span>View Website</span></a>-->
-
-                    </div>
-
-                </div>
-                <!--/Row -->
-
-                <div id="project-nav" class="has-animation" data-delay="100">
-                    <div class="nav-title">
-                        <a  class="ajax-link project-next" data-type="page-transition" href="omron.html">next</a>
-                    </div>
-                    <div class="nav-project-title"><span>Omron Health</span></div>
-                </div>
-
-
 
             </div>
             <!--/Main Content -->
@@ -577,7 +263,7 @@
         <!--/Main -->
 
 
-        <!-- Footer -->
+                <!-- Footer -->
         <footer class="hidden">
 
 
