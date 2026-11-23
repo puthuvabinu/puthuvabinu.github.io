@@ -513,6 +513,7 @@ body:has(.lp-cs-tabs) main{overflow:clip !important}
 .lp-cs-tabs a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .lp-cs-spy .lp-cs-brief{padding-top:56px}
 body.lp-tabs-pinned header{top:-120px !important}
+@media (max-width:1199.98px){ .lp-cs-tabs a{font-size:34px;line-height:44px} }
 @media (max-width:991.98px){ .lp-cs-tabs a{font-size:32px;line-height:42px} }
 @media (max-width:767.98px){
   .lp-cs-tabs{top:15px;padding-top:14px}
