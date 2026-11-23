@@ -321,3 +321,81 @@ body.lp-menu-open{overflow:hidden}
   .lp-step h3,.lp-ind h3{font-size:18px;line-height:28px}
   .lp-cta-box .eyebrow{font-size:18px;line-height:28px}
 }
+
+/* ==========================================================================
+   Case study pages — Lollypop project template (measured from
+   lollypop.design/projects/naruvi-hospital-management-system at 1288px):
+   banner title 51/66 with red bar, tag row with dots, 926px hero image;
+   brief rows = red uppercase label (3/12) + text (9/12), 80px apart;
+   design "modules" = big faded group title, red uppercase item title, text, full-width screen;
+   conclusion Q&A, then next-project link.
+   ========================================================================== */
+.lp-cs{font-family:var(--font);color:var(--ink)}
+.lp-cs-banner{padding:200px 0 0}
+.lp-cs-head{padding-left:calc((var(--w-md) + 24px)/12);margin-bottom:80px}
+.lp-cs-eyebrow{display:block;font-size:14px;line-height:24px;margin-bottom:8px}
+.lp .lp-cs-h1{position:relative;font-size:51px;line-height:66px;font-weight:800;letter-spacing:-1.5px;margin:0 0 24px}
+.lp-cs-h1::before{content:"";position:absolute;left:-40px;top:18px;width:5px;height:53px;background:var(--accent)}
+.lp-cs-tags{display:flex;flex-wrap:wrap;align-items:center;font-size:14px;line-height:24px;row-gap:4px}
+.lp-cs-tags span+span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#C9C3C0;margin:0 18px;vertical-align:middle;position:relative;top:-1px}
+.lp-cs-hero img{display:block;width:100%;height:auto}
+.lp-cs-note{font-size:13px;line-height:22px;color:var(--muted);margin:24px 0 0 !important;font-style:italic}
+
+.lp-cs-brief{padding:80px 0 0}
+.lp-cs-row{display:grid;grid-template-columns:calc((var(--w-md) + 24px)*3/12) minmax(0,1fr);margin-bottom:80px}
+.lp .lp-cs-label{font-size:18px;line-height:28px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent) !important;padding-right:24px;margin:0}
+.lp-cs-body p,.lp-cs-body li{font-size:16px;line-height:26.88px}
+.lp-cs-body p{margin:0 0 24px}
+.lp-cs-body > :last-child{margin-bottom:0}
+.lp-cs-body strong{font-weight:700}
+.lp .lp-cs-body h4{font-size:16px;line-height:26.88px;font-weight:800;margin:0 0 4px}
+.lp-cs-body ul{margin:0 0 24px;padding-left:20px}
+.lp-cs-body li{margin:0 0 6px}
+.lp .lp-cs-quote{font-size:28px;line-height:38px;font-weight:800;letter-spacing:-.5px;margin:8px 0 24px}
+.lp-cs-fig{grid-column:1/-1;margin:48px 0 0}
+.lp-cs-fig img{display:block;width:100%;height:auto}
+.lp-cs-fig figcaption{font-size:14px;line-height:24px;color:var(--muted);margin-top:12px}
+
+.lp-cs-modules{padding:40px 0 0}
+.lp-cs-group + .lp-cs-group{margin-top:40px}
+.lp .lp-cs-group-h{font-size:56px;line-height:86px;font-weight:700;letter-spacing:-1px;color:rgba(44,44,44,.4) !important;margin:0 0 32px}
+.lp-cs-item{margin-bottom:80px}
+.lp .lp-cs-item h3{font-size:18px;line-height:23.4px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent) !important;margin:0 0 24px}
+.lp-cs-item p{font-size:16px;line-height:26.88px;max-width:737px}
+.lp-cs strong,.lp-cs b{font-weight:700;color:var(--ink)}
+.lp-cs-item img{display:block;width:100%;height:auto;margin-top:64px}
+
+.lp-cs-end{padding:40px 0 0}
+.lp .lp-cs-end h2{font-size:40px;line-height:52px;font-weight:800;letter-spacing:-1px;color:var(--accent) !important;margin:0 0 38px}
+.lp-cs-qa{margin-bottom:40px}
+.lp .lp-cs-qa h3{font-size:28px;line-height:37px;font-weight:800;letter-spacing:-.5px;margin:0 0 16px}
+.lp-cs-qa p{font-size:16px;line-height:26.88px}
+
+.lp-cs-next{display:flex;justify-content:flex-end;padding:56px 0 120px}
+.lp-cs-next a{display:flex;align-items:flex-start;gap:24px;text-align:right;color:var(--ink) !important}
+.lp-cs-next small{display:block;font-size:14px;line-height:24px;color:var(--muted)}
+.lp .lp-cs-next h4{font-size:28px;line-height:38px;font-weight:800;margin:0;transition:color .25s ease}
+.lp-cs-next svg{width:28px;height:28px;margin-top:30px;color:var(--accent);transition:transform .25s ease}
+.lp-cs-next a:hover h4{color:var(--accent) !important}
+.lp-cs-next a:hover svg{transform:translateX(6px)}
+
+@media (max-width:767.98px){
+  .lp-cs-banner{padding-top:60px}
+  .lp-cs-head{padding-left:34px;margin-bottom:40px}
+  .lp .lp-cs-h1{font-size:32px;line-height:40px;letter-spacing:-1px}
+  .lp-cs-h1::before{left:-24px;top:8px;width:4px;height:32px}
+  .lp-cs-tags span+span::before{margin:0 10px}
+  .lp-cs-brief{padding-top:48px}
+  .lp-cs-row{grid-template-columns:1fr;margin-bottom:48px}
+  .lp .lp-cs-label{margin-bottom:12px}
+  .lp .lp-cs-quote{font-size:22px;line-height:32px}
+  .lp-cs-fig{margin-top:32px}
+  .lp .lp-cs-group-h{font-size:36px;line-height:48px;margin-bottom:24px}
+  .lp-cs-item{margin-bottom:56px}
+  .lp-cs-item img{margin-top:32px}
+  .lp .lp-cs-end h2{font-size:32px;line-height:42px;margin-bottom:24px}
+  .lp .lp-cs-qa h3{font-size:22px;line-height:32px}
+  .lp-cs-next{padding:32px 0 80px}
+  .lp .lp-cs-next h4{font-size:22px;line-height:32px}
+  .lp-cs-next svg{margin-top:26px}
+}

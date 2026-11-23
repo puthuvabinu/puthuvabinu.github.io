@@ -34,15 +34,15 @@
 	<div class="cd-index cd-main-content">
 
 	<!-- Page Content -->
-	<div id="page-content" class="" data-bgcolor="#fff" data-textcolor="#000">
+	<div id="page-content" class="lp" data-bgcolor="#F7F4F2" data-textcolor="#221429" >
 
         <div class="page-overlay from-bottom">
             <div class="animate-box-bottom"></div>
         </div>
 
         <!-- Header -->
-        <header class="scroll-hide">
-        	<div id="header-container">
+        <header class="scroll-hide initial">
+            <div id="header-container">
 
             <!-- Logo -->
             <div id="logo">
@@ -57,35 +57,33 @@
             <nav>
 
                 <ul data-breakpoint="1024" class="flexnav">
-                  <li><a class="ajax-link active" href="index.html" data-type="page-transition">Portfolio</a>
+                    <li><a class="active" href="" data-type="page-transition">Portfolio</a>
+                      <!--
+                      <ul>
+                        <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
+                        <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
+                        <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
+                        <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
+                        <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
+                      </ul>
+                    -->
+                    </li>
+
+                    <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
+
                     <!--
-                    <ul>
-                      <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
-                      <li><a class="ajax-link" href="portfolio01.html" data-type="page-transition">Half Squares</a></li>
-                      <li><a class="ajax-link" href="portfolio02.html" data-type="page-transition">White Canvas</a></li>
-                      <li><a class="ajax-link" href="portfolio03.html" data-type="page-transition">Vertical Slides</a></li>
-                      <li><a class="ajax-link" href="portfolio04.html" data-type="page-transition">Classic Grid</a></li>
-                    </ul>
+                    <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
+
+
+                    <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
                   -->
-                  </li>
-
-                  <li><a class="ajax-link" href="about.html" data-type="page-transition">About me</a></li>
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let's Talk</a></li>
-
-                  <!--
-                  <li><a class="ajax-link" href="project03.html" data-type="page-transition">Projects</a></li>
-
-
-                  <li><a class="ajax-link" href="contact.html" data-type="page-transition">Projects</a></li>
-                -->
 
 
                 </ul>
 
             </nav>
             <!--/Navigation -->
-
-            <div id="black-fade"></div>
 
             <!-- Menu Burger -->
             <div id="menu-burger">
@@ -96,264 +94,287 @@
             </div>
             <!--/Menu Burger -->
 
-        	</div>
+            </div>
         </header>
+
+        <!-- Menu button: sits with the header, then floats as a round button once you scroll (like Lollypop) -->
+        <button class="lp-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="lp-menu"><span></span><span></span></button>
+
+        <!-- Full-screen menu (slides down from the top, like Lollypop) -->
+        <div class="lp-menu" id="lp-menu" aria-hidden="true">
+            <button class="lp-menu-close" type="button" aria-label="Close menu"><span></span><span></span></button>
+            <div class="lp-menu-red">
+                <div class="lp-menu-in">
+                    <div class="lp-menu-grid">
+                        <ul class="lp-menu-big">
+                            <li><a class="ajax-link" href="index.html" data-type="page-transition">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a></li>
+                            <li><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a></li>
+                            <li><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a></li>
+                            <li><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a></li>
+                            <li><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a></li>
+                            <li><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#experience">Where I’ve Worked</a></li>
+                            <li><a href="#how">How I Work</a></li>
+                            <li><a href="#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <a class="lp-menu-promo ajax-link" href="contact.html" data-type="page-transition"><span>UX &amp; product designer, 22+ years</span> <b>Open to new opportunities →</b></a>
+                    <ul class="lp-menu-social">
+                        <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lp-menu-dark">
+                <div class="lp-menu-in">
+                    <p class="lp-menu-eyebrow">Got a complex product?</p>
+                    <h2 class="lp-menu-h">Let’s make it clear, together.</h2>
+                    <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition">Get In Touch</a>
+                    <ul class="lp-menu-places"><li>Wellington</li><li>New Zealand</li></ul>
+                </div>
+            </div>
+        </div>
         <!--/Header -->
-
-
 
         <!-- Main -->
         <div id="main">
+            <!-- Loaded here too so the page is styled when it arrives through an AJAX page transition -->
+            <link href="css/theme.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+            <div id="main-content" class="lp-cs">
 
-            <!-- Hero Section -->
-            <div id="hero">
-                <div id="hero-styles" class="parallax-onscroll opacity-onscroll">
-                    <div id="hero-caption">
-                        <div class="inner text-align-center">
-                            <div class="hero-title">SF-182</div>
-                            <div class="hero-subtitle">Digitising training approvals for US government agencies</div>
+                <!-- Banner -->
+                <section class="lp-cs-banner">
+                    <div class="lp-wrap md">
+                        <div class="lp-cs-head has-animation" data-delay="60">
+                            <span class="lp-cs-eyebrow">Totara · TotaraGov</span>
+                            <h1 class="lp-cs-h1">Digitising training approvals for US government agencies</h1>
+                            <div class="lp-cs-tags"><span>SF-182</span><span>US Federal Government</span><span>Enterprise</span><span>UX/UI</span></div>
+                        </div>
+                        <div class="lp-cs-hero has-animation" data-delay="120">
+                            <img decoding="async" src="images/projects/SF182_before_after.jpg" alt="The OPM SF-182 form compared with the guided request in Totara">
+                        </div>
+                        <p class="lp-cs-note">Statement of originality and confidentiality: to comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study, including customer names. All screens use placeholder data. This material belongs to the organisation named on it and is shared only to demonstrate my work experience and skills for the purpose of employment.</p>
+                    </div>
+                </section>
+
+                <!-- Brief: label left, story right -->
+                <section class="lp-cs-brief">
+                    <div class="lp-wrap md">
+
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Brief</h2>
+                            <div class="lp-cs-body">
+                                <p>Large US federal agencies use learning platforms to deliver training to their employees and contractors, and to assign and report on mandatory training. When an employee wants training from outside their organisation, especially training with fees or travel costs, they complete the <strong>SF-182</strong>: the <i>Request, Authorization, Agreement and Certification of Training</i> form from the Office of Personnel Management (OPM). The form records the request, its approvals and the completed training, and in some cases it also acts as the purchase order for the training provider.</p>
+                                <p><a href="https://www.totara.com/" target="_blank" rel="noopener"><strong>Totara</strong></a> is a learning, performance and compliance platform used by organisations worldwide. <strong>TotaraGov</strong> brings it to US federal and state government agencies.</p>
+                                <p>In 2021 a large US federal department moving to Totara needed its SF-182 process to come with it. Totara decided to design and build a <strong>new SF-182 plugin for Totara 14</strong>: first matching everything the department's previous system did, then becoming part of the core Totara product for other government customers. My goal was to turn a paper form into a <strong>guided digital workflow</strong>, from the learner's request, through several levels of approval, to verifying that the training was completed. <span class="lp-todo">[Can you name the customer (e.g. its learning portal)? If not, leave as is.]</span></p>
+                            </div>
+                        </div>
+
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Challenge</h2>
+                            <div class="lp-cs-body">
+                                <p>The SF-182 is <strong>long and technical</strong>: three sections of trainee details, training course data, and costs and billing, full of government codes, pay plans and appropriation funds. Each request then passes through <strong>up to four levels of approval</strong>, and the right approvers depend on the learner's organisation and sub-organisation. After the training, the learner has to prove they completed it and their supervisor has to verify it.</p>
+                                <p>Every agency uses the form a little differently, so the design had to work for this first customer while staying flexible enough to become a core product feature. It also had to stay true to the official OPM form, which people know well and which still has to be printed.</p>
+                                <h3 class="lp-cs-quote">“Turn a form that travels from desk to desk into a process everyone can see.”</h3>
+                            </div>
+                        </div>
+
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">My role</h2>
+                            <div class="lp-cs-body">
+                                <p>I owned the design side of SF-182 and the <strong>end-to-end experience</strong>, for every role involved: learners, supervisors, approvers, approval admins and site administrators. I worked closely with product owners and the customer's team, and my concept designs formed the screens of the solution design that went to the customer for sign-off. I then supported the developers through handover, using components from the <strong>Totara UI Kit</strong>.</p>
+                                <p>I partnered with product on <strong>discovery workshops, research and journey mapping</strong>, so that every design decision was grounded in how the agency actually processes training requests.</p>
+                            </div>
+                        </div>
+
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Discover</h2>
+                            <div class="lp-cs-body">
+                                <h4>Understanding the form</h4>
+                                <p>I started with the official OPM form itself: every section, field and code, and the OPM guidelines behind them. This showed which fields the learner fills in, which could be filled in automatically from their profile, which should be locked, and which only matter to approvers and reporting.</p>
+                                <h4>Learning from the existing process</h4>
+                                <p>Together with the product owners, I ran workshops with the customer's team to understand how SF-182 worked in their previous system: who approves at each level, how sub-organisations differ, which notifications people rely on and which reports they run. <span class="lp-todo">[Add the number of sessions or people involved, if you know it]</span></p>
+                                <h4>Key insights</h4>
+                                <ul>
+                                    <li>The form is long, and many fields are about the learner rather than the training, so the learner shouldn't have to type them.</li>
+                                    <li>Learners lose track of their request once it leaves their hands.</li>
+                                    <li>Approvers deal with many requests and need to see quickly what is waiting for them.</li>
+                                    <li>Approval chains differ by organisation and sub-organisation, and change over time.</li>
+                                    <li>Some data, like social security numbers, should not be collected at all.</li>
+                                    <li>The printed OPM form is still needed, for example as a purchase order.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="lp-cs-row has-animation" data-delay="40">
+                            <h2 class="lp-cs-label">Define</h2>
+                            <div class="lp-cs-body">
+                                <h4>Workflow and stages</h4>
+                                <p>We defined SF-182 as a workflow of four stages: filling out the form and getting approval, the training itself, verification, and recording the learning. Each stage has its own approvers and notifications.</p>
+                                <h4>Roles and permissions</h4>
+                                <p>I mapped five roles (learner, supervisor, approver, approval admin and site administrator) and what each can do at every point in a request's life, from draft and pending approval through to denied, withdrawn or verified. This <strong>user actions matrix</strong> became the blueprint for both the screens and the permissions.</p>
+                                <h4>Key decisions</h4>
+                                <ul>
+                                    <li>Up to four approval levels, following OPM guidelines, with the supervisor at level 1.</li>
+                                    <li>A rejected request returns to draft. A withdrawn request returns to the start of its current stage and must be approved again.</li>
+                                    <li>Approval admins can act at any level for their organisations, and submit or withdraw on someone's behalf.</li>
+                                    <li>Every key action is recorded in an activity log that everyone on the request can see.</li>
+                                    <li>Every step sends a clear email notification, which administrators can edit.</li>
+                                </ul>
+                            </div>
+                            <figure class="lp-cs-fig">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_approvalflow.jpg" alt="SF-182 workflow stages and approval levels">
+                                <figcaption>Workflow stages and approval levels</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="lp-cs-row has-animation" data-delay="40" style="margin-bottom:40px">
+                            <h2 class="lp-cs-label">Design</h2>
+                            <div class="lp-cs-body">
+                                <p>The request form keeps the OPM structure and field labels, so it feels familiar, but makes it much easier to complete. Each role gets the screens it needs at its step of the workflow: learners, approvers, and site administrators.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Design modules: one group per role -->
+                <section class="lp-cs-modules">
+                    <div class="lp-wrap md">
+
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">Learner</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Request dashboard</h3>
+                                <p><strong>Everything in one place –</strong> Learners get a dashboard of their requests and their progress, so they never lose track of a request once it leaves their hands.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_learner_dashboard.jpg" alt="Learner request dashboard">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>A guided form</h3>
+                                <p><strong>Familiar, but much easier –</strong> Section names on the left let learners jump around the form. Their profile details are filled in automatically, fixed values are locked, totals are calculated for them, and choices adapt to earlier answers. Help text based on the OPM guidelines sits next to the fields that need it. Learners can save a draft at any time, and clone a past request to start a new one.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_request.jpg" alt="SF-182 request form">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Vendor search</h3>
+                                <p><strong>No more typing provider details –</strong> Learners can search a vendor list by name, address or state, and the vendor fields fill themselves in. The details can still be edited.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_vendor_search.jpg" alt="Vendor search">
+                            </div>
+                        </div>
+
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">Approver</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Approver dashboard</h3>
+                                <p><strong>What needs me first –</strong> Approvers see the requests waiting for their response first, followed by every request they could act on, showing both their own progress and the overall progress.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_approver_dashboard.jpg" alt="Approver request dashboard">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Approving a request</h3>
+                                <p><strong>Clear decisions at every level –</strong> Approvers review a request and approve or deny it at their level, and the request moves on to the next approver automatically.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_approval.jpg" alt="Approving a request">
+                            </div>
+                        </div>
+
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">After the training</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Verification</h3>
+                                <p><strong>Prompted, simple proof –</strong> After the training date, the learner is prompted to complete verification: they confirm whether they completed the training, add evidence such as a certificate, and update the costs if they changed. Their supervisor then approves the verification.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_verification.jpg" alt="Verification form">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Activity log</h3>
+                                <p><strong>Everyone can see where it is –</strong> Every key action is recorded in an activity log that everyone on the request can see.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_tracking.jpg" alt="Request activity log">
+                            </div>
+                        </div>
+
+                        <div class="lp-cs-group">
+                            <h2 class="lp-cs-group-h has-animation" data-delay="40">Site administrator</h2>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Approval workflows</h3>
+                                <p><strong>Workflows that change with the agency –</strong> Site administrators manage workflows: edit, clone, publish and archive them.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_admin_workflows.jpg" alt="Manage approval workflows">
+                            </div>
+                            <div class="lp-cs-item has-animation" data-delay="40">
+                                <h3>Approvers for each level</h3>
+                                <p><strong>Flexible approval chains –</strong> Administrators choose approvers for each of the four levels by relationship or by name, upload overrides for sub-organisations in bulk with a CSV file, and edit the notifications.</p>
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_admin_approvers.jpg" alt="Configuring approvers for each level">
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="lp-cs-end">
+                    <div class="lp-wrap md">
+                        <h2 class="has-animation" data-delay="40">Conclusion</h2>
+                        <div class="lp-cs-qa has-animation" data-delay="40">
+                            <h3>What did we achieve?</h3>
+                            <p>SF-182 was built as a Totara plugin for Totara 14, replacing the paper form for our federal customer and becoming part of the core TotaraGov offering for other agencies. Learners submit and track requests in one place, approvers act on them from their dashboard, and every step is recorded and reportable through Totara's Report Builder. <span class="lp-todo">[Add results if you have them: number of users or requests, time saved, customer feedback]</span></p>
+                        </div>
+                        <div class="lp-cs-qa has-animation" data-delay="40">
+                            <h3>What would I do next?</h3>
+                            <p><span class="lp-todo">[Your reflection: what you learned designing for government, and what you would do next, e.g. making the form configurable for other agencies' fields]</span></p>
+                        </div>
+                        <div class="lp-cs-next has-animation" data-delay="40">
+                            <a class="ajax-link" href="totaramobile.html" data-type="page-transition"><span><small>Next project</small><h4>Totara Mobile</h4></span><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 14h17M15 7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="lp-sec" style="padding-top:90px;padding-bottom:0">
+                    <div class="lp-cta-box has-animation" data-delay="40">
+                        <p class="eyebrow">Got a complex product?</p>
+                        <h2 class="lp-h2">Let’s make it clear, together.</h2>
+                        <div class="row">
+                            <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition" style="border-color:var(--accent);color:var(--accent) !important">Let’s talk</a>
+                            <a class="lp-btn ghost" href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn <svg class="lp-ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer (Lollypop-style: big links row, then brand + link columns) -->
+                <div class="lp-foot2">
+                    <div class="lp-foot2-follow">
+                        <h2>Let’s connect</h2>
+                        <ul>
+                            <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="lp-foot2-bottom">
+                        <div class="lp-foot2-brand">
+                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose"></a>
+                            <p class="tag">A UX and product designer crafting clear, human experiences through <b>research, design and design systems</b>.</p>
+                            <p class="copy">© 2026 Binu Jose · Wellington, New Zealand</p>
+                            <ul class="small">
+                                <li><a class="ajax-link" href="about.html" data-type="page-transition">About</a></li>
+                                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                                <li><a class="ajax-link" href="index.html" data-type="page-transition">Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="lp-foot2-cols">
+                            <div><h3>Case studies</h3><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></div>
+                            <div><h3>Experience</h3><span>Totara</span><span>QBurst</span><span>EY</span><span>Assyst</span></div>
+                            <div><h3>Based in</h3><span>Wellington</span><span>New Zealand</span></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="hero-height" class="hidden"></div>
-            <!--/Hero Section -->
-
-
-            <div id="hero-image" class="hidden" style="background-image:url(images/projects/09hero.jpg)">
-            	<div id="image-border-left"></div>
-                <div id="image-border-right"></div>
-            </div>
-
-
-				<!-- Main Content -->
-				<div id="main-content">
-
-					<!-- DRAFT NOTE: text in yellow highlight (class="todo") still needs your input. Search this file for "todo" before publishing. -->
-					<style>.todo{background:#fff3c4;padding:0 4px;}</style>
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-						<div class="container">
-							<h5><i>Statement of Originality & Confidentiality</i></h5>
-							<p style="font-size: 16px;line-height: 24px;"><i>To comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study, including customer names. All screens use placeholder data. All the below information belongs to the organization whose name appears on the document and is to be treated as confidential. It is used to demonstrate my work experience and related skills. Please do not disclose any information to any person or persons who would use it for the purpose outside the possibility of employment.</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>OVERVIEW</h2>
-							<p>Large US federal agencies use learning platforms to deliver training to their employees and contractors, and to assign and report on mandatory training. When an employee wants training from outside their organisation, especially training with fees or travel costs, they complete the SF-182: the <i>Request, Authorization, Agreement and Certification of Training</i> form from the Office of Personnel Management (OPM). The form records the request, its approvals and the completed training, and in some cases it also acts as the purchase order for the training provider.</p>
-							<h4><a href="https://www.totara.com/" target="_blank" class="link"><span>Totara</span></a> is a learning, performance and compliance platform used by organisations worldwide.<br>TotaraGov brings it to US federal and state government agencies.</h4>
-							<p>In 2021 a large US federal department moving to Totara needed its SF-182 process to come with it. Totara decided to design and build a new SF-182 plugin for Totara 14: first matching everything the department's previous system did, then becoming part of the core Totara product for other government customers. My goal was to turn a paper form into a guided digital workflow, from the learner's request, through several levels of approval, to verifying that the training was completed. <span class="todo">[Can you name the customer (e.g. its learning portal)? If not, leave as is.]</span></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/SF182_before_after.jpg" alt="The OPM SF-182 form compared with the guided request in Totara">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>From the OPM form to a guided request</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>CHALLENGE</h2>
-							<p>The SF-182 is long and technical: three sections of trainee details, training course data, and costs and billing, full of government codes, pay plans and appropriation funds. Each request then passes through up to four levels of approval, and the right approvers depend on the learner's organisation and sub-organisation. After the training, the learner has to prove they completed it and their supervisor has to verify it.</p>
-							<p>Every agency uses the form a little differently, so the design had to work for this first customer while staying flexible enough to become a core product feature. It also had to stay true to the official OPM form, which people know well and which still has to be printed.</p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full has-animation text-align-center row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9">
-						<div class="container">
-							<h3>“Turn a form that travels from desk to desk into a process everyone can see.”</h3>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>MY ROLE & DESIGN PROCESS</h2>
-							<p>I owned the design side of SF-182 and the end-to-end experience, for every role involved: learners, supervisors, approvers, approval admins and site administrators. I worked closely with product owners and the customer's team, and my concept designs formed the screens of the solution design that went to the customer for sign-off. I then supported the developers through handover, using components from the Totara UI Kit.</p>
-							<h4>I partnered with product on discovery workshops, research and journey mapping, so that every design decision was grounded in how the agency actually processes training requests.</h4>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<div class=" one_third"><h3>Discover</h3></div>
-							<div class=" two_third last">
-								<h5>Understanding the form</h5>
-								<p>I started with the official OPM form itself: every section, field and code, and the OPM guidelines behind them. This showed which fields the learner fills in, which could be filled in automatically from their profile, which should be locked, and which only matter to approvers and reporting.</p>
-								<h5>Learning from the existing process</h5>
-								<p>Together with the product owners, I ran workshops with the customer's team to understand how SF-182 worked in their previous system: who approves at each level, how sub-organisations differ, which notifications people rely on and which reports they run. <span class="todo">[Add the number of sessions or people involved, if you know it]</span></p>
-								<h5>Key Insights</h5>
-								<p>
-									• The form is long, and many fields are about the learner rather than the training, so the learner shouldn't have to type them.
-									<br>
-									• Learners lose track of their request once it leaves their hands.
-									<br>
-									• Approvers deal with many requests and need to see quickly what is waiting for them.
-									<br>
-									• Approval chains differ by organisation and sub-organisation, and change over time.
-									<br>
-									• Some data, like social security numbers, should not be collected at all.
-									<br>
-									• The printed OPM form is still needed, for example as a purchase order.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<div class=" one_third"><h3>Define</h3></div>
-							<div class=" two_third last">
-								<h5>Workflow & stages</h5>
-								<p>We defined SF-182 as a workflow of four stages: filling out the form and getting approval, the training itself, verification, and recording the learning. Each stage has its own approvers and notifications.</p>
-								<h5>Roles & permissions</h5>
-								<p>I mapped five roles (learner, supervisor, approver, approval admin and site administrator) and what each can do at every point in a request's life, from draft and pending approval through to denied, withdrawn or verified. This user actions matrix became the blueprint for both the screens and the permissions.</p>
-								<h5>Key Decisions</h5>
-								<p>
-									• Up to four approval levels, following OPM guidelines, with the supervisor at level 1.
-									<br>
-									• A rejected request returns to draft. A withdrawn request returns to the start of its current stage and must be approved again.
-									<br>
-									• Approval admins can act at any level for their organisations, and submit or withdraw on someone's behalf.
-									<br>
-									• Every key action is recorded in an activity log that everyone on the request can see.
-									<br>
-									• Every step sends a clear email notification, which administrators can edit.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row full row_padding_bottom text-align-center has-animation" data-delay="10">
-						<div class="container">
-							<img loading="lazy" decoding="async" src="images/projects/SF182_approvalflow.jpg" alt="SF-182 workflow stages and approval levels">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Workflow stages and approval levels</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<div class=" one_third"><h3>Design</h3></div>
-							<div class=" two_third last">
-								<h5>A guided form</h5>
-								<p>The request form keeps the OPM structure and field labels, so it feels familiar, but makes it much easier to complete. Section names on the left let learners jump around the form. Their profile details are filled in automatically, fixed values are locked, totals are calculated for them, and choices adapt to earlier answers. Help text based on the OPM guidelines sits next to the fields that need it. Learners can save a draft at any time, and clone a past request to start a new one.</p>
-								<h5>Vendor search</h5>
-								<p>Instead of typing a training provider's details by hand, learners can search a vendor list by name, address or state, and the vendor fields fill themselves in. The details can still be edited.</p>
-								<h5>Dashboards for every role</h5>
-								<p>Learners get a dashboard of their requests and their progress. Approvers see the requests waiting for their response first, followed by every request they could act on, showing both their own progress and the overall progress.</p>
-								<h5>Verification</h5>
-								<p>After the training date, the learner is prompted to complete verification: they confirm whether they completed the training, add evidence such as a certificate, and update the costs if they changed. Their supervisor then approves the verification.</p>
-								<h5>Administration</h5>
-								<p>Site administrators manage workflows (edit, clone, publish, archive), choose approvers for each level by relationship or by name, upload overrides for sub-organisations in bulk with a CSV file, and edit the notifications.</p>
-							</div>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9; text-align: center;">
-						<div class="container">
-							<h4>Learner</h4>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_learner_dashboard.jpg" alt="Learner request dashboard">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Request dashboard: all your requests and their progress</i></p>
-							<hr><hr>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_screen_request.jpg" alt="SF-182 request form">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>The request form: OPM sections and labels, with pre-filled and locked fields</i></p>
-							<hr><hr>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_vendor_search.jpg" alt="Vendor search">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Searching for a training vendor</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="text-align: center;">
-						<div class="container">
-							<h4>Approver</h4>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_approver_dashboard.jpg" alt="Approver request dashboard">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Requests awaiting your response come first</i></p>
-							<hr><hr>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_screen_approval.jpg" alt="Approving a request">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Reviewing and approving a request at your level</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="background-color:#e8e8e9; text-align: center;">
-						<div class="container">
-							<h4>After the training</h4>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_verification.jpg" alt="Verification form">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Verification: completion status and evidence (with design notes)</i></p>
-							<hr><hr>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_screen_tracking.jpg" alt="Request activity log">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Activity log: everyone can see where the request is</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row has-animation row_padding_top row_padding_bottom" data-delay="10" style="text-align: center;">
-						<div class="container">
-							<h4>Site administrator</h4>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_admin_workflows.jpg" alt="Manage approval workflows">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Managing approval workflows</i></p>
-							<hr><hr>
-							<img loading="lazy" decoding="async" src="images/projects/SF182_admin_approvers.jpg" alt="Configuring approvers for each level">
-							<p style="color: #c0c0c0;padding-top: 30px;"><i>Choosing approvers for each of the four levels</i></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>OUTCOME</h2>
-							<p>SF-182 was built as a Totara plugin for Totara 14, replacing the paper form for our federal customer and becoming part of the core TotaraGov offering for other agencies. Learners submit and track requests in one place, approvers act on them from their dashboard, and every step is recorded and reportable through Totara's Report Builder. <span class="todo">[Add results if you have them: number of users or requests, time saved, customer feedback]</span></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-					<!-- Row -->
-					<div class="vc_row small text-align-center has-animation row_padding_top row_padding_bottom" data-delay="10">
-						<div class="container">
-							<h2>REFLECTION AND NEXT STEP</h2>
-							<p><span class="todo">[Your reflection: what you learned designing for government, and what you would do next, e.g. making the form configurable for other agencies' fields]</span></p>
-						</div>
-					</div>
-					<!--/Row -->
-
-                <div id="project-nav" class="has-animation" data-delay="100">
-                    <div class="nav-title">
-                        <a  class="ajax-link project-next" data-type="page-transition" href="totaramobile.html">next</a>
-                    </div>
-                    <div class="nav-project-title"><span>Totara Mobile</span></div>
-                </div>
-
-
 
             </div>
             <!--/Main Content -->
@@ -361,7 +382,7 @@
         <!--/Main -->
 
 
-        <!-- Footer -->
+                <!-- Footer -->
         <footer class="hidden">
 
 
