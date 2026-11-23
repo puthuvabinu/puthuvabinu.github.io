@@ -1322,6 +1322,7 @@ Delegated / re-queried so it keeps working after AJAX page changes.
 				if( t && t.getBoundingClientRect().top <= line ) current = links[i];
 			}
 			// before Discover nothing is highlighted (the brief, challenge and role come first)
+			n.classList.toggle('is-idle', !current);
 			for( var j = 0; j < links.length; j++ ){
 				var on = links[j] === current;
 				if( on !== links[j].classList.contains('is-active') ){
