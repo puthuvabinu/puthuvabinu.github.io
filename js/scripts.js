@@ -1184,10 +1184,10 @@ Function Contact Formular
 		
 	function ContactForm() {	
 	
-		if( jQuery('#contact-formular').length > 0 ){
-			$('#contactform').submit(function(e){
+		if( jQuery('#contactform').length > 0 ){
+			$('#contactform').off('submit').on('submit', function(e){
 				e.preventDefault();
-				var action = $(this).attr('action');
+				var form = $(this), action = form.attr('action');
 				$("#message").slideUp(750,function() {
 					$('#message').hide();
 					$('#submit').attr('disabled','disabled');		
@@ -1198,11 +1198,7 @@ Function Contact Formular
 						headers: {
 							'Accept': 'application/json'
 						},
-						data: {
-							name: $('#name').val() === 'Full Name' ? '' : $('#name').val(),
-							email: $('#email').val() === 'E-mail' ? '' : $('#email').val(),
-							comments: $('#comments').val() === 'Your Message' ? '' : $('#comments').val()
-						},
+						data: form.serialize(),   // sends every field (topic, name, email, phone, message)
 						dataType: 'json',
 						success: function() {
 							document.getElementById('message').innerHTML = "<div class='success-msg' style='color: #4CAF50; margin-bottom: 20px; font-weight: bold;'>Thank you! Your message has been sent successfully.</div>";

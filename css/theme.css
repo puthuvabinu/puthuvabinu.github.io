@@ -410,3 +410,84 @@ body.lp-menu-open{overflow:hidden}
 @media (max-width:767.98px){
   .lp-cs-gallery,.lp-cs-gallery.c3{grid-template-columns:1fr;gap:20px;margin-top:32px}
 }
+
+/* ==========================================================================
+   About page — Lollypop About layout: banner (eyebrow, title with red bar, lead),
+   then rows of a 40px title on the left and content on the right; testimonials with a dark left rule.
+   ========================================================================== */
+.lp-ab-lead{font-size:24px;line-height:36px;max-width:520px;margin:0 !important}
+.lp-ab{padding:120px 0 0}
+.lp-ab-row{display:grid;grid-template-columns:34% minmax(0,1fr);padding:0 48px;margin-bottom:120px}
+.lp .lp-ab-row > h2{font-size:40px;line-height:50px;font-weight:800;letter-spacing:-1px;margin:0;padding-right:24px}
+.lp-ab-body p{font-size:18px;line-height:30px;margin:0 0 24px}
+.lp-ab-body > :last-child{margin-bottom:0}
+.lp-ab-body .big{font-size:24px;line-height:36px}
+.lp-ab-body strong{font-weight:800}
+.lp-ab-list p{font-size:24px;line-height:36px;margin:0 0 32px}
+.lp-ab-list small{display:block;font-size:16px;line-height:26px;color:var(--muted);margin-top:4px}
+.lp .lp-ab-body h3{font-size:24px;line-height:36px;font-weight:800;margin:0 0 12px}
+.lp-ab-step + .lp-ab-step{margin-top:48px}
+.lp-ab-step p{margin-bottom:12px}
+.lp-ab-cite{font-size:24px;line-height:36px;font-weight:800;margin:0 0 24px !important}
+.lp-ab-cite span{display:block;font-size:14px;line-height:24px;font-weight:400;color:var(--muted);margin-top:4px}
+.lp-ab-quote{border-left:3px solid var(--ink);padding:4px 0 4px 32px;margin:0 0 64px}
+.lp-ab-quote:last-child{margin-bottom:0}
+.lp-ab-quote blockquote{margin:0;padding:0;border:0;font-family:var(--font);font-style:normal;font-size:20px;line-height:32px;color:var(--ink)}
+.lp-ab-quote .who{margin-top:16px;padding-left:16px;font-size:14px;line-height:24px}
+.lp-ab-quote .who b{display:block;font-weight:700}
+@media (max-width:991.98px){
+  .lp-ab-row{grid-template-columns:1fr;padding:0;margin-bottom:72px}
+  .lp .lp-ab-row > h2{margin-bottom:24px}
+}
+@media (max-width:767.98px){
+  .lp-ab{padding-top:64px}
+  .lp-ab-lead{font-size:18px;line-height:28px}
+  .lp .lp-ab-row > h2{font-size:30px;line-height:40px}
+  .lp-ab-body p{font-size:16px;line-height:27px}
+  .lp-ab-list p,.lp-ab-body .big,.lp-ab-cite{font-size:20px;line-height:30px}
+  .lp-ab-quote{padding-left:20px}
+  .lp-ab-quote blockquote{font-size:17px;line-height:28px}
+}
+
+/* ==========================================================================
+   Let's Talk page — Lollypop project-enquiry layout: topic tabs, title with red bar,
+   lead, "tell me about it" box, "your details" fields (white, 3px bottom rule), red outline button.
+   ========================================================================== */
+.lp-ct-in{padding-left:calc((var(--w-md) + 24px)/12);max-width:calc(688px + (var(--w-md) + 24px)/12)}
+.lp-ct-topics{display:flex;flex-wrap:wrap;gap:24px 100px;border:0;padding:0;margin:0 0 56px}
+.lp-ct-topics label{position:relative;cursor:pointer;padding-bottom:14px}
+.lp-ct-topics input{position:absolute;opacity:0;pointer-events:none}
+.lp-ct-topics small{display:block;font-size:13px;line-height:22px;color:var(--ink)}
+.lp-ct-topics b{display:block;font-size:22px;line-height:33px;font-weight:800;color:var(--ink);transition:color .2s ease}
+.lp-ct-topics label::after{content:"";position:absolute;left:0;bottom:0;width:24px;height:3px;background:var(--accent);opacity:0;transition:opacity .2s ease}
+.lp-ct-topics input:checked ~ small,.lp-ct-topics input:checked ~ b{color:var(--accent)}
+.lp-ct-topics label:has(input:checked)::after{opacity:1}
+.lp-ct-topics input:focus-visible ~ b{outline:2px solid var(--accent);outline-offset:4px}
+.lp .lp-ct-h1{margin-bottom:24px}
+.lp-ct-lead{font-size:24px;line-height:36px;margin:0 0 40px !important}
+.lp .lp-ct-h3{font-size:28px;line-height:38px;font-weight:800;letter-spacing:-.5px;margin:0 0 4px}
+.lp-ct-help{font-size:14px;line-height:24px;color:rgba(34,20,41,.6);margin:0 0 24px !important}
+.lp-field{position:relative;background:#fff;border-bottom:3px solid #DEDAD7;transition:border-color .2s ease}
+.lp-field:focus-within{border-bottom-color:var(--ink)}
+.lp-field input,.lp-field textarea{display:block;width:100%;border:0;outline:0;background:transparent;font-family:var(--font);font-size:16px;line-height:26px;color:var(--ink);padding:13px 110px 13px 26px;margin:0;border-radius:0;box-shadow:none;-webkit-appearance:none}
+.lp-field textarea{height:192px;resize:vertical;padding-top:20px}
+.lp-field ::placeholder{color:#6E6570;opacity:1}
+.lp-field .tag{position:absolute;right:26px;top:13px;font-size:14px;line-height:26px;color:var(--accent);pointer-events:none}
+.lp-field .tag.opt{color:#A39CA5}
+.lp-ct-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px;margin-bottom:56px}
+.lp-ct-block{margin-bottom:64px}
+.lp-ct-send{cursor:pointer;font-family:var(--font)}
+#message .success-msg,#message .error-msg{font-family:var(--font);font-size:16px}
+.lp-ct-direct{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:24px 56px;padding:56px 0 0;margin-top:80px;border-top:1px solid #E2DDDA}
+.lp-ct-direct small{display:block;font-size:13px;line-height:22px;color:var(--muted)}
+.lp-ct-direct a,.lp-ct-direct span{font-size:18px;line-height:28px;font-weight:700;color:var(--ink) !important;white-space:nowrap}
+.lp-ct-direct a:hover{color:var(--accent) !important}
+@media (max-width:767.98px){
+  .lp-ct-in{padding-left:0}
+  .lp-ct-topics{gap:16px 32px;margin-bottom:40px}
+  .lp-ct-topics b{font-size:18px;line-height:28px}
+  .lp-ct-lead{font-size:18px;line-height:28px}
+  .lp .lp-ct-h3{font-size:22px;line-height:32px}
+  .lp-ct-fields{grid-template-columns:1fr;gap:20px}
+  .lp-ct-direct{grid-template-columns:1fr 1fr}
+}
