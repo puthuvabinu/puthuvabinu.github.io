@@ -123,9 +123,11 @@ body:has(.lp) footer{padding:0 !important}
 /* showcase video under the hero (Lollypop: 10 columns wide, 16:9, red play button in the middle) */
 .lp-video{position:relative;margin-top:80px;aspect-ratio:16/9;background:#221429;overflow:hidden}
 .lp-video img,.lp-video video{display:block;width:100%;height:100%;object-fit:cover}
-.lp-video-play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--accent);box-shadow:0 8px 24px rgba(253,46,53,.35);transition:transform .25s ease}
+.lp-video-play{border:0;padding:0;cursor:pointer;z-index:2;position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--accent);box-shadow:0 8px 24px rgba(253,46,53,.35);transition:transform .25s ease}
 .lp-video-play::after{content:"";position:absolute;left:29px;top:23px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}
 .lp-video:hover .lp-video-play{transform:scale(1.08)}
+.lp-video.is-playing .lp-video-play{display:none}
+.lp-video:not(.is-playing){cursor:pointer}
 @media (max-width:767.98px){ .lp-video{margin-top:48px} .lp-video-play{width:52px;height:52px;margin:-26px 0 0 -26px} .lp-video-play::after{left:21px;top:16px;border-width:10px 0 10px 16px} }
 .lp-stats{display:flex;flex-wrap:wrap;gap:16px 72px;margin:0;padding:0;list-style:none}
 .lp-stats li b{display:block;font-size:18px;line-height:28px;font-weight:800;letter-spacing:-.5px}

@@ -1359,3 +1359,19 @@ Delegated / re-queried so it keeps working after AJAX page changes.
 		new MutationObserver(function(){ if( nav() ) update(); }).observe(document.body, { childList: true, subtree: false });
 		setInterval(function(){ if( nav() && !document.querySelector('.lp-cs-tabs a.is-active') ) update(); }, 1000);
 	})();
+
+
+/*--------------------------------------------------
+Showreel: plays only when clicked (poster + red play button until then).
+Delegated so it works after AJAX page changes too.
+---------------------------------------------------*/
+
+	document.addEventListener('click', function(e){
+		var box = e.target.closest('.lp-video'); if( !box || box.classList.contains('is-playing') ) return;
+		var v = box.querySelector('video'); if( !v ) return;
+		e.preventDefault();
+		box.classList.add('is-playing');
+		v.controls = true;
+		var p = v.play(); if( p && p.catch ) p.catch(function(){ box.classList.remove('is-playing'); v.controls = false; });
+		v.onended = function(){ box.classList.remove('is-playing'); v.controls = false; v.currentTime = 0; v.load(); };
+	});
