@@ -47,8 +47,8 @@
             <!-- Logo -->
             <div id="logo">
                 <a class="ajax-link" data-type="page-transition" href="index.html">
-                    <img class="black-logo" src="images/logo-bj.png" alt="Logo Black">
-                    <img class="white-logo" src="images/logo-bj-white.png" alt="Logo White">
+                    <img class="black-logo" src="images/logo-bj.png" alt="Logo Black" width="393" height="172">
+                    <img class="white-logo" src="images/logo-bj-white.png" alt="Logo White" width="393" height="172">
                 </a>
             </div>
             <!--/Logo -->
@@ -162,17 +162,25 @@
                             <div class="lp-cs-tags"><span>SF-182</span><span>US Federal Government</span><span>Enterprise</span><span>UX/UI</span></div>
                         </div>
                         <div class="lp-cs-hero has-animation" data-delay="120">
-                            <img decoding="async" src="images/projects/SF182_before_after.jpg" alt="The OPM SF-182 form compared with the guided request in Totara">
+                            <img decoding="async" src="images/projects/SF182_before_after.jpg" alt="The OPM SF-182 form compared with the guided request in Totara" width="1920" height="1080">
                         </div>
                         <p class="lp-cs-note">Statement of originality and confidentiality: to comply with my non-disclosure agreement, I have omitted and obscured confidential information in this case study, including customer names. All screens use placeholder data. This material belongs to the organisation named on it and is shared only to demonstrate my work experience and skills for the purpose of employment.</p>
                     </div>
                 </section>
 
                 <!-- Brief: label left, story right -->
+                <!-- Sticky section menu (like the Research / Design / Build tabs on lollypop.design/services) -->
+                <div class="lp-cs-spy">
+                <div class="lp-cs-tabs" role="navigation" aria-label="Case study sections">
+                    <div class="lp-wrap md">
+                        <ul><li><a href="#cs-brief">Brief</a></li><li><a href="#cs-discover">Discover</a></li><li><a href="#cs-define">Define</a></li><li><a href="#cs-design">Design</a></li><li><a href="#cs-conclusion">Conclusion</a></li></ul>
+                    </div>
+                </div>
+
                 <section class="lp-cs-brief">
                     <div class="lp-wrap md">
 
-                        <div class="lp-cs-row has-animation" data-delay="40">
+                        <div class="lp-cs-row has-animation" id="cs-brief" data-delay="40">
                             <h2 class="lp-cs-label">Brief</h2>
                             <div class="lp-cs-body">
                                 <p>Large US federal agencies use learning platforms to deliver training to their employees and contractors, and to assign and report on mandatory training. When an employee wants training from outside their organisation, especially training with fees or travel costs, they complete the <strong>SF-182</strong>: the <i>Request, Authorization, Agreement and Certification of Training</i> form from the Office of Personnel Management (OPM). The form records the request, its approvals and the completed training, and in some cases it also acts as the purchase order for the training provider.</p>
@@ -181,7 +189,7 @@
                             </div>
                         </div>
 
-                        <div class="lp-cs-row has-animation" data-delay="40">
+                        <div class="lp-cs-row has-animation" id="cs-challenge" data-delay="40">
                             <h2 class="lp-cs-label">Challenge</h2>
                             <div class="lp-cs-body">
                                 <p>The SF-182 is <strong>long and technical</strong>: three sections of trainee details, training course data, and costs and billing, full of government codes, pay plans and appropriation funds. Each request then passes through <strong>up to four levels of approval</strong>, and the right approvers depend on the learner's organisation and sub-organisation. After the training, the learner has to prove they completed it and their supervisor has to verify it.</p>
@@ -190,7 +198,7 @@
                             </div>
                         </div>
 
-                        <div class="lp-cs-row has-animation" data-delay="40">
+                        <div class="lp-cs-row has-animation" id="cs-my-role" data-delay="40">
                             <h2 class="lp-cs-label">My role</h2>
                             <div class="lp-cs-body">
                                 <p>I owned the design side of SF-182 and the <strong>end-to-end experience</strong>, for every role involved: learners, supervisors, approvers, approval admins and site administrators. I worked closely with product owners and the customer's team, and my concept designs formed the screens of the solution design that went to the customer for sign-off. I then supported the developers through handover, using components from the <strong>Totara UI Kit</strong>.</p>
@@ -198,7 +206,7 @@
                             </div>
                         </div>
 
-                        <div class="lp-cs-row has-animation" data-delay="40">
+                        <div class="lp-cs-row has-animation" id="cs-discover" data-delay="40">
                             <h2 class="lp-cs-label">Discover</h2>
                             <div class="lp-cs-body">
                                 <h4>Understanding the form</h4>
@@ -217,7 +225,7 @@
                             </div>
                         </div>
 
-                        <div class="lp-cs-row has-animation" data-delay="40">
+                        <div class="lp-cs-row has-animation" id="cs-define" data-delay="40">
                             <h2 class="lp-cs-label">Define</h2>
                             <div class="lp-cs-body">
                                 <h4>Workflow and stages</h4>
@@ -234,12 +242,12 @@
                                 </ul>
                             </div>
                             <figure class="lp-cs-fig">
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_approvalflow.jpg" alt="SF-182 workflow stages and approval levels">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_approvalflow.jpg" alt="SF-182 workflow stages and approval levels" width="1920" height="900">
                                 <figcaption>Workflow stages and approval levels</figcaption>
                             </figure>
                         </div>
 
-                        <div class="lp-cs-row has-animation" data-delay="40" style="margin-bottom:40px">
+                        <div class="lp-cs-row has-animation" id="cs-design" data-delay="40" style="margin-bottom:40px">
                             <h2 class="lp-cs-label">Design</h2>
                             <div class="lp-cs-body">
                                 <p>The request form keeps the OPM structure and field labels, so it feels familiar, but makes it much easier to complete. Each role gets the screens it needs at its step of the workflow: learners, approvers, and site administrators.</p>
@@ -258,17 +266,17 @@
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>Request dashboard</h3>
                                 <p><strong>Everything in one place –</strong> Learners get a dashboard of their requests and their progress, so they never lose track of a request once it leaves their hands.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_learner_dashboard.jpg" alt="Learner request dashboard">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_learner_dashboard.jpg" alt="Learner request dashboard" width="1396" height="900">
                             </div>
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>A guided form</h3>
                                 <p><strong>Familiar, but much easier –</strong> Section names on the left let learners jump around the form. Their profile details are filled in automatically, fixed values are locked, totals are calculated for them, and choices adapt to earlier answers. Help text based on the OPM guidelines sits next to the fields that need it. Learners can save a draft at any time, and clone a past request to start a new one.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_request.jpg" alt="SF-182 request form">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_request.jpg" alt="SF-182 request form" width="1396" height="1900">
                             </div>
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>Vendor search</h3>
                                 <p><strong>No more typing provider details –</strong> Learners can search a vendor list by name, address or state, and the vendor fields fill themselves in. The details can still be edited.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_vendor_search.jpg" alt="Vendor search">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_vendor_search.jpg" alt="Vendor search" width="1396" height="1250">
                             </div>
                         </div>
 
@@ -277,12 +285,12 @@
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>Approver dashboard</h3>
                                 <p><strong>What needs me first –</strong> Approvers see the requests waiting for their response first, followed by every request they could act on, showing both their own progress and the overall progress.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_approver_dashboard.jpg" alt="Approver request dashboard">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_approver_dashboard.jpg" alt="Approver request dashboard" width="1396" height="1409">
                             </div>
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>Approving a request</h3>
                                 <p><strong>Clear decisions at every level –</strong> Approvers review a request and approve or deny it at their level, and the request moves on to the next approver automatically.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_approval.jpg" alt="Approving a request">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_approval.jpg" alt="Approving a request" width="1396" height="1150">
                             </div>
                         </div>
 
@@ -291,12 +299,12 @@
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>Verification</h3>
                                 <p><strong>Prompted, simple proof –</strong> After the training date, the learner is prompted to complete verification: they confirm whether they completed the training, add evidence such as a certificate, and update the costs if they changed. Their supervisor then approves the verification.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_verification.jpg" alt="Verification form">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_verification.jpg" alt="Verification form" width="1396" height="1654">
                             </div>
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>Activity log</h3>
                                 <p><strong>Everyone can see where it is –</strong> Every key action is recorded in an activity log that everyone on the request can see.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_tracking.jpg" alt="Request activity log">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_screen_tracking.jpg" alt="Request activity log" width="1396" height="1300">
                             </div>
                         </div>
 
@@ -305,12 +313,12 @@
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>Approval workflows</h3>
                                 <p><strong>Workflows that change with the agency –</strong> Site administrators manage workflows: edit, clone, publish and archive them.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_admin_workflows.jpg" alt="Manage approval workflows">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_admin_workflows.jpg" alt="Manage approval workflows" width="1396" height="900">
                             </div>
                             <div class="lp-cs-item has-animation" data-delay="40">
                                 <h3>Approvers for each level</h3>
                                 <p><strong>Flexible approval chains –</strong> Administrators choose approvers for each of the four levels by relationship or by name, upload overrides for sub-organisations in bulk with a CSV file, and edit the notifications.</p>
-                                <img loading="lazy" decoding="async" src="images/projects/SF182_admin_approvers.jpg" alt="Configuring approvers for each level">
+                                <img loading="lazy" decoding="async" src="images/projects/SF182_admin_approvers.jpg" alt="Configuring approvers for each level" width="1396" height="1100">
                             </div>
                         </div>
 
@@ -318,7 +326,7 @@
                 </section>
 
                 <!-- Conclusion -->
-                <section class="lp-cs-end">
+                <section class="lp-cs-end" id="cs-conclusion">
                     <div class="lp-wrap md">
                         <h2 class="has-animation" data-delay="40">Conclusion</h2>
                         <div class="lp-cs-qa has-animation" data-delay="40">
@@ -334,6 +342,8 @@
                         </div>
                     </div>
                 </section>
+                </div>
+                <!--/Sticky section menu -->
 
                 <!-- CTA -->
                 <section class="lp-sec" style="padding-top:90px;padding-bottom:0">
@@ -359,7 +369,7 @@
                     </div>
                     <div class="lp-foot2-bottom">
                         <div class="lp-foot2-brand">
-                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose"></a>
+                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose" width="393" height="172"></a>
                             <p class="tag">A UX and product designer crafting clear, human experiences through <b>research, design and design systems</b>.</p>
                             <p class="copy">© 2026 Binu Jose · Wellington, New Zealand</p>
                             <ul class="small">
