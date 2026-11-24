@@ -1,0 +1,541 @@
+/* ==========================================================================
+   Portfolio theme (editorial, Lollypop-inspired)
+   Sizes measured from lollypop.design at 1440px and 390px wide.
+   Everything is scoped under .lp so pages that haven't moved yet are untouched.
+   ========================================================================== */
+.lp{
+  --bg:#F7F4F2;            /* warm off-white */
+  --ink:#221429;           /* deep aubergine: text + dark sections */
+  --muted:#5E5463;
+  --line:#E6E0DC;
+  --card:#FFFFFF;
+  --accent:#FD2E35;        /* Lollypop red: highlights, bars, labels */
+  --accent-strong:#E7232D; /* deeper red for filled buttons and links */
+  --accent-ink:#FFFFFF;
+  --on-dark:#F7F4F2;
+  --on-dark-muted:#BDB3C2;
+  --frame:20px;            /* white frame around the page */
+  /* Lollypop uses centred Bootstrap-style containers that step down at breakpoints.
+     --C is the container; blocks take a share of it (8/12, 10/12 or the full width). */
+  --C:1320px;
+  --w-sm:calc(var(--C) * 8 / 12 - 24px);   /* text column: 856 @1440, 736 @1288 */
+  --w-md:calc(var(--C) * 10 / 12 - 24px);  /* hero / CTA: 1076 @1440, 926 @1288 */
+  --w-lg:calc(var(--C) - 24px);            /* work grid: 1296 @1440, 1116 @1288 */
+  --gutter:24px;
+  --font:'Manrope','Inter','Helvetica Neue',Arial,sans-serif;
+  font-family:var(--font);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;
+}
+.lp *, .lp *::before, .lp *::after{box-sizing:border-box}
+.lp #main, .lp #main-content, .lp header, .lp footer{background:var(--bg) !important}
+.lp a{color:inherit;text-decoration:none}
+.lp h1,.lp h2,.lp h3,.lp h4,.lp h5{font-family:var(--font);color:var(--ink) !important;text-transform:none;margin:0}
+.lp p{font-family:var(--font);margin:0}
+
+/* ---------- white frame (20px desktop, 15px phone) ---------- */
+.lp::after{content:"";position:fixed;inset:0;border:var(--frame) solid #fff;pointer-events:none;z-index:9000;opacity:1;transition:opacity .5s ease .15s}
+.lp:has(.page-overlay.from-bottom)::after,
+body.page-is-changing .lp::after,
+body.hidden .lp::after{opacity:0;transition:none}
+/* template footer leftovers (the old footer sits outside .lp, so match on the page instead) */
+body:has(.lp) footer .socials-text, body:has(.lp) footer #page-action-holder{display:none !important}
+body:has(.lp) footer{padding:0 !important}
+
+/* ---------- header: 14px regular links, red "Let's Talk" with 32px underline ---------- */
+.lp header .flexnav li a{font-family:var(--font) !important;font-weight:400;font-size:14px;line-height:24px;color:var(--ink) !important;letter-spacing:0}
+/* sizes measured from Lollypop: 38px logo, 20px between links, 40px before "Let's Talk",
+   no underlines except a short 32px red line under "Let's Talk" */
+.lp #logo img{height:72px;width:auto;margin-top:-11px}
+.lp #logo img.white-logo{top:0}
+@media (max-width:767.98px){ .lp #logo img{height:56px;margin-top:0} }
+.lp header .flexnav li{margin-left:20px}
+.lp header .flexnav li::after{display:none}
+.lp header .flexnav li a::after{display:none}
+.lp header .flexnav li a:hover{color:var(--accent) !important}
+/* the link for the page you are on: red with a short red line under it (like Lollypop's "Let's Talk") */
+.lp header .flexnav li a.is-current{color:var(--accent) !important}
+.lp header .flexnav li a.is-current::after{display:block;width:32px;height:1px;background:var(--accent) !important;transform:none;bottom:15px;left:0;transition:width .3s ease}
+.lp header .flexnav li a.is-current:hover::after{width:100%}
+
+/* container steps (same breakpoints as Lollypop / Bootstrap) */
+@media (max-width:1399.98px){ .lp{--C:1140px} }
+@media (max-width:1199.98px){ .lp{--C:960px} }
+@media (max-width:991.98px){ .lp{--C:720px} }
+@media (max-width:767.98px){ .lp{--C:540px} }
+
+/* header geometry, tied to the container like Lollypop's:
+   logo half a column in from the container edge; menu icon near the right edge;
+   "Let's Talk" ending 33px before the icon; everything centred on y79 */
+@media (min-width:1025px){
+  .lp #header-container{
+    padding:0 calc((100% - var(--C)) / 2 + 12px + var(--C) / 36 + 83px) 0 calc((100% - var(--C)) / 2 + 12px + var(--C) / 24) !important;
+    transform:translateY(19px)}
+  .lp .lp-burger,.lp .lp-menu-close{right:calc((100% - var(--C)) / 2 + 12px + var(--C) / 36)}   /* close sits exactly where the burger was */
+  .lp header nav{position:relative;top:-1.5px}   /* nav text centre on y79, same line as logo and menu icon */
+}
+
+/* ---------- containers ---------- */
+.lp-wrap{width:100%;max-width:calc(var(--w-sm) + 2*var(--gutter));margin:0 auto;padding:0 var(--gutter)}
+.lp-wrap.md{max-width:calc(var(--w-md) + 2*var(--gutter))}
+.lp-wrap.lg{max-width:calc(var(--w-lg) + 2*var(--gutter))}
+.lp-sec{padding:60px 0}                 /* ~120px between sections */
+.lp-dark{background:var(--ink) !important;color:var(--on-dark);padding:120px 0}
+.lp-dark h1,.lp-dark h2,.lp-dark h3,.lp-dark h4{color:var(--on-dark) !important}
+.lp-dark p{color:var(--on-dark-muted)}
+
+/* ---------- type scale ---------- */
+.lp-h1{font-size:65px;line-height:76px;font-weight:800;letter-spacing:-3px}
+.lp-h2{font-size:50px;line-height:60px;font-weight:800;letter-spacing:-3px;margin-bottom:8px}
+.lp-h3{font-size:28px;line-height:38px;font-weight:800;letter-spacing:-1.2px}
+.lp-hl{color:var(--accent) !important}
+.lp-rotate{transition:opacity .45s ease}
+.lp-rotate.is-out{opacity:0}
+@media (prefers-reduced-motion:reduce){.lp-rotate{transition:none}}
+.lp-lead{font-size:24px;line-height:36px;color:var(--ink);max-width:calc((var(--w-sm) + 24px) * 10 / 12 - 20px)}  /* 713 @1440, 613 @1288 */
+.lp-body{font-size:16px;line-height:26px;color:var(--ink)}
+.lp-label{display:inline-block;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.lp-bar{position:relative}
+.lp-bar::before{content:"";position:absolute;left:-40px;top:15px;bottom:16px;width:5px;background:var(--accent)}  /* spans the whole headline (a one-line bar next to "I design" read like the letter I) */
+
+
+/* optional: red opening quote mark instead of the bar (add class "lp-quote-mark" to the headline) */
+.lp-quote-mark.lp-bar::before{display:none}
+.lp-quote-mark{position:relative}
+.lp-quote-mark::after{content:"";position:absolute;left:-72px;top:8px;width:44px;height:36px;background:var(--accent);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 36'%3E%3Cpath d='M0 36V22C0 10 6 2 18 0l2 5C13 7 10 12 10 18h8v18H0zm24 0V22c0-12 6-20 18-22l2 5c-7 2-10 7-10 13h8v18H24z'/%3E%3C/svg%3E") no-repeat center/contain;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 36'%3E%3Cpath d='M0 36V22C0 10 6 2 18 0l2 5C13 7 10 12 10 18h8v18H0zm24 0V22c0-12 6-20 18-22l2 5c-7 2-10 7-10 13h8v18H24z'/%3E%3C/svg%3E") no-repeat center/contain}
+@media (max-width:700px){ .lp-quote-mark::after{left:-30px;top:4px;width:22px;height:18px} }
+
+/* ---------- links & buttons ---------- */
+.lp-link{display:inline-block;font-size:14px;line-height:26px;color:var(--accent) !important;padding-bottom:2px;background:linear-gradient(var(--accent),var(--accent)) left bottom/32px 1px no-repeat;transition:background-size .35s ease}
+.lp-link:hover{background-size:100% 1px}
+.lp-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:50px;padding:0 25px;border-radius:28px;font-weight:800;font-size:14px;border:2px solid var(--accent);background:var(--accent-strong);border-color:var(--accent-strong);color:var(--accent-ink) !important;transition:transform .25s ease,background .25s ease,color .25s ease}
+.lp-btn:hover{transform:translateY(-2px)}
+.lp-btn .lp-ext{width:14px;height:14px;flex:none;margin-left:-2px}
+.lp-btn.ghost{background:transparent;border-color:var(--accent);color:var(--accent) !important}
+.lp-btn.ghost:hover{background:var(--accent);color:#fff !important}
+
+/* ---------- hero: column 1076 wide, text indented 92px, bar 40px left of text ---------- */
+.lp-hero{padding:249px 0 60px}
+.lp-hero-in{padding-left:calc((var(--w-md) + 24px) / 12)}
+.lp-hero .lp-h1{margin-bottom:45px}
+.lp-hero .lp-lead{font-size:20px;line-height:32px;max-width:640px;margin-bottom:30px}
+.lp-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:45px}
+/* showcase video under the hero (Lollypop: 10 columns wide, 16:9, red play button in the middle) */
+.lp-video{position:relative;margin-top:80px;aspect-ratio:16/9;background:#221429;overflow:hidden}
+.lp-video img,.lp-video video{display:block;width:100%;height:100%;object-fit:cover}
+.lp-video-play{border:0;padding:0;cursor:pointer;z-index:2;position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--accent);box-shadow:0 8px 24px rgba(253,46,53,.35);transition:transform .25s ease}
+.lp-video-play::after{content:"";position:absolute;left:29px;top:23px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}
+.lp-video:hover .lp-video-play{transform:scale(1.08)}
+.lp-video.is-playing .lp-video-play{display:none}
+.lp-video-cap{position:absolute;left:50%;top:calc(50% + 58px);transform:translateX(-50%);z-index:2;color:#fff;font-weight:600;font-size:20px;line-height:28px;white-space:nowrap;pointer-events:none;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.lp-video.is-playing .lp-video-cap{display:none}
+.lp-video:not(.is-playing){cursor:pointer}
+@media (max-width:767.98px){ .lp-video{margin-top:48px} .lp-video-play{width:52px;height:52px;margin:-26px 0 0 -26px} .lp-video-play::after{left:21px;top:16px;border-width:10px 0 10px 16px}  .lp-video-cap{top:calc(50% + 38px);font-size:14px;line-height:20px} }
+.lp-stats{display:flex;flex-wrap:wrap;gap:16px 72px;margin:0;padding:0;list-style:none}
+.lp-stats li b{display:block;font-size:18px;line-height:28px;font-weight:800;letter-spacing:-.5px}
+.lp-stats li span{display:block;font-size:14px;line-height:24px;color:var(--ink)}
+
+/* ---------- services: 269 | 269 | 205 on an 856 column, rows 50px apart ---------- */
+.lp-services{margin-top:50px}
+.lp-services{margin-right:-24px}
+.lp-service{display:grid;grid-template-columns:4fr 5fr 3fr;padding-top:50px}
+.lp-service > *{padding-right:24px}
+.lp-service:first-child{padding-top:0}
+.lp-service .lp-h3{padding-right:72px}
+.lp-service .lp-body{max-width:calc((var(--w-sm) + 24px) * 4 / 12)}
+.lp-service ul{list-style:none;margin:0;padding:0}
+.lp-service li{position:relative;padding-left:16px;font-size:16px;line-height:26px;margin-bottom:8px;color:var(--ink)}
+.lp-service li::before{content:"";position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+/* ---------- work: 3-up on a 1296 grid, 412x446 images, white panel inset 17px ---------- */
+.lp-work{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 0;margin-top:50px}
+.lp-work > .lp-card{margin:0 10px}
+.lp-card{display:block;position:relative;aspect-ratio:412/446;overflow:hidden;background:#e9e4e0}
+.lp-card > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.lp-card:hover > img{transform:scale(1.05)}
+.lp-card-panel{position:absolute;left:17px;bottom:17px;width:73%;max-width:302px;background:var(--card);padding:35px 30px}
+.lp-card-panel .meta{font-size:12px;line-height:20px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.lp-card-panel h3{font-size:16px;line-height:26px;font-weight:800;letter-spacing:-.5px;margin:2px 0 4px}
+.lp-card-panel p{font-size:14px;line-height:22px;color:var(--muted);margin:0 0 6px}
+.lp-more{margin-top:36px}
+
+/* ---------- companies: 256-wide white cards, 60/27/27 padding ---------- */
+.lp-cos{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px}
+.lp-co{background:var(--card);padding:60px 27px 27px;text-align:center}
+.lp-co .name{font-size:28px;line-height:38px;font-weight:800;letter-spacing:-1.2px}
+.lp-co .logo{height:56px;display:flex;align-items:flex-end;justify-content:center}
+.lp-co .logo img{max-height:100%;max-width:130px;width:auto;height:auto;display:block}
+.lp-co .logo img[alt="Assyst"]{max-width:140px}
+.lp-co .logo img[alt="QBurst"]{max-width:108px}
+.lp-co .role{font-size:16px;line-height:24px;font-weight:700;color:var(--ink);margin:24px 0 0;min-height:48px}
+.lp-co .yrs{font-size:14px;line-height:22px;color:var(--muted);margin:4px 0 0}
+.lp-co h3{font-size:18px;line-height:28px;font-weight:500;margin:0}
+.lp-co p{font-size:14px;line-height:24px;color:var(--ink);margin:8px 0 0}
+
+/* ---------- dark: process + highlights (award-style grid) ---------- */
+.lp-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px;counter-reset:s}
+.lp-step{border-top:1px solid rgba(255,255,255,.18);padding-top:24px}
+.lp-step::before{counter-increment:s;content:"0" counter(s);display:block;font-size:14px;font-weight:800;letter-spacing:.14em;color:var(--accent);margin-bottom:12px}
+.lp-step h3{font-size:22px;line-height:32px;font-weight:800;letter-spacing:-.5px}
+.lp-step p{font-size:16px;line-height:26px;margin-top:8px}
+.lp-hls{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 24px;margin-top:50px;text-align:center}
+.lp-hl-item .ico{width:28px;height:28px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;color:var(--on-dark);font-size:18px}
+.lp-hl-item h3{font-size:18px;line-height:28px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px}
+.lp-hl-item p{font-size:12px;line-height:22px;text-transform:uppercase}
+
+/* ---------- testimonials ---------- */
+.lp-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.lp-quote{background:var(--card);padding:35px 30px;display:flex;flex-direction:column}
+.lp-quote blockquote{flex:1}
+.lp-quote blockquote{margin:0;padding:0;border:0;font-style:normal;font-family:var(--font);font-size:16px;line-height:26px;color:var(--ink)}
+.lp-quote .who{margin-top:22px;font-size:16px;line-height:26px;font-weight:800}
+.lp-quote .role{font-size:14px;line-height:24px;color:var(--muted)}
+.lp-todo{background:#fff3c4;padding:0 4px}
+
+/* ---------- industries: 2 columns on the 856 column ---------- */
+.lp-inds{display:grid;grid-template-columns:1fr 1fr;gap:50px 24px;margin-top:50px}
+.lp-ind h3{font-size:22px;line-height:32px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+.lp-ind p{font-size:16px;line-height:26px;color:var(--ink)}
+
+/* ---------- CTA box (1096 wide, centred) + footer ---------- */
+.lp-cta-box{max-width:calc(var(--w-md) + 20px);margin:0 auto;background:var(--ink);padding:60px 16px 70px;text-align:center}
+.lp-cta-box .eyebrow{font-size:24px;line-height:36px;color:var(--on-dark);margin-bottom:24px}
+.lp-cta-box h2{color:var(--on-dark) !important;max-width:640px;margin:0 auto 32px}
+.lp-cta-box .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.lp-cta-box .lp-btn.ghost{color:#fff !important;border-color:rgba(255,255,255,.45)}
+.lp-cta-box .lp-btn.ghost:hover{background:#fff;color:var(--ink) !important;border-color:#fff}
+.lp-foot{background:var(--ink);color:var(--on-dark-muted);padding:80px 80px 71px;margin-top:90px}
+.lp-foot-in{max-width:var(--w-lg);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:14px;line-height:24px}
+.lp-foot a{color:var(--on-dark) !important}
+.lp-foot ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+
+
+/* ---------- footer (measured from Lollypop) ---------- */
+.lp .lp-foot2{position:relative;background:#F9F6F5 !important;color:var(--ink);padding:80px 80px 71px;margin-top:120px}
+.lp-foot2 a{color:var(--ink) !important;transition:color .2s ease-in-out}
+.lp-foot2 a:hover{color:var(--accent) !important}
+.lp-foot2-follow{margin-bottom:60px;text-align:center}
+.lp-foot2-follow h2{font-size:16px !important;line-height:26px;font-weight:600;margin:0 0 22px}
+.lp-foot2-follow ul{display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px 40px;list-style:none;margin:0;padding:0}
+.lp-foot2-follow li a{font-size:30px;line-height:40px;font-weight:800;letter-spacing:-1px}
+.lp-foot2-bottom{display:flex;justify-content:space-between;gap:48px;padding:0 12px;flex-wrap:wrap}
+.lp-foot2-brand{max-width:389px}
+.lp-foot2-brand img{height:72px;width:auto;display:block}
+.lp-foot2-brand .tag{font-size:14px;line-height:24px;margin:8px 0 24px}
+.lp-foot2-brand .copy{font-size:14px;line-height:24px;margin:0 0 4px}
+.lp-foot2-brand .small{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.lp-foot2-brand .small a{font-size:12px;line-height:22px}
+.lp-foot2-cols{display:flex;gap:48px}
+.lp-foot2-cols > div{display:flex;flex-direction:column}
+.lp-foot2-cols h3{font-size:16px !important;line-height:26px;font-weight:800;letter-spacing:-.5px;margin:0 0 2px}
+.lp-foot2-cols a,.lp-foot2-cols span{font-size:14px;line-height:24px;padding:4px 0;color:var(--ink)}
+@media (max-width:900px){
+  .lp .lp-foot2{padding:60px 24px}
+  .lp-foot2-follow li a{font-size:24px;line-height:32px}
+  .lp-foot2-cols{gap:32px;flex-wrap:wrap}
+}
+
+
+/* ---------- hamburger + full-screen menu (measured from Lollypop) ---------- */
+.lp-burger,.lp-menu-close{position:absolute;width:50px;height:50px;border:0;background:none;cursor:pointer;padding:0;z-index:2}
+.lp-burger{position:fixed !important;right:109px;top:54px;z-index:9400 !important;border-radius:50%;transition:background .3s ease,box-shadow .3s ease}
+/* the menu icon hides while the black page overlay plays (refresh and page changes), then fades back in */
+.lp-burger{opacity:1;transition:background .3s ease,box-shadow .3s ease,opacity .5s ease .15s}
+body:has(.page-overlay.from-bottom) .lp-burger,body.page-is-changing .lp-burger,body.hidden .lp-burger{opacity:0;pointer-events:none;transition:none} /* lp-burger hides */
+body.lp-scrolled .lp-burger{background:#fff;box-shadow:0 6px 20px rgba(34,20,41,.15)}
+/* icon measured from Lollypop: two 13x2px lines, 10px apart, centred in a 50px button */
+.lp-burger span{position:absolute;left:18.5px;width:13px;height:2px;background:var(--accent);border-radius:3px;transition:transform .3s ease-in-out}
+.lp-burger span:first-child{top:19px}
+.lp-burger span:last-child{top:29px}
+.lp-burger:hover span:first-child{transform:translateX(-3px)}
+.lp-burger:hover span:last-child{transform:translateX(3px)}
+.lp header #menu-burger{display:none !important}      /* replaced by .lp-burger */
+
+.lp-menu{position:fixed;inset:0;z-index:9500;display:flex;transform:translateY(-100%);transition:transform .6s ease-in-out,visibility 0s linear .6s;visibility:hidden}
+.lp-menu.is-open{transform:none;visibility:visible;transition:transform .6s ease-in-out}
+.lp-menu-red{flex:0 0 60%;background:var(--accent);color:#fff;display:flex;align-items:center;overflow-y:auto}
+.lp-menu-dark{flex:0 0 40%;background:var(--ink);color:#fff;display:flex;align-items:center;overflow-y:auto}
+.lp-menu-red .lp-menu-in{width:100%;padding:120px 108px 64px 148px}
+.lp-menu-dark .lp-menu-in{width:100%;padding:120px 84px 64px 84px}
+.lp-menu,.lp-menu a,.lp-menu b,.lp-menu span,.lp-menu li,.lp-menu p{color:#fff !important}
+.lp-menu a{transition:opacity .3s ease}
+.lp-menu .lp-btn.ghost{color:var(--accent) !important}
+.lp-menu .lp-btn.ghost:hover{color:#fff !important}
+.lp-menu-grid{display:grid;grid-template-columns:1.45fr .85fr 1fr;gap:24px}
+.lp-menu-grid ul{list-style:none;margin:0;padding:0}
+.lp-menu-big a{display:inline-block;font-size:38px;line-height:54px;font-weight:800;letter-spacing:-1.5px}
+.lp-menu-small li a{display:inline-block;font-size:16px;line-height:24px;padding:7px 0}
+.lp-menu-grid ul:hover a{opacity:.6}
+.lp-menu-grid ul:hover a:hover{opacity:1}
+.lp-menu-promo{display:block;margin-top:70px;padding:24px 0;border-top:1px solid rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.4);text-align:center;font-size:16px}
+.lp-menu-promo b{font-size:24px;line-height:32px;font-weight:800;letter-spacing:-.5px;margin-left:8px}
+.lp-menu-social,.lp-menu-places{display:flex;gap:24px;flex-wrap:wrap;list-style:none;margin:36px 0 0;padding:0;font-size:18px;line-height:28px}
+.lp-menu-eyebrow{font-size:18px;line-height:28px;color:#fff;margin:0 0 16px}
+.lp .lp-menu-h{font-size:36px !important;line-height:46px;font-weight:800;letter-spacing:-1.2px;color:#fff !important;margin:0 0 40px;max-width:420px}
+.lp-menu-dark .lp-btn.ghost{color:var(--accent) !important;border-color:var(--accent)}
+.lp-menu-dark .lp-btn.ghost:hover{background:var(--accent);color:#fff !important}
+.lp-menu-places{margin-top:180px}
+.lp-menu-close{position:fixed;top:54px;right:109px}
+.lp-menu-close span{position:absolute;left:19px;top:24px;width:12px;height:2px;background:#fff;transition:transform .3s ease-in-out}
+.lp-menu-close span:first-child{transform:rotate(45deg)}
+.lp-menu-close span:last-child{transform:rotate(-45deg)}
+.lp-menu-close:hover span{width:14px}
+/* menu items fade up just after the panel lands */
+.lp-menu .lp-menu-in > *{opacity:0;transform:translateY(16px);transition:opacity .4s ease,transform .4s ease}
+.lp-menu.is-open .lp-menu-in > *{opacity:1;transform:none;transition-delay:.45s}
+body.lp-menu-open{overflow:hidden}
+@media (prefers-reduced-motion:reduce){.lp-menu,.lp-menu.is-open,.lp-menu .lp-menu-in > *{transition:none}}
+@media (max-width:1024px){
+  .lp-burger{right:22px;top:22px}
+  .lp header .flexnav{display:none !important}
+  .lp-menu{flex-direction:column;overflow-y:auto}
+  .lp-menu-red,.lp-menu-dark{flex:0 0 auto}
+  .lp-menu-red .lp-menu-in{padding:96px 24px 40px}
+  .lp-menu-dark .lp-menu-in{padding:48px 24px 56px}
+  .lp-menu-grid{grid-template-columns:1fr 1fr}
+  .lp-menu-big{grid-column:1/-1;margin-bottom:12px}
+  .lp-menu-big a{font-size:32px;line-height:46px}
+  .lp-menu-promo{margin-top:36px}
+  .lp-menu-promo b{display:block;margin:4px 0 0;font-size:20px}
+  .lp-menu-places{margin-top:48px}
+  .lp-menu-close{top:22px;right:22px}
+  .lp .lp-menu-h{font-size:28px !important;line-height:38px}
+}
+
+/* ---------- tablet ---------- */
+@media (max-width:1200px){
+  .lp-cos{grid-template-columns:repeat(2,1fr)}
+  .lp-steps{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .lp-work,.lp-quotes,.lp-hls{grid-template-columns:1fr 1fr}
+  .lp-foot{padding:60px 24px}
+}
+/* ---------- phone: measured at 390px ---------- */
+@media (max-width:700px){
+  .lp{--frame:15px;--gutter:20px}
+  .lp-hero{padding:110px 0 40px}
+  .lp-hero-in{padding-left:34px}
+  .lp-h1{font-size:32px;line-height:38px;letter-spacing:-1px}
+  .lp-hero .lp-h1{margin-bottom:24px}
+  .lp-bar::before{left:-18px;top:7px;bottom:8px;width:3px}
+  .lp-h2{font-size:28px;line-height:38px;letter-spacing:-1px}
+  .lp-h3,.lp-co .name{font-size:18px;line-height:28px;letter-spacing:0}
+  .lp-lead,.lp-hero .lp-lead{font-size:18px;line-height:28px}
+  .lp-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+  .lp-sec{padding:40px 0}
+  .lp-dark{padding:80px 0}
+  .lp-service{grid-template-columns:1fr;gap:8px;padding-top:36px}
+  .lp-services{margin-right:0}
+  .lp-service > *{padding-right:0 !important}
+  .lp-service .lp-body{max-width:none}
+  .lp-lead{max-width:none}
+  .lp-work > .lp-card{margin:0}
+  .lp-work,.lp-cos,.lp-steps,.lp-hls,.lp-quotes,.lp-inds{grid-template-columns:1fr}
+  .lp-step h3,.lp-ind h3{font-size:18px;line-height:28px}
+  .lp-cta-box .eyebrow{font-size:18px;line-height:28px}
+}
+
+/* ==========================================================================
+   Case study pages — Lollypop project template (measured from
+   lollypop.design/projects/naruvi-hospital-management-system at 1288px):
+   banner title 51/66 with red bar, tag row with dots, 926px hero image;
+   brief rows = red uppercase label (3/12) + text (9/12), 80px apart;
+   design "modules" = big faded group title, red uppercase item title, text, full-width screen;
+   conclusion Q&A, then next-project link.
+   ========================================================================== */
+.lp-cs{font-family:var(--font);color:var(--ink)}
+.lp-cs-banner{padding:200px 0 0}
+.lp-cs-head{padding-left:calc((var(--w-md) + 24px)/12);margin-bottom:80px}
+.lp-cs-eyebrow{display:block;font-size:14px;line-height:24px;margin-bottom:8px}
+.lp .lp-cs-h1{position:relative;font-size:51px;line-height:66px;font-weight:800;letter-spacing:-1.5px;margin:0 0 24px}
+.lp-cs-h1::before{content:"";position:absolute;left:-40px;top:18px;width:5px;height:53px;background:var(--accent)}
+.lp-cs-tags{display:flex;flex-wrap:wrap;align-items:center;font-size:14px;line-height:24px;row-gap:4px}
+.lp-cs-tags span+span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#C9C3C0;margin:0 18px;vertical-align:middle;position:relative;top:-1px}
+.lp-cs-hero img{display:block;width:100%;height:auto}
+.lp-cs-note{font-size:13px;line-height:22px;color:var(--muted);margin:24px 0 0 !important;font-style:italic}
+
+.lp-cs-brief{padding:80px 0 0}
+.lp-cs-row{display:grid;grid-template-columns:calc((var(--w-md) + 24px)*3/12) minmax(0,1fr);margin-bottom:80px}
+.lp .lp-cs-label{font-size:18px;line-height:28px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent) !important;padding-right:24px;margin:0}
+.lp-cs-body p,.lp-cs-body li{font-size:16px;line-height:26.88px}
+.lp-cs-body p{margin:0 0 24px}
+.lp-cs-body > :last-child{margin-bottom:0}
+.lp-cs-body strong{font-weight:700}
+.lp .lp-cs-body h4{font-size:16px;line-height:26.88px;font-weight:800;margin:0 0 4px}
+.lp-cs-body ul{margin:0 0 24px;padding-left:20px}
+.lp-cs-body li{margin:0 0 6px}
+.lp .lp-cs-quote{font-size:28px;line-height:38px;font-weight:800;letter-spacing:-.5px;margin:8px 0 24px}
+.lp-cs-fig{grid-column:1/-1;margin:48px 0 0}
+.lp-cs-fig img{display:block;width:100%;height:auto}
+.lp-cs-fig figcaption{font-size:14px;line-height:24px;color:var(--muted);margin-top:12px}
+
+.lp-cs-modules{padding:40px 0 0}
+.lp-cs-group + .lp-cs-group{margin-top:40px}
+.lp .lp-cs-group-h{font-size:56px;line-height:86px;font-weight:700;letter-spacing:-1px;color:rgba(44,44,44,.4) !important;margin:0 0 32px}
+.lp-cs-item{margin-bottom:80px}
+.lp .lp-cs-item h3{font-size:18px;line-height:23.4px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent) !important;margin:0 0 24px}
+.lp-cs-item p{font-size:16px;line-height:26.88px;max-width:737px}
+.lp-cs strong,.lp-cs b{font-weight:700;color:var(--ink)}
+.lp-cs-item img{display:block;width:100%;height:auto;margin-top:64px}
+
+.lp-cs-end{padding:40px 0 0}
+.lp .lp-cs-end h2{font-size:40px;line-height:52px;font-weight:800;letter-spacing:-1px;color:var(--accent) !important;margin:0 0 38px}
+.lp-cs-qa{margin-bottom:40px}
+.lp .lp-cs-qa h3{font-size:28px;line-height:37px;font-weight:800;letter-spacing:-.5px;margin:0 0 16px}
+.lp-cs-qa p{font-size:16px;line-height:26.88px}
+
+.lp-cs-next{display:flex;justify-content:flex-end;padding:56px 0 120px}
+.lp-cs-next a{display:flex;align-items:flex-start;gap:24px;text-align:right;color:var(--ink) !important}
+.lp-cs-next small{display:block;font-size:14px;line-height:24px;color:var(--muted)}
+.lp .lp-cs-next h4{font-size:28px;line-height:38px;font-weight:800;margin:0;transition:color .25s ease}
+.lp-cs-next svg{width:28px;height:28px;margin-top:30px;color:var(--accent);transition:transform .25s ease}
+.lp-cs-next a:hover h4{color:var(--accent) !important}
+.lp-cs-next a:hover svg{transform:translateX(6px)}
+
+@media (max-width:767.98px){
+  .lp-cs-banner{padding-top:60px}
+  .lp-cs-head{padding-left:34px;margin-bottom:40px}
+  .lp .lp-cs-h1{font-size:32px;line-height:40px;letter-spacing:-1px}
+  .lp-cs-h1::before{left:-24px;top:8px;width:4px;height:32px}
+  .lp-cs-tags span+span::before{margin:0 10px}
+  .lp-cs-brief{padding-top:48px}
+  .lp-cs-row{grid-template-columns:1fr;margin-bottom:48px}
+  .lp .lp-cs-label{margin-bottom:12px}
+  .lp .lp-cs-quote{font-size:22px;line-height:32px}
+  .lp-cs-fig{margin-top:32px}
+  .lp .lp-cs-group-h{font-size:36px;line-height:48px;margin-bottom:24px}
+  .lp-cs-item{margin-bottom:56px}
+  .lp-cs-item img{margin-top:32px}
+  .lp .lp-cs-end h2{font-size:32px;line-height:42px;margin-bottom:24px}
+  .lp .lp-cs-qa h3{font-size:22px;line-height:32px}
+  .lp-cs-next{padding:32px 0 80px}
+  .lp .lp-cs-next h4{font-size:22px;line-height:32px}
+  .lp-cs-next svg{margin-top:26px}
+}
+/* case study galleries (2 or 3 images side by side) and multi-image module items */
+.lp-cs-gallery{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:48px 0 0}
+.lp-cs-gallery.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lp-cs-gallery figure{margin:0}
+.lp-cs-gallery img{display:block;width:100%;height:auto}
+.lp-cs-gallery figcaption{font-size:14px;line-height:24px;color:var(--muted);margin-top:12px}
+.lp-cs-item img + img{margin-top:24px}
+.lp-cs-nda{display:inline-block;font-size:12px;line-height:20px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);border:1.5px solid var(--accent);border-radius:20px;padding:4px 14px;margin-top:24px}
+@media (max-width:767.98px){
+  .lp-cs-gallery,.lp-cs-gallery.c3{grid-template-columns:1fr;gap:20px;margin-top:32px}
+}
+
+/* ==========================================================================
+   About page — Lollypop About layout: banner (eyebrow, title with red bar, lead),
+   then rows of a 40px title on the left and content on the right; testimonials with a dark left rule.
+   ========================================================================== */
+.lp-ab-lead{font-size:24px;line-height:36px;max-width:520px;margin:0 !important}
+.lp-ab{padding:120px 0 0}
+.lp-ab-row{display:grid;grid-template-columns:34% minmax(0,1fr);padding:0 48px;margin-bottom:120px}
+.lp .lp-ab-row > h2{font-size:40px;line-height:50px;font-weight:800;letter-spacing:-1px;margin:0;padding-right:24px}
+.lp-ab-body p{font-size:18px;line-height:30px;margin:0 0 24px}
+.lp-ab-body > :last-child{margin-bottom:0}
+.lp-ab-body .big{font-size:24px;line-height:36px}
+.lp-ab-body strong{font-weight:800}
+.lp-ab-list p{font-size:24px;line-height:36px;margin:0 0 32px}
+.lp-ab-list small{display:block;font-size:16px;line-height:26px;color:var(--muted);margin-top:4px}
+.lp .lp-ab-body h3{font-size:24px;line-height:36px;font-weight:800;margin:0 0 12px}
+.lp-ab-step + .lp-ab-step{margin-top:48px}
+.lp-ab-step p{margin-bottom:12px}
+.lp-ab-cite{font-size:24px;line-height:36px;font-weight:800;margin:0 0 24px !important}
+.lp-ab-cite span{display:block;font-size:14px;line-height:24px;font-weight:400;color:var(--muted);margin-top:4px}
+.lp-ab-quote{border-left:3px solid var(--ink);padding:4px 0 4px 32px;margin:0 0 64px}
+.lp-ab-quote:last-child{margin-bottom:0}
+.lp-ab-quote blockquote{margin:0;padding:0;border:0;font-family:var(--font);font-style:normal;font-size:20px;line-height:32px;color:var(--ink)}
+.lp-ab-quote .who{margin-top:16px;padding-left:16px;font-size:14px;line-height:24px}
+.lp-ab-quote .who b{display:block;font-weight:700}
+@media (max-width:991.98px){
+  .lp-ab-row{grid-template-columns:1fr;padding:0;margin-bottom:72px}
+  .lp .lp-ab-row > h2{margin-bottom:24px}
+}
+@media (max-width:767.98px){
+  .lp-ab{padding-top:64px}
+  .lp-ab-lead{font-size:18px;line-height:28px}
+  .lp .lp-ab-row > h2{font-size:30px;line-height:40px}
+  .lp-ab-body p{font-size:16px;line-height:27px}
+  .lp-ab-list p,.lp-ab-body .big,.lp-ab-cite{font-size:20px;line-height:30px}
+  .lp-ab-quote{padding-left:20px}
+  .lp-ab-quote blockquote{font-size:17px;line-height:28px}
+}
+
+/* ==========================================================================
+   Let's Talk page — Lollypop project-enquiry layout: topic tabs, title with red bar,
+   lead, "tell me about it" box, "your details" fields (white, 3px bottom rule), red outline button.
+   ========================================================================== */
+.lp-ct-in{padding-left:calc((var(--w-md) + 24px)/12);max-width:calc(688px + (var(--w-md) + 24px)/12)}
+.lp-ct-topics{display:flex;flex-wrap:wrap;gap:24px 100px;border:0;padding:0;margin:0 0 56px}
+.lp-ct-topics label{position:relative;cursor:pointer;padding-bottom:14px}
+.lp-ct-topics input{position:absolute;opacity:0;pointer-events:none}
+.lp-ct-topics small{display:block;font-size:13px;line-height:22px;color:var(--ink)}
+.lp-ct-topics b{display:block;font-size:22px;line-height:33px;font-weight:800;color:var(--ink);transition:color .2s ease}
+.lp-ct-topics label::after{content:"";position:absolute;left:0;bottom:0;width:24px;height:3px;background:var(--accent);opacity:0;transition:opacity .2s ease}
+.lp-ct-topics input:checked ~ small,.lp-ct-topics input:checked ~ b{color:var(--accent)}
+.lp-ct-topics label:has(input:checked)::after{opacity:1}
+.lp-ct-topics input:focus-visible ~ b{outline:2px solid var(--accent);outline-offset:4px}
+.lp .lp-ct-h1{margin-bottom:24px}
+.lp-ct-lead{font-size:24px;line-height:36px;margin:0 0 40px !important}
+.lp .lp-ct-h3{font-size:28px;line-height:38px;font-weight:800;letter-spacing:-.5px;margin:0 0 4px}
+.lp-ct-help{font-size:14px;line-height:24px;color:rgba(34,20,41,.6);margin:0 0 24px !important}
+.lp-field{position:relative;background:#fff;border-bottom:3px solid #DEDAD7;transition:border-color .2s ease}
+.lp-field:focus-within{border-bottom-color:var(--ink)}
+.lp-field input,.lp-field textarea{display:block;width:100%;border:0;outline:0;background:transparent;font-family:var(--font);font-size:16px;line-height:26px;color:var(--ink);padding:13px 110px 13px 26px;margin:0;border-radius:0;box-shadow:none;-webkit-appearance:none}
+.lp-field textarea{height:192px;resize:vertical;padding-top:20px}
+.lp-field ::placeholder{color:#6E6570;opacity:1}
+.lp-field .tag{position:absolute;right:26px;top:13px;font-size:14px;line-height:26px;color:var(--accent);pointer-events:none}
+.lp-field .tag.opt{color:#A39CA5}
+.lp-ct-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px;margin-bottom:56px}
+.lp-ct-block{margin-bottom:64px}
+.lp-ct-send{cursor:pointer;font-family:var(--font)}
+#message .success-msg,#message .error-msg{font-family:var(--font);font-size:16px}
+.lp-ct-direct{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:24px 56px;padding:56px 0 0;margin-top:80px;border-top:1px solid #E2DDDA}
+.lp-ct-direct small{display:block;font-size:13px;line-height:22px;color:var(--muted)}
+.lp-ct-direct a,.lp-ct-direct span{font-size:18px;line-height:28px;font-weight:700;color:var(--ink) !important;white-space:nowrap}
+.lp-ct-direct a:hover{color:var(--accent) !important}
+@media (max-width:767.98px){
+  .lp-ct-in{padding-left:0}
+  .lp-ct-topics{gap:16px 32px;margin-bottom:40px}
+  .lp-ct-topics b{font-size:18px;line-height:28px}
+  .lp-ct-lead{font-size:18px;line-height:28px}
+  .lp .lp-ct-h3{font-size:22px;line-height:32px}
+  .lp-ct-fields{grid-template-columns:1fr;gap:20px}
+  .lp-ct-direct{grid-template-columns:1fr 1fr}
+}
+
+/* ==========================================================================
+   Case study sticky section menu — like the Research / Design / Build tabs on
+   lollypop.design/services: pins 20px from the top while you read the case study,
+   the section you're in is solid with a short 4px underline (25% of the word), the
+   others fade to 20%; clicking one glides to that section. JS: CaseStudyTabs in scripts.js.
+   ========================================================================== */
+/* the template sets main{overflow:hidden}, which stops position:sticky working; "clip" still hides side overflow but lets sticky work */
+body:has(.lp-cs-tabs) main{overflow:clip !important}
+.lp-cs-tabs{position:sticky;top:20px;z-index:60;display:block;float:none;width:auto;background:var(--bg);padding:30px 0 0;margin:0}
+.lp-cs-tabs ul{display:flex;justify-content:space-between;gap:24px;list-style:none;margin:0;padding:0 0 22px}
+.lp-cs-tabs li{margin:0;padding:0}
+.lp-cs-tabs a{position:relative;display:inline-flex;align-items:center;gap:14px;font-family:var(--font);font-size:40px;line-height:50px;font-weight:800;letter-spacing:-1px;color:var(--ink) !important;opacity:.2;transition:opacity .3s ease-in-out;white-space:nowrap}
+.lp-cs-tabs .ico{width:36px;height:36px;flex:none;display:block}
+.lp-cs-tabs a::before{content:"";position:absolute;left:50px;bottom:-2px;width:calc((100% - 50px)*.25);height:4px;background:var(--ink);opacity:0;transition:opacity .3s ease-in-out}
+.lp-cs-tabs a:hover{opacity:.55}
+.lp-cs-tabs a.is-active{opacity:1}
+.lp-cs-tabs.is-idle a{opacity:1}   /* before you reach Discover: shown in full, like the old process image */
+.lp-cs-tabs a.is-active::before{opacity:1}
+.lp-cs-tabs a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.lp-cs-spy .lp-cs-brief{padding-top:56px}
+body.lp-tabs-pinned header{top:-120px !important}
+@media (max-width:1199.98px){ .lp-cs-tabs a{font-size:34px;line-height:44px} }
+@media (max-width:991.98px){ .lp-cs-tabs a{font-size:32px;line-height:42px} }
+@media (max-width:767.98px){
+  .lp-cs-tabs{top:15px;padding-top:14px}
+  .lp-cs-tabs .lp-wrap{padding:0}
+  .lp-cs-tabs ul{justify-content:flex-start;gap:24px;overflow-x:auto;scrollbar-width:none;padding:0 84px 14px 20px;scroll-padding:0 20px}
+  .lp-cs-tabs ul::-webkit-scrollbar{display:none}
+  .lp-cs-tabs a{font-size:20px;line-height:30px;letter-spacing:-.3px}
+  .lp-cs-tabs .ico{display:none}   /* words only on phones so all three fit beside the menu button */
+  .lp-cs-tabs a::before{height:3px;left:0;width:25%}
+  .lp-cs-spy .lp-cs-brief{padding-top:32px}
+}

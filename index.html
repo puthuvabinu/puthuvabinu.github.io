@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <title>Binu Jose · UX & Product Designer, Wellington NZ</title>
+    <meta name="description" content="Binu Jose is a UX and product designer in Wellington, New Zealand with 22+ years turning complex enterprise systems into products people understand." />
+    <link rel="canonical" href="https://binujose.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Binu Jose" />
+    <meta property="og:title" content="Binu Jose · UX & Product Designer, Wellington NZ" />
+    <meta property="og:description" content="Binu Jose is a UX and product designer in Wellington, New Zealand with 22+ years turning complex enterprise systems into products people understand." />
+    <meta property="og:url" content="https://binujose.com/" />
+    <meta property="og:image" content="https://binujose.com/images/og/home.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<title>User Experience Design Portfolio of Binu Jose HFI (CUA™)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Binu Jose is a User Experience Designer based in New Zealand." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="user experience, ux, interaction design, user experience designer" />
     <meta name="author" content="Binu Jose"/>
-    <meta charset="UTF-8" />
 
     <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
@@ -17,6 +27,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300&display=swap' rel='stylesheet' type='text/css' media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css?family=Poppins:500,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+    <link href="css/theme.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 
 
@@ -33,7 +45,7 @@
 	<div class="cd-index cd-main-content">
 
 	<!-- Page Content -->
-	<div id="page-content" class="" data-bgcolor="#fff" data-textcolor="#000" data-portfoliocolor="#ccc">
+	<div id="page-content" class="lp" data-bgcolor="#F7F4F2" data-textcolor="#221429" data-portfoliocolor="#ccc">
 
         <div class="page-overlay from-bottom">
             <div class="animate-box-bottom"></div>
@@ -46,8 +58,8 @@
             <!-- Logo -->
             <div id="logo">
                 <a class="ajax-link" data-type="page-transition" href="index.html">
-                    <img class="black-logo" src="images/logo.png" alt="Logo Black">
-                    <img class="white-logo" src="images/logo-white.png" alt="Logo White">
+                    <img class="black-logo" src="images/logo-bj.png" alt="Logo Black">
+                    <img class="white-logo" src="images/logo-bj-white.png" alt="Logo White">
                 </a>
             </div>
             <!--/Logo -->
@@ -56,7 +68,7 @@
             <nav>
 
                 <ul data-breakpoint="1024" class="flexnav">
-                    <li><a class="active" href="" data-type="page-transition">Portfolio</a>
+                    <li><a class="is-current" href="#work" aria-current="page">Portfolio</a>
                       <!--
                       <ul>
                         <li><a class="ajax-link active" href="index.html" data-type="page-transition">Brick Wall</a></li>
@@ -95,6 +107,53 @@
 
             </div>
         </header>
+
+        <!-- Menu button: sits with the header, then floats as a round button once you scroll (like Lollypop) -->
+        <button class="lp-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="lp-menu"><span></span><span></span></button>
+
+        <!-- Full-screen menu (slides down from the top, like Lollypop) -->
+        <div class="lp-menu" id="lp-menu" aria-hidden="true">
+            <button class="lp-menu-close" type="button" aria-label="Close menu"><span></span><span></span></button>
+            <div class="lp-menu-red">
+                <div class="lp-menu-in">
+                    <div class="lp-menu-grid">
+                        <ul class="lp-menu-big">
+                            <li><a class="ajax-link" href="index.html" data-type="page-transition">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a></li>
+                            <li><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a></li>
+                            <li><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a></li>
+                            <li><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a></li>
+                            <li><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a></li>
+                            <li><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></li>
+                        </ul>
+                        <ul class="lp-menu-small">
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#experience">Where I’ve Worked</a></li>
+                            <li><a href="#how">How I Work</a></li>
+                            <li><a href="#industries">Industries</a></li>
+                        </ul>
+                    </div>
+                    <a class="lp-menu-promo ajax-link" href="contact.html" data-type="page-transition"><span>UX &amp; product designer, 22+ years</span> <b>Open to new opportunities →</b></a>
+                    <ul class="lp-menu-social">
+                        <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lp-menu-dark">
+                <div class="lp-menu-in">
+                    <p class="lp-menu-eyebrow">Got a complex product?</p>
+                    <h2 class="lp-menu-h">Let’s make it clear, together.</h2>
+                    <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition">Get In Touch</a>
+                    <ul class="lp-menu-places"><li>Wellington</li><li>New Zealand</li></ul>
+                </div>
+            </div>
+        </div>
         <!--/Header -->
 
 
@@ -118,196 +177,213 @@
 
         <!-- Main -->
         <div id="main">
+            <!-- Loaded here too so the page is styled when it arrives through an AJAX page transition -->
+            <link href="css/theme.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+            <div id="main-content">
 
-            <!-- Hero Section -->
-            <div id="hero">
-                <div id="hero-styles" class="scale-onscroll opacity-onscroll">
-                    <div id="hero-caption">
-                        <div class="inner text-align-center">
-                            <div class="hero-title">Crafting digital experiences</div>
-                            <div class="hero-subtitle">Hi, I am an HFI Certified Usability Analyst (CUA™).</div>
+                <!-- Hero -->
+                <section class="lp-hero">
+                    <div class="lp-wrap md"><div class="lp-hero-in">
+                        <h1 class="lp-h1 lp-bar lp-quote-mark has-animation" data-delay="60">I turn complex enterprise systems into products people <span class="lp-hl lp-rotate" data-words="trust|understand|adopt">trust</span></h1>
+                        <!-- Hidden for now: remove the comment markers to bring the intro line back
+                        <p class="lp-lead has-animation" data-delay="140">I’m Binu Jose, a UX and product designer in Wellington, New Zealand, with 22+ years across learning, government, healthcare, logistics and construction safety.</p>
+                        -->
+                        <!-- Hidden for now: remove the comment markers to bring the buttons back
+                        <div class="lp-ctas has-animation" data-delay="200">
+                            <a class="lp-btn" href="#work">See my work <span>↓</span></a>
+                            <a class="lp-btn ghost ajax-link" href="about.html" data-type="page-transition">About me</a>
+                        </div>
+                        -->
+                        <ul class="lp-stats has-animation" data-delay="260">
+                            <li><b>22+ years</b><span>Designing digital products</span></li>
+                            <li><b>HFI CUA™</b><span>Certified Usability Analyst</span></li>
+                            <!-- Hidden for now: remove the comment markers to bring these back
+                            <li><b>5 designers</b><span>Led and mentored</span></li>
+                            <li><b>~8 years</b><span>At Totara Learning</span></li>
+                            -->
+                        </ul>
+                    </div>
+                    <!-- Showcase video (like the showreel under the headline on lollypop.design).
+                         images/showcase.mp4 is a 45-second, 1920 x 1080 reel; it plays only when clicked with no sound; replace it with a new cut any time. -->
+                    <div class="lp-video has-animation" data-delay="320">
+                        <video src="images/showcase.mp4" poster="images/showcase-poster.jpg" width="1920" height="1080" playsinline preload="none" aria-label="Showreel of Binu Jose's work"></video>
+                        <button class="lp-video-play" type="button" aria-label="Play showreel"></button>
+                        <span class="lp-video-cap" aria-hidden="true">Watch the showreel · 45 s</span>
+                    </div>
+                    </div>
+                </section>
+
+                <!-- What I do -->
+                <section class="lp-sec" id="services">
+                    <div class="lp-wrap">
+                        <h2 class="lp-h2 has-animation" data-delay="40">Turning complex workflows into products people trust</h2>
+                        <p class="lp-lead has-animation" data-delay="100">I work end to end, from discovery with product teams and customers to polished, accessible designs that developers can build with confidence.</p>
+                        <a class="lp-link ajax-link" href="about.html" data-type="page-transition" style="margin-top:16px">More about me</a>
+                        <div class="lp-services">
+                            <div class="lp-service has-animation" data-delay="40">
+                                <h3 class="lp-h3">Research</h3>
+                                <p class="lp-body">I partner with product on discovery workshops, research and journey mapping, so decisions are grounded in how people really work.</p>
+                                <ul><li>Discovery workshops</li><li>User interviews</li><li>Journey mapping</li><li>Usability testing</li><li>Heuristic reviews</li></ul>
+                            </div>
+                            <div class="lp-service has-animation" data-delay="80">
+                                <h3 class="lp-h3">Design</h3>
+                                <p class="lp-body">From approval workflows to mobile learning, I design clear, accessible experiences for web and mobile, including AI-powered features.</p>
+                                <ul><li>UX &amp; interaction design</li><li>Complex workflows</li><li>Mobile apps</li><li>AI features</li><li>Prototyping in Figma</li></ul>
+                            </div>
+                            <div class="lp-service has-animation" data-delay="120">
+                                <h3 class="lp-h3">Systems &amp; delivery</h3>
+                                <p class="lp-body">I build and maintain design systems and work closely with developers through handover, so what ships matches what was designed.</p>
+                                <ul><li>Design systems</li><li>Figma tooling</li><li>Design tokens</li><li>Developer handover</li><li>Accessibility</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Selected work -->
+                <section class="lp-sec" id="work">
+                    <div class="lp-wrap">
+                        <h2 class="lp-h2 has-animation" data-delay="40">Selected work</h2>
+                        <p class="lp-lead has-animation" data-delay="100">Case studies showing how research-led design turns complex problems into products that work.</p>
+                    </div>
+                    <div class="lp-wrap lg">
+                        <div class="lp-work">
+                            <a href="sf182.html" class="lp-card ajax-link has-animation" data-type="page-transition" data-delay="40">
+                                <img loading="lazy" decoding="async" src="images/projects/card_sf182.jpg" width="1236" height="1338" alt="The SF-182 paper form next to the new guided request">
+                                <div class="lp-card-panel"><div class="meta">Totara · TotaraGov</div><h3>From a paper form to a guided approval workflow</h3><p>SF-182 for US federal agencies.</p><span class="lp-link">View case study</span></div>
+                            </a>
+                            <a href="totaramobile.html" class="lp-card ajax-link has-animation" data-type="page-transition" data-delay="100">
+                                <img loading="lazy" decoding="async" src="images/projects/card_totaramobile.jpg" width="1236" height="1338" alt="Totara Mobile app screens">
+                                <div class="lp-card-panel"><div class="meta">Totara</div><h3>Learning in your pocket, online or offline</h3><span class="lp-link">View case study</span></div>
+                            </a>
+                            <a href="aware.html" class="lp-card ajax-link has-animation" data-type="page-transition" data-delay="160">
+                                <img loading="lazy" decoding="async" src="images/projects/card_aware.jpg" width="1236" height="1338" alt="AWARE">
+                                <div class="lp-card-panel"><div class="meta">QBurst · Oldcastle</div><h3>Keeping highway work-zone crews out of harm’s way</h3><span class="lp-link">View case study</span></div>
+                            </a>
+                            <a href="dhowber.html" class="lp-card ajax-link has-animation" data-type="page-transition" data-delay="40">
+                                <img loading="lazy" decoding="async" src="images/projects/card_nau.jpg" width="1236" height="1338" alt="Nau by DP World">
+                                <div class="lp-card-panel"><div class="meta">QBurst · DP World</div><h3>A marketplace for dhow captains and traders</h3><span class="lp-link">View case study</span></div>
+                            </a>
+                            <a href="omron.html" class="lp-card ajax-link has-animation" data-type="page-transition" data-delay="100">
+                                <img loading="lazy" decoding="async" src="images/projects/card_omron.jpg" width="1236" height="1338" alt="Omron Health">
+                                <div class="lp-card-panel"><div class="meta">QBurst · Omron</div><h3>New features for an established health app</h3><span class="lp-link">View case study</span></div>
+                            </a>
+                            <a href="studiesabroad.html" class="lp-card ajax-link has-animation" data-type="page-transition" data-delay="160">
+                                <img loading="lazy" decoding="async" src="images/projects/card_studiesabroad.jpg" width="1236" height="1338" alt="Studies Abroad">
+                                <div class="lp-card-panel"><div class="meta">QBurst · ISA</div><h3>Discovery for an education consultancy</h3><span class="lp-link">View case study</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Where I've worked -->
+                <section class="lp-sec" id="experience">
+                    <div class="lp-wrap">
+                        <h2 class="lp-h2 has-animation" data-delay="40">Where I’ve worked</h2>
+                        <p class="lp-lead has-animation" data-delay="100">From a Big Four firm to a fast-paced agency and a global SaaS company, across very different industries.</p>
+                    </div>
+                    <div class="lp-wrap md">
+                        <div class="lp-cos">
+                            <div class="lp-co has-animation" data-delay="40"><div class="logo"><img src="images/logos/totara.png" alt="Totara"></div><p class="role">User Experience Designer</p><p class="yrs">January 2019 – Present<br>Wellington, New Zealand</p></div>
+                            <div class="lp-co has-animation" data-delay="100"><div class="logo"><img src="images/logos/qburst.svg" alt="QBurst"></div><p class="role">Manager, User Experience</p><p class="yrs">February 2016 – January 2019<br>Kochi, India</p></div>
+                            <div class="lp-co has-animation" data-delay="160"><div class="logo"><img src="images/logos/ey.png" alt="EY"></div><p class="role">Sr. User Experience Designer</p><p class="yrs">April 2012 – February 2016<br>Kochi, India</p></div>
+                            <div class="lp-co has-animation" data-delay="220"><div class="logo"><img src="images/logos/assyst.svg" alt="Assyst"></div><p class="role">Multimedia Team Lead</p><p class="yrs">April 2004 – March 2012<br>Kochi, India</p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dark: how I work -->
+                <section class="lp-dark" id="how" style="margin-top:60px">
+                    <div class="lp-wrap md">
+                        <span class="lp-label">How I work</span>
+                        <h2 class="lp-h2 has-animation" data-delay="40" style="margin-top:12px;max-width:713px">Curious by nature, methodical by habit</h2>
+                        <div class="lp-steps">
+                            <div class="lp-step has-animation" data-delay="40"><h3>Discover</h3><p>Workshops, interviews and site visits to understand people, their context and the business goals.</p></div>
+                            <div class="lp-step has-animation" data-delay="100"><h3>Define</h3><p>Journey maps, user flows and roles that turn findings into a shared picture and clear priorities.</p></div>
+                            <div class="lp-step has-animation" data-delay="160"><h3>Design</h3><p>Wireframes, prototypes and visual design, tested early with users and stakeholders.</p></div>
+                            <div class="lp-step has-animation" data-delay="220"><h3>Deliver</h3><p>Design-system components and close work with developers so the experience ships as designed.</p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials -->
+                <section class="lp-sec" style="padding-top:120px">
+                    <div class="lp-wrap">
+                        <h2 class="lp-h2 has-animation" data-delay="40">What people say</h2>
+                        <p class="lp-lead has-animation" data-delay="100">From the product managers and engineers I’ve worked with at Totara.</p>
+                    </div>
+                    <div class="lp-wrap md">
+                        <div class="lp-quotes">
+                            <div class="lp-quote has-animation" data-delay="40"><blockquote>“He has a strong ability to understand complex problems, ask the right questions, and turn ideas and requirements into clear, practical user experiences. … His designs are also exceptionally clear and thorough — he thinks beyond how something looks and carefully defines behaviours, states, conditions, and interactions.”</blockquote><div class="who">Fei Gao</div><div class="role">Product Manager, Totara Learning</div></div>
+                            <div class="lp-quote has-animation" data-delay="100"><blockquote>“If you’re looking for someone who can talk to a customer and figure out what they’re after, then talk to a developer and figure out the technical boundaries and turn that into a working brilliant design, Binu’s the guy to talk to.”</blockquote><div class="who">Cody Finegan</div><div class="role">Development Lead, Totara Learning</div></div>
+                            <div class="lp-quote has-animation" data-delay="160"><blockquote>“He’s one of the best designers I’ve had the chance to work with. … He was able to understand and work within the technical constraints we had really well, producing something that looked and felt great with strong attention to detail and usability.”</blockquote><div class="who">Simon Chester</div><div class="role">Senior Software Engineer, Totara Learning</div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Industries -->
+                <section class="lp-sec" id="industries">
+                    <div class="lp-wrap">
+                        <h2 class="lp-h2 has-animation" data-delay="40">Experience across six industries, from government to the dhow harbours of Dubai</h2>
+                        <p class="lp-lead has-animation" data-delay="100">Working across very different domains means I learn new contexts fast and bring patterns from one to another.</p>
+                        <div class="lp-inds">
+                            <div class="lp-ind has-animation" data-delay="40"><h3>Learning &amp; compliance</h3><p>Learning, performance and compliance platforms used by organisations worldwide.</p></div>
+                            <div class="lp-ind has-animation" data-delay="80"><h3>Government</h3><p>Training approval workflows for US federal and state agencies.</p></div>
+                            <div class="lp-ind has-animation" data-delay="40"><h3>Construction safety</h3><p>Warning systems that protect highway work-zone crews.</p></div>
+                            <div class="lp-ind has-animation" data-delay="80"><h3>Logistics &amp; maritime</h3><p>A marketplace connecting dhow captains and traders.</p></div>
+                            <div class="lp-ind has-animation" data-delay="40"><h3>Healthcare</h3><p>New features for an established health-monitoring app.</p></div>
+                            <div class="lp-ind has-animation" data-delay="80"><h3>Education</h3><p>Discovery and recommendations for an international education consultancy.</p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="lp-sec" style="padding-top:90px;padding-bottom:0">
+                    <div class="lp-cta-box has-animation" data-delay="40">
+                        <p class="eyebrow">Got a complex product?</p>
+                        <h2 class="lp-h2">Let’s make it clear, together.</h2>
+                        <div class="row">
+                            <a class="lp-btn ghost ajax-link" href="contact.html" data-type="page-transition" style="border-color:var(--accent);color:var(--accent) !important">Let’s talk</a>
+                            <a class="lp-btn ghost" href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn <svg class="lp-ext" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer (Lollypop-style: big links row, then brand + link columns) -->
+                <div class="lp-foot2">
+                    <div class="lp-foot2-follow">
+                        <h2>Let’s connect</h2>
+                        <ul>
+                            <li><a href="https://in.linkedin.com/in/binujose/" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a class="ajax-link" href="contact.html" data-type="page-transition">Let’s Talk</a></li>
+                            <li><a class="ajax-link" href="about.html" data-type="page-transition">About Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="lp-foot2-bottom">
+                        <div class="lp-foot2-brand">
+                            <a class="ajax-link" href="index.html" data-type="page-transition"><img src="images/logo-bj.png" alt="Binu Jose"></a>
+                            <p class="tag">A UX and product designer crafting clear, human experiences through <b>research, design and design systems</b>.</p>
+                            <p class="copy">© 2026 Binu Jose · Wellington, New Zealand</p>
+                            <ul class="small">
+                                <li><a class="ajax-link" href="about.html" data-type="page-transition">About</a></li>
+                                <li><a class="ajax-link" href="contact.html" data-type="page-transition">Contact</a></li>
+                                <li><a href="#work">Work</a></li>
+                            </ul>
+                        </div>
+                        <div class="lp-foot2-cols">
+                            <div><h3>Case studies</h3><a class="ajax-link" href="sf182.html" data-type="page-transition">SF-182</a><a class="ajax-link" href="totaramobile.html" data-type="page-transition">Totara Mobile</a><a class="ajax-link" href="aware.html" data-type="page-transition">AWARE</a><a class="ajax-link" href="dhowber.html" data-type="page-transition">Nau</a><a class="ajax-link" href="omron.html" data-type="page-transition">Omron Health</a><a class="ajax-link" href="studiesabroad.html" data-type="page-transition">Studies Abroad</a></div>
+                            <div><h3>Experience</h3><span>Totara</span><span>QBurst</span><span>EY</span><span>Assyst</span></div>
+                            <div><h3>Based in</h3><span>Wellington</span><span>New Zealand</span></div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            <div id="hero-height" class="hidden"></div>
-            <!--/Hero Section -->
-
-
-            <!-- Main Content -->
-            <div id="main-content">
-
-
-                <!-- Portfolio Wrap -->
-                <div id="portfolio-wrap" class="">
-
-                    <!-- Portfolio Columns -->
-                    <div id="portfolio" data-col="3">
-
-
-
-                    <div class="item wide mobile">
-                    	<a href="aware.html" class="ajax-link" data-type="page-transition">
-                    		<div class="item-content">
-                            	<div class="item-image" data-src="images/2.jpg"></div>
-                                <div class="item-caption">
-                                    <div class="item-overlay">
-                                        <div class="item-title">Aware</div>
-                                        <div class="item-sub-mask">
-                                            <div class="item-cat">Mobile App</div>
-                                            <div class="item-case">See Case Study</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="item mobile">
-                      <a href="dhowber.html" class="ajax-link" data-type="page-transition">
-                        <div class="item-content">
-                              <div class="item-image" data-src="images/1.jpg"></div>
-                                <div class="item-caption">
-                                  <div class="item-overlay">
-                                        <div class="item-title">Nau by DP World</div>
-                                        <div class="item-sub-mask">
-                                            <div class="item-cat">Mobile App</div>
-                                            <div class="item-case">See Case Study</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                    <!--<div class="item wide mobile">
-                    	<a href="" class="ajax-link" data-type="page-transition">
-                    		<div class="item-content">
-                            	<div class="item-image" data-src="images/3.jpg"></div>
-                                <div class="item-caption">
-                                    <div class="item-overlay">
-                                        <div class="item-title">Ceasers Palace</div>
-                                        <div class="item-sub-mask">
-                                            <div class="item-cat">Mobile App</div>
-                                            <div class="item-case">See Case Study</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-			</a>
-    </div>-->
-
-                    <div class="item web">
-                    	<a href="studiesabroad.html" class="ajax-link" data-type="page-transition">
-                    		<div class="item-content">
-                            	<div class="item-image" data-src="images/4.jpg"></div>
-                                <div class="item-caption">
-                                    <div class="item-overlay">
-                                        <div class="item-title">Studies Abroad</div>
-                                        <div class="item-sub-mask">
-                                            <div class="item-cat">Research</div>
-                                            <div class="item-case">See Case Study</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-			</a>
-                    </div>
-
-
-                    <div class="item wide mobile">
-                      <a href="omron.html" class="ajax-link" data-type="page-transition">
-                        <div class="item-content">
-                              <div class="item-image" data-src="images/6.jpg"></div>
-                                <div class="item-caption">
-                                    <div class="item-overlay">
-                                        <div class="item-title">Omron Health</div>
-                                        <div class="item-sub-mask">
-                                            <div class="item-cat">Mobile App</div>
-                                            <div class="item-case">See Case Study</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </a>
-                    </div>
-
-
-
-
-                    <!--<div class="item mobile">
-                    	<a href="" class="ajax-link" data-type="page-transition">
-                    		<div class="item-content">
-                            	<div class="item-image" data-src="images/5.jpg"></div>
-                                <div class="item-caption">
-                                    <div class="item-overlay">
-                                        <div class="item-title">Nightlive</div>
-                                        <div class="item-sub-mask">
-                                            <div class="item-cat">Mobile App</div>
-                                            <div class="item-case">See Case Study</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-			</a>
-    </div>-->
-
-
-
-                    <!--<div class="item wide mobile">
-                    	<a href="" class="ajax-link" data-type="page-transition">
-                    		<div class="item-content">
-                            	<div class="item-image" data-src="images/7.jpg"></div>
-                                <div class="item-caption">
-                                    <div class="item-overlay">
-                                        <div class="item-title">FCA</div>
-                                        <div class="item-sub-mask">
-                                            <div class="item-cat">Mobile App</div>
-                                            <div class="item-case">See Case Study</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-			</a>
-    </div>-->
-
-                    <!--<div class="item ipad">
-                    	<a href="updating.html" class="ajax-link" data-type="page-transition">
-                    		<div class="item-content">
-                            	<div class="item-image" data-src="images/8.jpg"></div>
-                                <div class="item-caption">
-                                    <div class="item-overlay">
-                                        <div class="item-title">EMIS Health</div>
-                                        <div class="item-sub-mask">
-                                            <div class="item-cat">iPad Application</div>
-                                            <div class="item-case">See Case Study</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-			                       </a>
-                    </div>-->
-
-
-                  </div>
-                  <!--/Portfolio -->
-
                 </div>
-                <!--/Portfolio Wrap -->
-
 
             </div>
+            <!--/Main Content -->
         </div>
         <!--/Main -->
 

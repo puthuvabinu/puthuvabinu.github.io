@@ -16,6 +16,7 @@ $(document).ready(function() {
 	AppearIteam();
 	BackToTop();
 	ContactForm();
+	TextRotator();
 		
 });
 
@@ -124,6 +125,9 @@ Function Hero Section
 		
 		window.addEventListener('scroll', function windowScroll() {
 			windowScrolled = window.pageYOffset || document.documentElement.scrollTop;
+			// look the caption up each time: after an AJAX page change the old one may be gone
+			HeroCaption = document.getElementById('hero-caption');
+			if (!HeroCaption) return;
 			if ($('#hero-styles').hasClass("scale-onscroll")) {
 				HeroCaption.style.transform = 'scale('+(100 - windowScrolled/100)/100+')';
 			}
@@ -325,6 +329,7 @@ Function Ajax Load
 			  // load new content and replace <main> content with the new one
 			  
 			  $('main').html(section);
+			  var tm = /<title>([^<]*)<\/title>/i.exec(response || ''); if( tm ) document.title = $('<textarea/>').html(tm[1]).text();   // lp: tab title
 			  
 				$('header').addClass('initial');
 				$('html, body').scrollTop(0);
@@ -351,6 +356,7 @@ Function Ajax Load
 				AppearIteam();
 				BackToTop();
 				ContactForm();
+				TextRotator();
 				
 				
 				
@@ -1001,6 +1007,7 @@ Function Page Progress
 	function PageProgress() {
   
 		var progressPath = document.querySelector('.progress-page path');
+		if (!progressPath) return;
 		var pathLength = progressPath.getTotalLength();
 		progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
 		progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
@@ -1178,10 +1185,10 @@ Function Contact Formular
 		
 	function ContactForm() {	
 	
-		if( jQuery('#contact-formular').length > 0 ){
-			$('#contactform').submit(function(e){
+		if( jQuery('#contactform').length > 0 ){
+			$('#contactform').off('submit').on('submit', function(e){
 				e.preventDefault();
-				var action = $(this).attr('action');
+				var form = $(this), action = form.attr('action');
 				$("#message").slideUp(750,function() {
 					$('#message').hide();
 					$('#submit').attr('disabled','disabled');		
@@ -1192,11 +1199,7 @@ Function Contact Formular
 						headers: {
 							'Accept': 'application/json'
 						},
-						data: {
-							name: $('#name').val() === 'Full Name' ? '' : $('#name').val(),
-							email: $('#email').val() === 'E-mail' ? '' : $('#email').val(),
-							comments: $('#comments').val() === 'Your Message' ? '' : $('#comments').val()
-						},
+						data: form.serialize(),   // sends every field (topic, name, email, phone, message)
 						dataType: 'json',
 						success: function() {
 							document.getElementById('message').innerHTML = "<div class='success-msg' style='color: #4CAF50; margin-bottom: 20px; font-weight: bold;'>Thank you! Your message has been sent successfully.</div>";
@@ -1220,3 +1223,163 @@ Function Contact Formular
 	}//End ContactForm		
 	
 	
+
+/*--------------------------------------------------
+Function Text Rotator: cycles the highlighted headline phrase
+(<span class="lp-rotate" data-words="one|two|three">), fading between them
+---------------------------------------------------*/
+
+	function TextRotator() {
+		if( window.lpRotateTimer ) { clearInterval(window.lpRotateTimer); window.lpRotateTimer = null; }
+		var el = document.querySelector('.lp-rotate');
+		if( !el || !el.getAttribute('data-words') ) return;
+		if( window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ) return;
+		var words = el.getAttribute('data-words').split('|'), i = 0;
+		// Reserve the height of the longest phrase so the headline doesn't jump when a word wraps
+		var head = el.closest('h1,h2') || el.parentNode;
+		function reserve(){
+			if( !document.body.contains(el) ) { window.removeEventListener('resize', reserve); return; }
+			var cur = el.textContent, max = 0;
+			head.style.minHeight = '';
+			words.forEach(function(w){ el.textContent = w; max = Math.max(max, head.offsetHeight); });
+			el.textContent = cur;
+			head.style.minHeight = max + 'px';
+		}
+		reserve();
+		window.removeEventListener('resize', window.lpRotateReserve || function(){});
+		window.lpRotateReserve = reserve;
+		window.addEventListener('resize', reserve);
+		if( document.fonts && document.fonts.ready ) document.fonts.ready.then(reserve);
+		window.lpRotateTimer = setInterval(function(){
+			if( !document.body.contains(el) ) { clearInterval(window.lpRotateTimer); return; }
+			el.classList.add('is-out');
+			setTimeout(function(){
+				i = (i + 1) % words.length;
+				el.textContent = words[i];
+				el.classList.remove('is-out');
+			}, 450);
+		}, 2800);
+	}// End Text Rotator
+
+
+/*--------------------------------------------------
+Lollypop-style full-screen menu (.lp-burger / .lp-menu)
+Delegated on document so it keeps working after AJAX page changes.
+---------------------------------------------------*/
+
+	(function(){
+		function menuEl(){ return document.getElementById('lp-menu'); }
+		function setMenu(open){
+			var m = menuEl(); if( !m ) return;
+			m.classList.toggle('is-open', open);
+			m.setAttribute('aria-hidden', open ? 'false' : 'true');
+			document.body.classList.toggle('lp-menu-open', open);
+			var b = document.querySelector('.lp-burger');
+			if( b ) b.setAttribute('aria-expanded', open ? 'true' : 'false');
+			if( open ){ var c = m.querySelector('.lp-menu-close'); if( c ) setTimeout(function(){ c.focus(); }, 650); }
+			else if( b ) b.focus();
+		}
+		document.addEventListener('click', function(e){
+			if( e.target.closest('.lp-burger') ){ e.preventDefault(); setMenu(true); return; }
+			if( e.target.closest('.lp-menu-close') ){ e.preventDefault(); setMenu(false); return; }
+			var a = e.target.closest('.lp-menu a');
+			if( a ){
+				var href = a.getAttribute('href') || '';
+				if( href.charAt(0) === '#' ){
+					e.preventDefault(); setMenu(false);
+					var t = document.querySelector(href);
+					if( t ) setTimeout(function(){ window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 40, behavior: 'smooth' }); }, 350);
+					else window.location.href = 'index.html' + href;   // section lives on the home page
+				} else {
+					var m = menuEl(); if( m ){ m.classList.remove('is-open'); document.body.classList.remove('lp-menu-open'); }
+				}
+			}
+		});
+		function onScroll(){ document.body.classList.toggle('lp-scrolled', window.pageYOffset > 120); }
+		window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+		// arriving on index.html#section from another page: scroll there once the intro has played
+		window.addEventListener('load', function(){
+			var h = window.location.hash; if( !h || h.length < 2 ) return;
+			var t = null; try { t = document.querySelector(h); } catch(err) {}
+			if( t ) setTimeout(function(){ window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 40, behavior: 'smooth' }); }, 1300);
+		});
+		document.addEventListener('keydown', function(e){
+			if( e.key === 'Escape' && menuEl() && menuEl().classList.contains('is-open') ) setMenu(false);
+		});
+	})();
+
+
+/*--------------------------------------------------
+Case study sticky section menu (.lp-cs-tabs) — scroll-spy + smooth jump.
+Delegated / re-queried so it keeps working after AJAX page changes.
+---------------------------------------------------*/
+
+	(function(){
+		var ticking = false;
+		function nav(){ return document.querySelector('.lp-cs-tabs'); }
+		function offset(n){ return (n ? n.getBoundingClientRect().height : 0) + 20 + 32; }
+		function update(){
+			ticking = false;
+			var n = nav(); if( !n ){ document.body.classList.remove('lp-tabs-pinned'); return; }
+			// while the menu is pinned, keep the site header tucked away so it doesn't cover the menu
+			var spy = n.parentElement, sr = spy.getBoundingClientRect(), nr = n.getBoundingClientRect();
+			document.body.classList.toggle('lp-tabs-pinned', nr.top <= 22 && sr.bottom > nr.height + 40);
+			var links = n.querySelectorAll('a[href^="#"]'), line = offset(n) + 10, current = null;
+			for( var i = 0; i < links.length; i++ ){
+				var t = document.querySelector(links[i].getAttribute('href'));
+				if( t && t.getBoundingClientRect().top <= line ) current = links[i];
+			}
+			// before Discover nothing is highlighted (the brief, challenge and role come first)
+			n.classList.toggle('is-idle', !current);
+			for( var j = 0; j < links.length; j++ ){
+				var on = links[j] === current;
+				if( on !== links[j].classList.contains('is-active') ){
+					links[j].classList.toggle('is-active', on);
+					if( on ){
+						links[j].setAttribute('aria-current', 'true');
+						var ul = n.querySelector('ul');   // keep the active tab visible on phones (scrolls the row sideways only)
+						if( ul && ul.scrollWidth > ul.clientWidth ){
+							var l = links[j].offsetLeft - 20;
+							ul.scrollTo ? ul.scrollTo({ left: l, behavior: 'smooth' }) : (ul.scrollLeft = l);
+						}
+					} else links[j].removeAttribute('aria-current');
+				}
+			}
+		}
+		window.addEventListener('scroll', function(){ if( !ticking ){ ticking = true; requestAnimationFrame(update); } }, { passive: true });
+		window.addEventListener('resize', update);
+		document.addEventListener('click', function(e){
+			var a = e.target.closest('.lp-cs-tabs a[href^="#"]'); if( !a ) return;
+			var t = document.querySelector(a.getAttribute('href')); if( !t ) return;
+			e.preventDefault();
+			function go(){ window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - offset(nav()) + 2, behavior: 'smooth' }); }
+			go();
+			// images loading on the way can move the target; once scrolling settles, nudge into place (max 3 times)
+			var tries = 0, last = -1, timer = setInterval(function(){
+				var y = window.pageYOffset;
+				if( y !== last ){ last = y; return; }
+				var off = t.getBoundingClientRect().top - offset(nav()) + 2;
+				if( Math.abs(off) > 6 && tries++ < 3 ){ last = -1; go(); } else clearInterval(timer);
+			}, 200);
+		});
+		// run after first load and after every AJAX page change
+		update();
+		new MutationObserver(function(){ if( nav() ) update(); }).observe(document.body, { childList: true, subtree: false });
+		setInterval(function(){ if( nav() && !document.querySelector('.lp-cs-tabs a.is-active') ) update(); }, 1000);
+	})();
+
+
+/*--------------------------------------------------
+Showreel: plays only when clicked (poster + red play button until then).
+Delegated so it works after AJAX page changes too.
+---------------------------------------------------*/
+
+	document.addEventListener('click', function(e){
+		var box = e.target.closest('.lp-video'); if( !box || box.classList.contains('is-playing') ) return;
+		var v = box.querySelector('video'); if( !v ) return;
+		e.preventDefault();
+		box.classList.add('is-playing');
+		v.controls = true;
+		var p = v.play(); if( p && p.catch ) p.catch(function(){ box.classList.remove('is-playing'); v.controls = false; });
+		v.onended = function(){ box.classList.remove('is-playing'); v.controls = false; v.currentTime = 0; v.load(); };
+	});
