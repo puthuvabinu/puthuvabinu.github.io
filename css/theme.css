@@ -542,3 +542,6 @@ body.lp-tabs-pinned header{top:-120px !important}
 
 /* phones: no white frame (it showed as a white bar under the iPhone status bar) */
 @media (max-width:767.98px){ .lp::after{display:none} }
+
+/* phones/tablets: the open menu scrolls; when iOS bounces it, show red above and dark below instead of the page behind */
+@media (max-width:1024px){ .lp-menu{background:linear-gradient(var(--accent) 50%,var(--ink) 50%);overscroll-behavior:contain} }
