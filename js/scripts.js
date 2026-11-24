@@ -1297,6 +1297,8 @@ Delegated on document so it keeps working after AJAX page changes.
 		});
 		function onScroll(){ document.body.classList.toggle('lp-scrolled', window.pageYOffset > 120); }
 		window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+		// the menu only animates once the page has finished loading, so it can never flash in while the intro plays
+		window.addEventListener('load', function(){ setTimeout(function(){ document.documentElement.classList.add('lp-ready'); }, 100); });
 		// arriving on index.html#section from another page: scroll there once the intro has played
 		window.addEventListener('load', function(){
 			var h = window.location.hash; if( !h || h.length < 2 ) return;

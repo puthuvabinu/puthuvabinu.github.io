@@ -548,3 +548,6 @@ body.lp-tabs-pinned header{top:-120px !important}
 
 /* contact details wrap onto new lines instead of running off the edge */
 .lp-ct-direct{display:flex;flex-wrap:wrap;gap:24px 48px}
+
+/* until the page has loaded, the menu stays hidden with no animation (stops it flashing during the intro) */
+html:not(.lp-ready) .lp-menu{transition:none !important}
