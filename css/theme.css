@@ -237,6 +237,9 @@ body:has(.lp) footer{padding:0 !important}
 /* ---------- hamburger + full-screen menu (measured from Lollypop) ---------- */
 .lp-burger,.lp-menu-close{position:absolute;width:50px;height:50px;border:0;background:none;cursor:pointer;padding:0;z-index:2}
 .lp-burger{position:fixed !important;right:109px;top:54px;z-index:9400 !important;border-radius:50%;transition:background .3s ease,box-shadow .3s ease}
+/* the menu icon hides while the black page overlay plays (refresh and page changes), then fades back in */
+.lp-burger{opacity:1;transition:background .3s ease,box-shadow .3s ease,opacity .5s ease .15s}
+body:has(.page-overlay.from-bottom) .lp-burger,body.page-is-changing .lp-burger,body.hidden .lp-burger{opacity:0;pointer-events:none;transition:none} /* lp-burger hides */
 body.lp-scrolled .lp-burger{background:#fff;box-shadow:0 6px 20px rgba(34,20,41,.15)}
 /* icon measured from Lollypop: two 13x2px lines, 10px apart, centred in a 50px button */
 .lp-burger span{position:absolute;left:18.5px;width:13px;height:2px;background:var(--accent);border-radius:3px;transition:transform .3s ease-in-out}
