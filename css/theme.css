@@ -69,7 +69,7 @@ body:has(.lp) footer{padding:0 !important}
   .lp #header-container{
     padding:0 calc((100% - var(--C)) / 2 + 12px + var(--C) / 36 + 83px) 0 calc((100% - var(--C)) / 2 + 12px + var(--C) / 24) !important;
     transform:translateY(19px)}
-  .lp .lp-burger{right:calc((100% - var(--C)) / 2 + 12px + var(--C) / 36)}
+  .lp .lp-burger,.lp .lp-menu-close{right:calc((100% - var(--C)) / 2 + 12px + var(--C) / 36)}   /* close sits exactly where the burger was */
   .lp header nav{position:relative;top:-1.5px}   /* nav text centre on y79, same line as logo and menu icon */
 }
 
@@ -293,7 +293,7 @@ body.lp-menu-open{overflow:hidden}
   .lp-menu-promo{margin-top:36px}
   .lp-menu-promo b{display:block;margin:4px 0 0;font-size:20px}
   .lp-menu-places{margin-top:48px}
-  .lp-menu-close{top:20px;right:20px}
+  .lp-menu-close{top:22px;right:22px}
   .lp .lp-menu-h{font-size:28px !important;line-height:38px}
 }
 
