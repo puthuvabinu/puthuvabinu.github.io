@@ -539,3 +539,6 @@ body.lp-tabs-pinned header{top:-120px !important}
   .lp-cs-tabs a::before{height:3px;left:0;width:25%}
   .lp-cs-spy .lp-cs-brief{padding-top:32px}
 }
+
+/* phones: no white frame (it showed as a white bar under the iPhone status bar) */
+@media (max-width:767.98px){ .lp::after{display:none} }
