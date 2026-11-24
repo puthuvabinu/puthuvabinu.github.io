@@ -329,6 +329,7 @@ Function Ajax Load
 			  // load new content and replace <main> content with the new one
 			  
 			  $('main').html(section);
+			  var tm = /<title>([^<]*)<\/title>/i.exec(response || ''); if( tm ) document.title = $('<textarea/>').html(tm[1]).text();   // lp: tab title
 			  
 				$('header').addClass('initial');
 				$('html, body').scrollTop(0);
@@ -1288,6 +1289,7 @@ Delegated on document so it keeps working after AJAX page changes.
 					e.preventDefault(); setMenu(false);
 					var t = document.querySelector(href);
 					if( t ) setTimeout(function(){ window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 40, behavior: 'smooth' }); }, 350);
+					else window.location.href = 'index.html' + href;   // section lives on the home page
 				} else {
 					var m = menuEl(); if( m ){ m.classList.remove('is-open'); document.body.classList.remove('lp-menu-open'); }
 				}
@@ -1295,6 +1297,12 @@ Delegated on document so it keeps working after AJAX page changes.
 		});
 		function onScroll(){ document.body.classList.toggle('lp-scrolled', window.pageYOffset > 120); }
 		window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+		// arriving on index.html#section from another page: scroll there once the intro has played
+		window.addEventListener('load', function(){
+			var h = window.location.hash; if( !h || h.length < 2 ) return;
+			var t = null; try { t = document.querySelector(h); } catch(err) {}
+			if( t ) setTimeout(function(){ window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 40, behavior: 'smooth' }); }, 1300);
+		});
 		document.addEventListener('keydown', function(e){
 			if( e.key === 'Escape' && menuEl() && menuEl().classList.contains('is-open') ) setMenu(false);
 		});
