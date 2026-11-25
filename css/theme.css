@@ -566,3 +566,8 @@ html:not(.lp-ready) .lp-menu{transition:none !important}
 .lp-co,.lp-quote{border-radius:18px}
 .lp-cs-hero img,.lp-cs-item img,.lp-cs-body img{border-radius:18px}
 .lp-video{border-radius:18px}
+/* rounded corners everywhere: form fields, case-study figures and galleries */
+.lp-field{border-bottom:0;border-radius:12px;overflow:hidden;box-shadow:inset 0 -3px 0 #DEDAD7;transition:box-shadow .2s ease}
+.lp-field:focus-within{box-shadow:inset 0 -3px 0 var(--ink)}
+.lp-cs-fig img,.lp-cs-gallery img{border-radius:18px}
+.lp-cs-gallery.c3 img{border-radius:12px}
