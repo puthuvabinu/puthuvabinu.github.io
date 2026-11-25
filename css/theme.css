@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Portfolio theme (editorial: cream background, charcoal type, Inter)
+   Portfolio theme (editorial: cream background, charcoal type, Manrope)
    Sizes measured from lollypop.design at 1440px and 390px wide.
    Everything is scoped under .lp so pages that haven't moved yet are untouched.
    ========================================================================== */
@@ -22,7 +22,7 @@
   --w-md:calc(var(--C) * 10 / 12 - 24px);  /* hero / CTA: 1076 @1440, 926 @1288 */
   --w-lg:calc(var(--C) - 24px);            /* work grid: 1296 @1440, 1116 @1288 */
   --gutter:24px;
-  --font:'Inter','Helvetica Neue',Arial,sans-serif;
+  --font:'Manrope','Inter','Helvetica Neue',Arial,sans-serif;
   font-family:var(--font);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;
 }
 .lp *, .lp *::before, .lp *::after{box-sizing:border-box}
@@ -553,12 +553,9 @@ body.lp-tabs-pinned header{top:-120px !important}
 html:not(.lp-ready) .lp-menu{transition:none !important}
 
 /* ==========================================================================
-   Direction A: charcoal type, Inter display headings, no white frame,
-   card text below the image, softer corners
+   Direction A: charcoal type, card text below the image, softer corners
+   (Manrope and the white frame kept)
    ========================================================================== */
-.lp{font-optical-sizing:auto}
-.lp::after{display:none !important}
-.lp h1,.lp h2,.lp h3,.lp .lp-h1{font-weight:700 !important;letter-spacing:-.025em !important}
 .lp-card{aspect-ratio:auto;overflow:visible;background:none}
 .lp-card > img{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:412/446;object-fit:cover;border-radius:18px;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s ease}
 .lp-card:hover > img{transform:translateY(-4px);box-shadow:0 18px 40px rgba(29,29,31,.12)}
@@ -568,3 +565,4 @@ html:not(.lp-ready) .lp-menu{transition:none !important}
 .lp .lp-btn{border-radius:12px}
 .lp-co,.lp-quote{border-radius:18px}
 .lp-cs-hero img,.lp-cs-item img,.lp-cs-body img{border-radius:18px}
+.lp-video{border-radius:18px}
