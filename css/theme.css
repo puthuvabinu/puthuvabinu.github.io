@@ -571,3 +571,5 @@ html:not(.lp-ready) .lp-menu{transition:none !important}
 .lp-field:focus-within{box-shadow:inset 0 -3px 0 var(--ink)}
 .lp-cs-fig img,.lp-cs-gallery img{border-radius:18px}
 .lp-cs-gallery.c3 img{border-radius:12px}
+
+.lp-video-credit{margin-top:12px;font-size:12px;line-height:18px;color:var(--muted);text-align:right}
